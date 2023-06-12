@@ -3,14 +3,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <header class="flex flex-col items-center gap-2 font-virgil">
-	<h2 class="text-5xl md:text-7xl text-red-400">
+	<a class="cursor-pointer text-5xl md:text-7xl text-red-400">
 		{SITE_TITLE}
-	</h2>
-	<h4 class="text-xs md:text-base">
+	</a>
+	<a class="cursor-pointer text-xs md:text-base">
 		{SITE_DESCRIPTION}
-	</h4>
+	</a>
 	<nav
-		class="flex justify-evenly gap-5 fixed bg-transparent bottom-5 underline text-red-400"
+		class="flex md:w-1/2 justify-evenly gap-5 fixed bg-transparent bottom-5 underline text-red-400"
 	>
 		<a
 			class="rounded-lg px-2 cursor-pointer"
