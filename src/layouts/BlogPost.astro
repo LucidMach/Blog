@@ -17,6 +17,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main class="flex flex-col justify-center items-center">
+			<br />
+			<br />
 			<h1 class="w-screen text-3xl font-bold text-center">
 				{title}
 			</h1>
@@ -24,11 +26,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				🗓️ <FormattedDate date={pubDate} />
 			</h4>
 			<br />
-			<article class="prose prose-invert">
+			<article
+				class="prose prose-invert prose-a:text-red-400 prose-a:cursor-pointer prose-a:no-underline"
+			>
 				<slot />
+				<br />
+				<blockquote>
+					you could catch me on
+					<a href="https://instagram.com/lucidmach">instagram</a>,
+					<a href="https://twitter.com/lucidmach">twitter</a>,
+					<a href="https://www.linkedin.com/in/lucidmach/">linkedin</a
+					> and maybe even
+					<a href="https://www.youtube.com/@lucidmach">youtube</a>
+					where i excalidraw those diagrams
+					<br />
+					<br />
+					<span class="font-virgil mt-10 text-xl">
+						untill next time !️ ✌</span
+					>
+				</blockquote>
 			</article>
-			<br />
-			<br />
 			<Footer />
 		</main>
 	</body>
