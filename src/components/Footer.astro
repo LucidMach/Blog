@@ -2,12 +2,12 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="text-center text-xs md:text-base mb-20">
+	<br />
+	&copy; {today.getFullYear()}
+	<a
+		class="underline underline-offset-2 hover:cursor-pointer hover:text-red-400"
+		href="https://lucidmach.tech"
+		target="_blank">LucidMach.</a
+	> All rights reserved.
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

@@ -1,7 +1,7 @@
 ---
-title: "Second post"
+title: "Data Pre-Processing"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 22 2022"
+pubDate: "June 12 2022"
 heroImage: "/placeholder-hero.jpg"
 ---
 
