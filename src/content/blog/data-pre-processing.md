@@ -34,7 +34,7 @@ cuz ML algorithms learn **best** when the data they work with is **continuous nu
 
 <center>
 
-![](/public/data-pre-processing/class-emotion.png)
+![](/data-pre-processing/class-emotion.png)
 
 </center>
 
@@ -46,7 +46,7 @@ let's say we find a dataset with paramenters we are looking for
 
 <center>
 
-![](/public/data-pre-processing/unclean.png)
+![](/data-pre-processing/unclean.png)
 
 </center>
 
@@ -54,7 +54,7 @@ here the column **pic** represents an 3d array of red, green and blue pixel valu
 
 <center>
 
-![](/public/data-pre-processing/image2layers.png)
+![](/data-pre-processing/image2layers.png)
 
 </center>
 
@@ -64,7 +64,7 @@ the whole goal of training an ML model is so that we could us it to actively pre
 
 <center>
 
-![](/public/data-pre-processing/splitting.png)
+![](/data-pre-processing/splitting.png)
 
 </center>
 
@@ -79,7 +79,7 @@ so there are 2 common ways of dealing with that missing data
 
 <center>
 
-![](/public/data-pre-processing/delete.png)
+![](/data-pre-processing/delete.png)
 
 </center>
 
@@ -89,7 +89,7 @@ _note: works great for super ultra large datasets but since **more data = better
 
 <center>
 
-![](/public/data-pre-processing/middle.png)
+![](/data-pre-processing/middle.png)
 
 </center>
 
@@ -103,7 +103,7 @@ there are 2 common ways of dealing with class data, lets take the gender column
 
 <center>
 
-![](/public/data-pre-processing/one-hot-encoding.png)
+![](/data-pre-processing/one-hot-encoding.png)
 
 </center>
 
@@ -113,7 +113,7 @@ when **one column** is split **into number of class** columns, like _gender has 
 
 <center>
 
-![](/public/data-pre-processing/label-encoding.png)
+![](/data-pre-processing/label-encoding.png)
 
 </center>
 
@@ -127,7 +127,7 @@ when we plot these values without scaling em to the same range it would look lik
 
 <center>
 
-![](/public/data-pre-processing/unscaled.png)
+![](/data-pre-processing/unscaled.png)
 
 </center>
 
@@ -135,7 +135,7 @@ and let's say we tried to find a line that best fit through the points it would 
 
 <center>
 
-![](/public/data-pre-processing/line-unscaled.png)
+![](/data-pre-processing/line-unscaled.png)
 
 </center>
 
@@ -143,7 +143,7 @@ however if we scaled the inputs to the same range, it would look like this
 
 <center>
 
-![](/public/data-pre-processing/line-scaled.png)
+![](/data-pre-processing/line-scaled.png)
 
 </center>
 
@@ -156,7 +156,7 @@ now feature scaling is commonly done using 2 methods
 
 <center>
 
-![](/public/data-pre-processing/norm-vs-stand.png)
+![](/data-pre-processing/norm-vs-stand.png)
 
 </center>
 
@@ -164,7 +164,7 @@ where x is the current input we want to scale, here's an example of normalizatio
 
 <center>
 
-![](/public/data-pre-processing/normalization.png)
+![](/data-pre-processing/normalization.png)
 
 </center>
 
@@ -172,7 +172,7 @@ this leaves us with a ready for training dataset
 
 <center>
 
-![](/public/data-pre-processing/clean-training.png)
+![](/data-pre-processing/clean-training.png)
 
 </center>
 
@@ -190,6 +190,6 @@ so we've to remember to
 
 yuppp data people shouldn't become doctors 😝
 
-![](/public/data-pre-processing/clean-testing.png)
+![](/data-pre-processing/clean-testing.png)
 
 and with that we have testing data that is ready to be taken for a ride in our ML model
