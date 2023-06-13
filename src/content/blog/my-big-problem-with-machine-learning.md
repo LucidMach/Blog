@@ -9,7 +9,7 @@ heroImage: "/problem-with-ml.png"
 
 ever since 2019, machine learning has been slowly gaining the spotlight and me being the starry eyed technology enthusiast i was (kinda like Hiro Hamada) i **tried jumping in twice**... both failed leaps of faith
 
-![](/public/my-big-problem-with-ml/hiro.jpeg)
+![](/my-big-problem-with-ml/hiro.jpeg)
 
 as **someone obsessed with building stuff from scratch** [this blog is custom built by the way], i found it really hard to get into ML as
 most resources out there were either
@@ -31,7 +31,7 @@ my problem wasn't with ML, but it with what people refered to as ML. **i didn't 
 
 <center>
 
-![](/public/my-big-problem-with-ml/ml-dl.png)
+![](/my-big-problem-with-ml/ml-dl.png)
 
 </center>
 
@@ -46,7 +46,7 @@ and more... so here's my unofficial tags for everything in ML
 
 <center>
 
-![](/public/my-big-problem-with-ml/problem-with-ml.png)
+![](/my-big-problem-with-ml/problem-with-ml.png)
 
 </center>
 
