@@ -26,9 +26,7 @@ source: the pennsylvania state university
 
 </center>
 
-somthing that helps **quantify emotions**
-
-> the ~science~ math of **taking in real world info**, converting it into numbers and then ~finding~ learning a pattern out of it
+something that helps **quantify emotions**
 
 cuz ML algorithms learn **best** when the data they work with is **continuous numbers** instead of traditional encoded classification data like
 
@@ -38,7 +36,7 @@ cuz ML algorithms learn **best** when the data they work with is **continuous nu
 
 </center>
 
-while the **class-ified data** does represent numbers, the numberical value of a class **doesn't always accurately represent** an emotion, while _russel's model gives an activation and an plesentness value that are already intensities of an emotion_
+while the **class-ified data** does represent numbers, the numberical value of a class **doesn't always represent the intensity of** an emotion, while _russel's model gives you an **activation** and an **pleseantness** value that are already intensities of an emotion_
 
 # Unclean Data
 
@@ -95,7 +93,7 @@ _note: works great for super ultra large datasets but since **more data = better
 
 ## Step - 3 : Dealing with Class Data
 
-many a times, the data in datasets is class data and encoded class data might not always accurately represent the intensity of a parameter
+many a times, the data in datasets is class data and while encoded class data might not always accurately represent the intensity of a parameter, something is better than nothing
 
 there are 2 common ways of dealing with class data, lets take the gender column
 
@@ -107,7 +105,7 @@ there are 2 common ways of dealing with class data, lets take the gender column
 
 </center>
 
-when **one column** is split **into number of class** columns, like _gender has 2 classes_: male and female, so the _gender columns gets split into a male column and female column_
+when **one column** is split **into number of class** columns, like _gender has 2 classes_: male and female, so the _gender columns gets split into 2 columns: a male column and female column_
 
 #### 2. label encoding
 
@@ -122,6 +120,8 @@ for columns with binary classes, like true or false, male or female, yes or no, 
 ## Step - 4 : Feature Scaling
 
 different columns usually represent different parameters, and not all paraneters have the same proportion. assuming a dataset of age and height, the age column has a range of 1 to 100, while the height column perhaps has a range of 100cm to 200cm
+
+**why is this important?**
 
 when we plot these values without scaling em to the same range it would look like
 
@@ -147,7 +147,7 @@ however if we scaled the inputs to the same range, it would look like this
 
 </center>
 
-which even from a glance we can tell that the line better represents a model to predict such data
+which even from a glance we can tell that the line better fits the model, i.e there is lesser error to predict for unseen data
 
 now feature scaling is commonly done using 2 methods
 
