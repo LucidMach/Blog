@@ -1,5 +1,5 @@
 ---
-title: "Data Pre-Processing"
+title: "The Only Thing about Machine Learning that's more Important than Machine Learning"
 description: "the most important step for any machine learning project"
 pubDate: "June 14 2022"
 heroImage: "/data-pre-processing/dataprepro.png"
