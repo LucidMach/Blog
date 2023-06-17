@@ -36,7 +36,7 @@ list of items in my bag,
 converting that from a table to a matrix would look like:
 <center>
 
-![](/public/matrix-multiplication/table-1d.png)
+![](/matrix-multiplication/table-1d.png)
 
 </center>
 
@@ -45,7 +45,7 @@ this is technically an **array**, but to make this a matrix, let's add one dimen
 
 <center>
 
-![](/public/matrix-multiplication/table-2d.png)
+![](/matrix-multiplication/table-2d.png)
 
 </center>
 
@@ -56,7 +56,7 @@ the math representation is pretty straight forward, remove the tables and draw t
 
 <center>
 
-![](/public/matrix-multiplication/math-matrix.png)
+![](/matrix-multiplication/math-matrix.png)
 
 </center>
 
@@ -70,7 +70,7 @@ here's the distances Suraj and Arjun travelled in the months of jan, feb and mar
 
 <center>
 
-![](/public/matrix-multiplication/info.png)
+![](/matrix-multiplication/info.png)
 
 </center>
 
@@ -78,7 +78,7 @@ now calculate the total money spent on petrol by both Suraj and Arjun **without 
 
 <center>
 
-![](/public/matrix-multiplication/total.png)
+![](/matrix-multiplication/total.png)
 
 </center>
 
@@ -86,7 +86,7 @@ now try with the matrix multiplication method
 
 <center>
 
-![](/public/matrix-multiplication/matmul-tot.png)
+![](/matrix-multiplication/matmul-tot.png)
 
 </center>
 
@@ -94,7 +94,7 @@ this is also **why the inner dimensions have to match**, i,e they have to be the
 
 <center>
 
-![](/public/matrix-multiplication/dims.png)
+![](/matrix-multiplication/dims.png)
 
 </center>
 
