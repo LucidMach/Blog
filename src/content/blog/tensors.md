@@ -16,14 +16,41 @@ there are 3 stages in any machine learning algorithm
 </centre>
 
 while the **real-world data** can have **any structure**,
+in machine learning, the data is generally encoded/represented using a data structore called **tensor**
 
-machines require data to be encoded into numbers, this numberical encoding is a data structure called a **tensor**
-
-> machine learning algorithms essentialy modify and process these tensors as they learn patterns from the data (tensors)
-
-_for a little more reading on the concept of what n-dimensions represent, check out my previous blog post on [matrix (2d tensors) multiplication](https://ziro2mach.com/blog/matrix-multiplication/)_
+## what is a tensor?
 
 > a tensor is an n-dimentional array where each dimension holds different parameters values for each value in the array
+
+1. a scalar is a 0d tensor
+2. an array is a 1d tensor
+3. a matrix is a [2d tensor](https://ziro2mach.com/blog/matrix-multiplication)
+
+## what do extra dimensions represent?
+
+consider a matrix (or) **2d tensor**, think of a **matrix** to be an _excel/SQL **table**_
+
+let's take an example:
+list of items in my bag,
+converting that from a table to a matrix would look like:
+
+<center>
+
+![](/matrix-multiplication/table-1d.png)
+
+</center>
+
+this is technically an **array**, but to make this a matrix, let's add one dimension i.e, parameter to the array
+
+<center>
+
+![](/matrix-multiplication/table-2d.png)
+
+</center>
+
+and so on...
+
+## Tensors in Action
 
 let's take an example:
 
@@ -46,7 +73,13 @@ this is a 3 dimensional tensor:
 
 3. the **3rd dimension** represents the **individual pixels** in each row
 
+> fun fact: google's machine learning framework is named tensorflow because each ML algorithm is a different flow of tensors 🤪
+
 # 3 Important Attributes of a Tensor
+
+now that we understand what tensors are, there are 3 important parameters of a tensor that you'll need to keep in mind while working with tensors
+
+all 3 attributes are usually the causes for most errors you'll face as a machine/deep learning engineer
 
 ## 1. Shape
 
