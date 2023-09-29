@@ -1,7 +1,7 @@
 ---
 title: "Why is Matrix Multiplication Done the Way it is Done"
 description: "the intution behind performing a matrix multiplication operation"
-pubDate: "June 17 2022"
+pubDate: "July 20 2022"
 heroImage: "/matrix-multiplication/hero.png"
 ---
 
@@ -10,6 +10,7 @@ matrix multiplication is something we've all done at some point.
 while some of y'all still do stuff that require matrix multiplication, most of y'all don't
 
 none the less if you're reading this you're curious why we do
+
 <center>
 
 ![](/matrix-multiplication/matmul.png)
@@ -20,7 +21,6 @@ answering that would need some digging into the **concept of matrix(s)**
 
 `spoiler: it's really intuitive once you remember that matrices represent something`
 
-
 here's a video version of this blog post [https://youtu.be/hVZD4OvlV3w](https://youtu.be/hVZD4OvlV3w)
 
 # what does a matrix represent?
@@ -29,19 +29,19 @@ a matrix is a **2d tensor**
 
 > a tensor is an n-dimentional array that holds different values for different parameters of the array
 
-pretty sure that definition doesn't help  but **think** of a **matrix** to be an *excel/SQL **table*** 
+pretty sure that definition doesn't help but **think** of a **matrix** to be an \*excel/SQL **table\***
 
 let's take an example:
 list of items in my bag,
 converting that from a table to a matrix would look like:
+
 <center>
 
 ![](/matrix-multiplication/table-1d.png)
 
 </center>
 
-this is technically an **array**, but to make this a matrix, let's add one dimension i.e, parameter to the array 
-
+this is technically an **array**, but to make this a matrix, let's add one dimension i.e, parameter to the array
 
 <center>
 
@@ -49,10 +49,9 @@ this is technically an **array**, but to make this a matrix, let's add one dimen
 
 </center>
 
-***ohh this is the computer science representation of a matrix by the way***
+**_ohh this is the computer science representation of a matrix by the way_**
 
 the math representation is pretty straight forward, remove the tables and draw those brackets 👀
-
 
 <center>
 
@@ -66,7 +65,7 @@ just remembering that the matrix represents something and performing normal mult
 
 don't believe em?? let's run through an example
 
-here's the distances Suraj and Arjun travelled in the months of jan, feb and march and here's the petrol prizes for the months 
+here's the distances Suraj and Arjun travelled in the months of jan, feb and march and here's the petrol prizes for the months
 
 <center>
 

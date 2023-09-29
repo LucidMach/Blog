@@ -1,11 +1,11 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -25,25 +25,14 @@ const posts = (await getCollection("blog")).sort(
 		<br />
 		<main class="w-full flex flex-col">
 			<br />
-			<h1 class="text-3xl font-virgil">What's the Name?</h1>
-			<br />
-			<!-- <p class="font-virgil text-center self-center opacity-50">
-				"the faster you can do something efficiently, the better you are
-				at it"
-			</p> -->
-			<p class="font-virgil text-center self-center opacity-50">
-				"taking ideas from 0 to concepts at mach speed"
-			</p>
-			<br />
-			<img class="w-1/2 self-center" src="/explainer.png" alt="" />
-			<br />
-			<br />
-			<br />
 			<h1 class="text-3xl font-virgil">The Blog Posts</h1>
+			<br />
+			<br />
+			<h3 class="text-xl font-virgil text-red-400">Web Dev</h3>
 			<br />
 			<ul class="flex flex-col gap-5 w-full text-sm md:text-base">
 				{
-					posts.slice(-3).map((post, i) => (
+					posts.slice(0, 9).map((post) => (
 						<li>
 							<a
 								class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
@@ -59,10 +48,27 @@ const posts = (await getCollection("blog")).sort(
 					))
 				}
 			</ul>
-			<a
-				class="text-right hover:text-red-400 hover:cursor-pointer"
-				href="/blog">and more...</a
-			>
+			<br />
+			<h3 class="text-xl font-virgil text-red-400">ML</h3>
+			<br />
+			<ul class="flex flex-col gap-5 w-full text-sm md:text-base">
+				{
+					posts.slice(9, 13).map((post) => (
+						<li>
+							<a
+								class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
+								href={`/blog/${post.slug}/`}
+							>
+								<p class="max-w-[240px] md:max-w-xl">
+									{post.data.title}
+								</p>
+
+								<FormattedDate date={post.data.pubDate} />
+							</a>
+						</li>
+					))
+				}
+			</ul>
 			<br />
 			<br />
 			<br />
