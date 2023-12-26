@@ -3,7 +3,7 @@ title: "The Battle of The NoSQL Databases | When To Use What"
 description: "why machine learning is tough to get into"
 pubDate: "June 19 2021"
 type: "Dev"
-heroImage: "/problem-with-ml.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--O67X0rMt--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gw7j7eapprpep8h8h4s9.png"
 ---
 
 Let’s start from the very beginning….

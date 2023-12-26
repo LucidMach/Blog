@@ -3,7 +3,7 @@ title: "You've Gotta Check Out SnowPack..."
 description: "the most important step for any machine learning project"
 pubDate: "January 1 2022"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--Ja92Nd7f--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1uoelbsn0t3mwm6ubi2.png"
 ---
 
 ## Introduction

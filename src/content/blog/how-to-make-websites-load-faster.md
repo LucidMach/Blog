@@ -3,7 +3,7 @@ title: "The 20% Optimization That Improves 80% Web Performance"
 description: "the most important step for any machine learning project"
 pubDate: "July 27 2021"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--_D-OgshM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/khdd9has5hs67kjh9aey.png"
 ---
 
 In today's ultra fast paced world,

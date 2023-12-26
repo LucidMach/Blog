@@ -3,7 +3,7 @@ title: "Firebase Auth | Understanding The Auth"
 description: "the most important step for any machine learning project"
 pubDate: "July 13 2021"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--5rRax6AX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6zcfwcqa1ekb2hsz1v8j.png"
 ---
 
 > NOTE: This blog post assumes that you are at-least familiar with setting up firebase SDK

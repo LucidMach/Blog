@@ -3,7 +3,7 @@ title: "Learning Web Dev On The Web | A RoadMap"
 description: "the most important step for any machine learning project"
 pubDate: "June 8 2021"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "/meta.png"
 ---
 
 As a sequel to my first blog, [learning web dev on the web](https://dev.to/lucidmach/learning-web-dev-on-the-web-ifp) which had info on some of the most epic **youtube channels** from where you can _learn **web dev** for **free**_

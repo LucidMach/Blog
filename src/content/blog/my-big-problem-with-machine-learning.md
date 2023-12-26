@@ -1,9 +1,9 @@
 ---
-title: 'My Big Problem with "Machine Learning"'
+title: 'My Story with "Machine Learning"'
 description: "why machine learning is tough to get into"
 pubDate: "June 12 2023"
 type: "ML"
-heroImage: "/problem-with-ml.png"
+heroImage: "/ML.png"
 ---
 
 > this is just a testing blog post, just to make sure all "md" rendering has been implemented
@@ -18,7 +18,7 @@ most resources out there were either
 1. too **theory intense** (Andrew NG's Coursera Course is an example)
 2. too much **framework** (tensorflow and sklearn API abstracted)
 
-searching for _[ML algorithm] from scratch_ **usually got you across that hurdle**, ton of amazing resources out there on youtube by the way
+searching for _implementing [insert ML model/algorithm name] from scratch_ **got me across that hurdle**, ton of amazing resources out there on youtube by the way
 
 # What does ML Refer To?
 

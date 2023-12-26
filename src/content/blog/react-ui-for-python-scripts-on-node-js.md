@@ -3,7 +3,7 @@ title: "React UI for Python Scripts on Node.JS"
 description: "the most important step for any machine learning project"
 pubDate: "August 5 2021"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--i-NU5Fe7--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m5u8lu1494f8x5mq4ty7.png"
 ---
 
 If you are familiar with **node.js**, you know that it is

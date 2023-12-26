@@ -3,7 +3,7 @@ title: "Essential FireStore | CheatSheet/Tutorial"
 description: "the most important step for any machine learning project"
 pubDate: "June 20 2021"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--GWNJsafK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/976qjl5ggt4qvrx11zfr.png"
 ---
 
 In the [prequel to this blog](https://dev.to/lucidmach/the-battle-of-the-nosql-databases-when-to-use-what-1e2o), we took a look at the concept of databases (noSQL to be more specific).

@@ -3,7 +3,7 @@ title: "How I Built a Meme Bot for Instagram"
 description: "the most important step for any machine learning project"
 pubDate: "July 17 2022"
 type: "Dev"
-heroImage: "/data-pre-processing/dataprepro.png"
+heroImage: "https://res.cloudinary.com/practicaldev/image/fetch/s--Uk7tuMu8--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g18b2sintsiami63n4wo.png"
 ---
 
 > **build** your own instagram bot from **scratch** (or) **set** one **up** in like **10s** for free
