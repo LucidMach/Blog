@@ -22,13 +22,9 @@ searching for _implementing [insert ML model/algorithm name] from scratch_ **got
 
 # What does ML Refer To?
 
-The big problem started when as I got decent with ML (Machine Learning).
-
 let me first define ML to make more sense
 
 > the ~science~ math of taking in real world info, converting it into numbers and then ~finding~ learning a pattern out of it
-
-my problem wasn't with ML, but it with what people refered to as ML. **i didn't like** what people refered to **when they said ML**, more of what they **didn't refer to**
 
 <center>
 
@@ -36,7 +32,7 @@ my problem wasn't with ML, but it with what people refered to as ML. **i didn't 
 
 </center>
 
-i didn't like that when people said machine learning, **they meant the cresent moon**... all the cool fun stuff hid under the `DEEP LEARNING` tag
+when people say machine learning, **they almost always mean the cresent moon**... all the cool fun stuff hid under the `DEEP LEARNING` tag
 
 1. ANNs
 2. CNNs
@@ -53,4 +49,4 @@ and more... so here's my unofficial tags for everything in ML
 
 in this blog i shall refer to everything in the **cresent moon** not as machine learning but as **shallow learning**
 
-i don't like shallow learning... even though _**shallow learning** could be used to solve certain problems with greater efficiency and **lower computation**_
+keep in mind shallow learning... is really cool cuz _**shallow learning** could be used to learn **certain patterns** with greater efficiency and muchhhhhhh **lower computation**_
