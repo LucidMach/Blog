@@ -2,6 +2,7 @@
 title: 'The Fundamental "Building Block" of Machine Learning'
 description: "the data structure that powers machine learning"
 pubDate: "June 19 2023"
+type: "ML"
 heroImage: "/tensors/hero.png"
 ---
 

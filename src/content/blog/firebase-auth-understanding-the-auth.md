@@ -2,6 +2,7 @@
 title: "Firebase Auth | Understanding The Auth"
 description: "the most important step for any machine learning project"
 pubDate: "July 13 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

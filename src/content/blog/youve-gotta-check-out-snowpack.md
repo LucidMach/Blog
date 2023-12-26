@@ -2,6 +2,7 @@
 title: "You've Gotta Check Out SnowPack..."
 description: "the most important step for any machine learning project"
 pubDate: "January 1 2022"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

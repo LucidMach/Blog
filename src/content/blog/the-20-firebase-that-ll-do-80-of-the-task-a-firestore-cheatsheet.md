@@ -2,6 +2,7 @@
 title: "Essential FireStore | CheatSheet/Tutorial"
 description: "the most important step for any machine learning project"
 pubDate: "June 20 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

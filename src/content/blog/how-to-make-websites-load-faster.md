@@ -2,6 +2,7 @@
 title: "The 20% Optimization That Improves 80% Web Performance"
 description: "the most important step for any machine learning project"
 pubDate: "July 27 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

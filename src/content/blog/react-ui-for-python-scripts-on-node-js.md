@@ -2,6 +2,7 @@
 title: "React UI for Python Scripts on Node.JS"
 description: "the most important step for any machine learning project"
 pubDate: "August 5 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

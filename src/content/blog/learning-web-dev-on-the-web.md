@@ -2,6 +2,7 @@
 title: "Learning Web Dev On The Web"
 description: "the most important step for any machine learning project"
 pubDate: "May 31 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

@@ -2,6 +2,7 @@
 title: 'My Big Problem with "Machine Learning"'
 description: "why machine learning is tough to get into"
 pubDate: "June 12 2023"
+type: "ML"
 heroImage: "/problem-with-ml.png"
 ---
 

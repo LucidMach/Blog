@@ -2,6 +2,7 @@
 title: "Learning Web Dev On The Web | A RoadMap"
 description: "the most important step for any machine learning project"
 pubDate: "June 8 2021"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 

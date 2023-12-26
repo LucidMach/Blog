@@ -2,6 +2,7 @@
 title: "The Battle of The NoSQL Databases | When To Use What"
 description: "why machine learning is tough to get into"
 pubDate: "June 19 2021"
+type: "Dev"
 heroImage: "/problem-with-ml.png"
 ---
 

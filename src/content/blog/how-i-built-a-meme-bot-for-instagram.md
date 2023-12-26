@@ -2,6 +2,7 @@
 title: "How I Built a Meme Bot for Instagram"
 description: "the most important step for any machine learning project"
 pubDate: "July 17 2022"
+type: "Dev"
 heroImage: "/data-pre-processing/dataprepro.png"
 ---
 
