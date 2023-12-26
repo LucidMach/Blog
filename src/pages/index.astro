@@ -8,91 +8,88 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (await getCollection("blog")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="w-full">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="font-assistant w-full">
-		<br />
-		<br />
-		<Header title={SITE_TITLE} />
-		<br />
-		<br />
-		<main class="w-full flex flex-col">
-			<br />
-			<h1 class="text-3xl font-virgil">What's the Name?</h1>
-			<br />
-			<!-- <p class="font-virgil text-center self-center opacity-50">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="font-assistant w-full">
+    <br />
+    <br />
+    <Header title={SITE_TITLE} />
+    <br />
+    <br />
+    <main class="w-full flex flex-col">
+      <br />
+      <h1 class="text-3xl font-virgil">What's the Name?</h1>
+      <br />
+      <!-- <p class="font-virgil text-center self-center opacity-50">
 				"the faster you can do something efficiently, the better you are
 				at it"
 			</p> -->
-			<p class="font-virgil text-center self-center opacity-50">
-				"taking ideas from 0 to concepts at mach speed"
-			</p>
-			<br />
-			<img class="w-1/2 self-center" src="/explainer.png" alt="" />
-			<br />
-			<br />
-			<br />
-			<h1 class="text-3xl font-virgil">The Blog Posts</h1>
-			<br />
-			<ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-				{
-					posts.slice(-3).map((post, i) => (
-						<li>
-							<a
-								class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
-								href={`/blog/${post.slug}/`}
-							>
-								<p class="max-w-[240px] md:max-w-xl">
-									{post.data.title}
-								</p>
+      <p class="font-virgil text-center self-center opacity-50">
+        "taking ideas from 0 to concepts at mach speed"
+      </p>
+      <br />
+      <img class="w-1/2 self-center" src="/explainer.png" alt="" />
+      <br />
+      <br />
+      <br />
+      <h1 class="text-3xl font-virgil">The Blog Posts</h1>
+      <br />
+      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
+        {
+          posts.slice(-3).map((post, i) => (
+            <li>
+              <a
+                class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
+                href={`/blog/${post.slug}/`}
+              >
+                <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
 
-								<FormattedDate date={post.data.pubDate} />
-							</a>
-						</li>
-					))
-				}
-			</ul>
-			<a
-				class="text-right hover:text-red-400 hover:cursor-pointer"
-				href="/blog">and more...</a
-			>
-			<br />
-			<br />
-			<br />
-			<h1 class="text-3xl font-virgil">Who Am I?</h1>
-			<br />
+                <FormattedDate date={post.data.pubDate} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="text-left hover:text-red-400 hover:cursor-pointer" href="/blog"
+        >and more...</a
+      >
+      <br />
+      <br />
+      <br />
+      <h1 class="text-3xl font-virgil">Who Am I?</h1>
+      <br />
 
-			<section class="font-virgil prose prose-invert">
-				👋 hieeeeeeee!
-				<br />
-				my name is <a
-					class="hover:cursor-pointer text-red-400"
-					href="https://lucidmach.tech">suraj nukala</a
-				>
-				<img class="rounded-lg" src="/LucidMach.jpg" alt="" />
-				i constantly teach myself "to build stuff that i think will blow
-				my mind" and on the internet i call myself the
-				<a
-					class="hover:cursor-pointer text-red-400"
-					href="https://lucidmach.tech"
-					>lucidmach
-				</a>
-				<br />
-				<br />
-				this time i decided to blog out my learnings as i learn and build
-				some really cool stuff along the way
-				<br />
-				<br />
-				pretty sure you know the rest 😉
-			</section>
-		</main>
-		<Footer />
-	</body>
+      <section class="font-virgil prose prose-invert">
+        👋 hieeeeeeee!
+        <br />
+        my name is <a
+          class="hover:cursor-pointer text-red-400"
+          href="https://lucidmach.tech">suraj nukala</a
+        >
+        <img class="rounded-lg" src="/LucidMach.jpg" alt="" />
+        i constantly teach myself "to build stuff that i think will blow my mind"
+        and on the internet i call myself the
+        <a
+          class="hover:cursor-pointer text-red-400"
+          href="https://lucidmach.tech"
+          >lucidmach
+        </a>
+        <br />
+        <br />
+        this time i decided to blog out my learnings as i learn and build some really
+        cool stuff along the way
+        <br />
+        <br />
+        pretty sure you know the rest 😉
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
