@@ -5,13 +5,13 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    type: z.string(),
+    type: z.enum(["Dev", "ML"]),
     // Transform string to Date object
     pubDate: z
       .string()
       .or(z.date())
       .transform((val) => new Date(val)),
-    heroImage: z.string().optional(),
+    heroImage: z.string().default("/meta.png"),
   }),
 });
 
