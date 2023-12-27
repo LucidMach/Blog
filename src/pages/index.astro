@@ -43,7 +43,7 @@ const posts = (await getCollection("blog")).sort(
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
         {
-          posts.slice(-3).map((post, i) => (
+          posts.slice(-5).map((post, i) => (
             <li>
               <a
                 class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
@@ -58,7 +58,7 @@ const posts = (await getCollection("blog")).sort(
         }
       </ul>
       <a class="text-left hover:text-red-400 hover:cursor-pointer" href="/blog"
-        >and more...</a
+        >view more...</a
       >
       <br />
       <br />

@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import BlogCard from "../../components/BlogCard.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -31,23 +32,7 @@ const posts = (await getCollection("blog")).sort(
       <h3 class="text-xl font-virgil text-red-400">ML</h3>
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        {
-          posts.map((post) => (
-			post.data.type === "ML"?
-			<li>
-              <a
-                class="bg-transparent flex-col hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full"
-                href={`/blog/${post.slug}/`}
-              >
-         <img src={post.data.heroImage} alt="hero"> 
-         <div class="flex justify-between">
-                <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
-                <FormattedDate date={post.data.pubDate} />
-          </div>
-              </a>
-            </li>:<></>
-          ))
-        }
+        { posts.map((post) => (post.data.type === "ML"? <BlogCard post={post}/>:<></>)) }
       </ul>
       <br />
       <h3 class="text-xl font-virgil text-red-400">Web Dev</h3>
@@ -56,24 +41,7 @@ const posts = (await getCollection("blog")).sort(
 	  </p>
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        {
-          posts.map((post) => (
-			post.data.type === "Dev"?
-            <li>
-              <a
-                class="bg-transparent flex-col hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full"
-                href={`/blog/${post.slug}/`}
-              >
-         <img src={post.data.heroImage} alt="hero"> 
-         <div class="flex justify-between">
-                <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
-
-                <FormattedDate date={post.data.pubDate} />
-                </div>
-              </a>
-            </li>:<></>
-          ))
-        }
+        { posts.map((post) => (post.data.type === "Dev"? <BlogCard post={post}/>:<></>)) }
       </ul>
       <br />
       <br />
