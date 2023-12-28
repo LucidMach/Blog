@@ -1,7 +1,7 @@
 ---
 title: 'Appreciating the "Learning Problem"'
 description: "AI is all hype, but AI doesn't really know what it is doing and hence AI deserves appriciation"
-pubDate: "Dec 27 2023"
+pubDate: "Dec 28 2023"
 type: "ML"
 heroImage: "/appr-ml/hero.png"
 ---
@@ -38,7 +38,7 @@ the point here is that whatever your guess was...
 
 basically **you had no idea what you we're doing** and you find a pattern and make a (educated) guess
 
-just like this AI and guy here
+just like AI and this guy here
 
 <center>
 
@@ -86,7 +86,7 @@ long answer to solve any **learning problem** (ML, DL, RL)👇
    > eg: Perceptron Learning Algorithm, Backpropagation Algorithm, etc
 4. **hypothesis set:** a set of all possible models that can find a solution
    > eg: Perceptron, Neural Networks, etc
-5. **final hypothesis solution:** a found pattern that seems to
+5. **final hypothesis solution:** a pattern with the heighest accuracy
 
 while this **IS** the long answer to solve any **learning problem**
 
