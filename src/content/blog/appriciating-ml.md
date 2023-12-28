@@ -36,8 +36,6 @@ the point here is that whatever your guess was...
 2. you had no idea what the co-relation between the tiles was
 3. you had no idea what 0 or 1 represents
 
-basically **you had no idea what you we're doing** and you find a pattern and make a (educated) guess
-
 just like AI and this guy here
 
 <center>
