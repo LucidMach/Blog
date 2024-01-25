@@ -43,6 +43,12 @@ const posts = (await getCollection("blog")).sort(
         { posts.map((post) => (post.data.type === "Dev"? <BlogCard post={post}/>:<></>)) }
       </ul>
       <br />
+      <h3 class="text-xl font-virgil text-red-400">Misc</h3>
+      <br />
+      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
+        { posts.map((post) => (post.data.type === "Misc"? <BlogCard post={post}/>:<></>)) }
+      </ul>
+      <br />
       <br />
       <br />
       <h1 class="text-3xl font-virgil">Who Am I?</h1>

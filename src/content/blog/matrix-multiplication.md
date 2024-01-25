@@ -2,7 +2,7 @@
 title: "Why is Matrix Multiplication Done the Way it is Done"
 description: "the intution behind performing a matrix multiplication operation"
 pubDate: "July 20 2023"
-type: "ML"
+type: "Misc"
 heroImage: "/matrix-multiplication/hero.png"
 ---
 
