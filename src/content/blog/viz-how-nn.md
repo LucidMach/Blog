@@ -97,7 +97,7 @@ this way, neural networks can learn anything by **approximately** tracing the ma
 
 ## Inspiration for this Blog Post
 
-a 40 sec visualization showing a neural network learn a mathematical function
+a [40 sec visualization showing a neural network learn a mathematical function](https://youtu.be/Ln8pV1AXAgQ)
 
 <center>
 
