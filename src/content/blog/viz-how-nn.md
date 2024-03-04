@@ -10,7 +10,7 @@ so... neural networks are now at the core of every cool new AI product from "viz
 
 this blog post is intended to be a breakdown on the **how**, which involves diving into understanding how neural networks learn. Most "How do Neural Network Work" resourses online focus on explaining backpropagation, understandable because backprop is pretty complication to get your head wrapped around
 
-# So How do Neural Networks Learn
+## So How do Neural Networks Learn
 
 there are 3 pieces you'll need to understand to understand how neural networks learn
 
@@ -19,7 +19,7 @@ there are 3 pieces you'll need to understand to understand how neural networks l
 
 and obviously what exactly are **neurons** in nueral networks
 
-## Neurons
+### Neurons
 
 y'all prolly already know this pretty well so i'm going to skim through ASAP
 
@@ -47,7 +47,7 @@ a neuron is a mathematical model designed to make decisions in a very similar fa
 
 > there's a lot of cool things to discuss when it comes to the intution behind activation functions, a separate blog post on it maybe....
 
-## Univeral Approximation Theorem
+### Univeral Approximation Theorem
 
 visually seeing the proof of this statement really helps solidify the whole concept of neural networks:
 
@@ -95,8 +95,12 @@ w11 = -1 inverts the graphs from neuron1 and adds the graph of neuron2 based on 
 
 this way, neural networks can learn anything by **approximately** tracing the mathematical representation of what we're trying to teach the network...
 
+## Inspiration for this Blog Post
+
+a 40 sec visualization showing a neural network learn a mathematical function
+
 <center>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ln8pV1AXAgQ?si=IW8nKLiNNn9055hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Ln8pV1AXAgQ?si=IW8nKLiNNn9055hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </center>
