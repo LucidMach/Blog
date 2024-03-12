@@ -49,7 +49,19 @@ a neuron is a mathematical model designed to make decisions in a very similar fa
 
 ### Univeral Approximation Theorem
 
-visually seeing the proof of this statement really helps solidify the whole concept of neural networks:
+before we look at UAT, we've gotta understand what's happening when neural networks learn...
+
+you prolly know really well that neural networks are great at learning patterns, and patterns when described mathematically are functions
+
+<center>
+
+![UAF GIF](/viz-how-nn/UAF.gif)
+
+[Credits: Hugo Mougard on YouTube](https://youtu.be/Ln8pV1AXAgQ)
+
+</center>
+
+so in essense when neural networks learn they're slowly trying to approximate functions
 
 > a neural network with at least one hidden layer of a sufficient number of neurons, and a non-linear activation function can approximate any continuous function to an arbitrary level of accuracy
 
@@ -94,13 +106,3 @@ w11 = -1 inverts the graphs from neuron1 and adds the graph of neuron2 based on 
 </details>
 
 this way, neural networks can learn anything by **approximately** tracing the mathematical representation of what we're trying to teach the network...
-
-## Inspiration for this Blog Post
-
-a [40 sec visualization showing a neural network learn a mathematical function](https://youtu.be/Ln8pV1AXAgQ)
-
-<center>
-
-<iframe src="https://www.youtube.com/embed/Ln8pV1AXAgQ?si=IW8nKLiNNn9055hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-</center>
