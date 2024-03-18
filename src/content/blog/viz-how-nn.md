@@ -8,7 +8,7 @@ heroImage: "/viz-how-nn/hero.png"
 
 so... neural networks are now at the core of every cool new AI product from "vizcom" to "stable diffusion" to "chatgpt" to "sora" to "gemini" and the reason for that is **Neural Networks can Learn (almost) Anything**
 
-this blog post is intended to be a breakdown on the **how**, which involves diving into understanding how neural networks learn. Most "How do Neural Network Work" resourses online focus on explaining backpropagation, understandable because backprop is pretty complication to get your head wrapped around
+this blog post is intended to be a breakdown on the **how**, which involves diving into understanding how neurons form networks to learn. Most "How do Neural Network Work" resourses online focus on explaining backpropagation, understandable because backprop is pretty complication to get your head wrapped around
 
 ## So How do Neural Networks Learn
 
@@ -49,9 +49,28 @@ a neuron is a mathematical model designed to make decisions in a very similar fa
 
 ### Univeral Approximation Theorem
 
-before we look at UAT, we've gotta understand what's happening when neural networks learn...
+before we look at UAT, we've gotta understand what's happens when 2 neuron form a network, and how they learn...
 
-you prolly know really well that neural networks are great at learning patterns, and patterns when described mathematically are functions
+<center>
+
+![neuron](/viz-how-nn/nn.png)
+a neuron (a visual representation)
+
+</center>
+
+this is a neuron as we know it, but actually it is better to look at it as the graph of the function it represents
+
+<center>
+
+![neuron](/viz-how-nn/formula.png)
+a neuron (mathematical representation)
+
+![neuron](/viz-how-nn/nn-graph.png)
+a neuron (as function output as a graph representation)
+
+</center>
+
+you prolly know really well that neural networks are great at learning patterns, and how they do that is, by tweaking each function(neuron) so that the graph output traces the pattern to be learnt
 
 <center>
 
@@ -64,6 +83,8 @@ you prolly know really well that neural networks are great at learning patterns,
 so in essense when neural networks learn they're slowly trying to approximate functions
 
 > a neural network with at least one hidden layer of a sufficient number of neurons, and a non-linear activation function can approximate any continuous function to an arbitrary level of accuracy
+
+## What Happens When 2 Neurons form a Network
 
 assume 2 neurons with a step activation function
 
