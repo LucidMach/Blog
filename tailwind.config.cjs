@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        comfortaa: ["Comfortaa", "sans-serif"],
         virgil: ["Virgil", "sans-serif"],
         assistant: ["Assistant", "sans-serif"],
       },
