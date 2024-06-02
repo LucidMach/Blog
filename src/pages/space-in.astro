@@ -1,0 +1,86 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="w-full">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="w-full text-white font-virgil flex flex-col justify-center items-center"
+  >
+    <div class="w-full flex justify-end absolute top-0 left-0 z-10">
+      <a href="/">
+        <img class="w-16 h-16 rounded-full m-4" src="/brain.png" alt="" />
+      </a>
+    </div>
+    <div class="w-full h-screen flex flex-col justify-center items-center">
+      <img class="w-48 h-48" src="/aida.png" alt="aida" />
+      <br />
+      <h1
+        class="tracking-[0.25rem] md:tracking-[0.5rem] font-bold text-sm md:text-base"
+      >
+        The Philosophy of <span class="text-white">"Space In"</span>
+      </h1>
+      <br />
+      <div class="flex flex-col gap-4 absolute bottom-48">
+        <a
+          href="#know-more"
+          class="hover:bg-white hover:text-black border-2 rounded-full px-3 text-center"
+          >Know More</a
+        >
+        <a
+          href="#share"
+          class="hover:bg-black text-black bg-white hover:text-white border-2 rounded-full px-3 text-center"
+          >Share</a
+        >
+      </div>
+    </div>
+    <div
+      id="know-more"
+      class="w-screen h-screen font-virgil flex flex-col justify-evenly items-center bg-cover bg-blend-soft-light bg-[url(https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMzY4OTl8MHwxfHNlYXJjaHw5fHxuYXR1cmV8ZW58MHx8fHwxNzE3MzYyNTM1fDA&ixlib=rb-4.0.3&q=80&w=1080)]"
+    >
+      <div class="bg-[#00000000] flex flex-col items-center gap-10">
+        <h1 class="text-xs md:text-base">
+          in a life filled with constant hustle...
+        </h1>
+        <h1 class="text-center md:text-2xl">
+          it's really important to take a step back... and <span
+            class="text-red-400">間</span
+          >
+          into the life surrounding us
+        </h1>
+      </div>
+      <div class="flex flex-row gap-2 p-4 m-4 items-center rounded-lg max-w-lg">
+        <div class="flex flex-col items-center gap-2">
+          <h1 class="text-3xl md:text-5xl">間</h1>
+          <h1 class="flex flex-row gap-2 text-gray-400 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-white"
+              ><path
+                d="M6 7l8-5v20l-8-5v-10zm-6 10h4v-10h-4v10zm20.264-13.264l-1.497 1.497c1.847 1.783 2.983 4.157 2.983 6.767 0 2.61-1.135 4.984-2.983 6.766l1.498 1.498c2.305-2.153 3.735-5.055 3.735-8.264s-1.43-6.11-3.736-8.264zm-.489 8.264c0-2.084-.915-3.967-2.384-5.391l-1.503 1.503c1.011 1.049 1.637 2.401 1.637 3.888 0 1.488-.623 2.841-1.634 3.891l1.503 1.503c1.468-1.424 2.381-3.309 2.381-5.394z"
+              ></path></svg
+            >
+            aida
+          </h1>
+        </div>
+        <div class="text-5xl md:text-7xl font-comfortaa">|</div>
+        <div>
+          <h1 class="text-gray-400 text-sm md:text-base">
+            <span class="text-white">meaning</span> space in, appreciate, cherish,
+            relish, live, delight, adore, admire, bask, savor, euphoria
+          </h1>
+        </div>
+        <br />
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
