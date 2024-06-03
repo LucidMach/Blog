@@ -1,7 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 ---
 
 <!DOCTYPE html>
@@ -79,6 +79,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
           </h1>
         </div>
         <br />
+      </div>
+    </div>
+    <div
+      id="share"
+      class="w-screen h-screen font-virgil flex flex-col justify-evenly items-center bg-black"
+    >
+      <div
+        class="max-w-md p-4 m-4 rounded-lg bg-[#1a1a1a] text-center flex flex-col gap-8"
+      >
+        <h1 class="text-2xl">Spread the "間"</h1>
+        <img class="rounded-lg" src="/aida-cap.png" alt="cap render" />
+        <a
+          href="/space-in/order"
+          class="bg-white text-black rounded-lg hover:bg-[#1a1a1a] hover:cursor-pointer hover:text-white border-2"
+          >get the cap [FREE]</a
+        >
       </div>
     </div>
     <Footer />
