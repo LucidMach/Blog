@@ -5,49 +5,66 @@ import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
 const { title, description, pubDate, heroImage } = Astro.props;
+
+// astro db stuff nigga
+import { db, BlogStats, eq } from "astro:db";
+
+// await db.insert(BlogStats).values({ title, views: 0 });
+
+const blogstats = await db
+  .select()
+  .from(BlogStats)
+  .where(eq(BlogStats.title, title));
+
+blogstats.length > 0
+  ? await db
+      .update(BlogStats)
+      .set({ views: blogstats[0].views + 1 })
+      .where(eq(BlogStats.title, title))
+  : await db.insert(BlogStats).values({ title, views: 1 });
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead
-			title={title}
-			description={description}
-			image={"https://ziro2mach.com" + heroImage}
-		/>
-	</head>
-	<body>
-		<Header />
-		<main class="flex flex-col justify-center items-center">
-			<br />
-			<br />
-			<h1 class="text-3xl font-bold text-center mx-4">
-				{title}
-			</h1>
-			<h4 class="text-sm text-center opacity-90">
-				🗓️ <FormattedDate date={pubDate} />
-			</h4>
-			<br />
-			<article
-				class="prose prose-invert prose-a:text-red-400 prose-a:cursor-pointer prose-a:no-underline"
-			>
-				<slot />
-				<br />
-				<blockquote>
-					<span class="font-virgil mt-10 text-xl">
-						untill next time !️ ✌</span
-					>
-					<br />
-					<br />
-					or you could spot me in the wild 🤭 i mean
-					<a href="https://instagram.com/lucidmach">instagram</a>,
-					<a href="https://twitter.com/lucidmach">twitter</a>,
-					<a href="https://www.linkedin.com/in/lucidmach/">linkedin</a
-					> and maybe even
-					<a href="https://www.youtube.com/@lucidmach">youtube</a>
-					where i excalidraw those diagrams
-				</blockquote>
-			</article>
-			<Footer />
-		</main>
-	</body>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      image={"https://ziro2mach.com" + heroImage}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="flex flex-col justify-center items-center">
+      <br />
+      <br />
+      <h1 class="text-3xl font-bold text-center mx-4">
+        {title}
+      </h1>
+      <h4 class="text-sm text-center opacity-90">
+        🗓️ <FormattedDate date={pubDate} />
+        <br />
+        👀 : {blogstats.length > 0 ? blogstats[0].views : 1}
+      </h4>
+      <br />
+      <article
+        class="prose prose-invert prose-a:text-red-400 prose-a:cursor-pointer prose-a:no-underline"
+      >
+        <slot />
+        <br />
+        <blockquote>
+          <span class="font-virgil mt-10 text-xl"> untill next time !️ ✌</span>
+          <br />
+          <br />
+          or you could spot me in the wild 🤭 i mean
+          <a href="https://instagram.com/lucidmach">instagram</a>,
+          <a href="https://twitter.com/lucidmach">twitter</a>,
+          <a href="https://www.linkedin.com/in/lucidmach/">linkedin</a> and maybe
+          even
+          <a href="https://www.youtube.com/@lucidmach">youtube</a>
+          where i excalidraw those diagrams
+        </blockquote>
+      </article>
+      <Footer />
+    </main>
+  </body>
 </html>
