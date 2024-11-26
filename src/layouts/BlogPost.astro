@@ -13,7 +13,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
     <BaseHead
       title={title}
       description={description}
-      image={"https://ziro2mach.com" + heroImage}
+      image={"https://lucidmach.com" + heroImage}
     />
   </head>
   <body>
@@ -25,6 +25,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
         {title}
       </h1>
       <h4 class="text-sm text-center opacity-90">
+        <br />
         🗓️ <FormattedDate date={pubDate} />
         <br />
         <ViewCounter title={title} client:load />

@@ -29,7 +29,7 @@ const ViewCounter: React.FC<ViewCounterProps> = ({ title }) => {
     fetchViews();
   }, [title]);
 
-  return <span>👀 : {views}</span>;
+  return <span>no of reads 👀 : {views ? views : "loading..."}</span>;
 };
 
 export default ViewCounter;

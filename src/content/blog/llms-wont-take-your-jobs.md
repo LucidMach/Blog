@@ -123,7 +123,7 @@ now that we have established that current state of the art AI - LLMs like chatGP
 
 Humans possess intelligence across 21 dimensions [[Fun Fact: humans have 21 not 5 senses]](https://www.sensorytrust.org.uk/blog/how-many-senses-do-we-have).
 
-Robots typically demonstrate intelligence in four dimensions [visual, auditory, textual and motor-encoding].
+Robots will max demonstrate intelligence in four dimensions [visual, auditory, textual and motor-encoding].
 
 LLMs have only recently expanded to two dimensions [image and textual].
 

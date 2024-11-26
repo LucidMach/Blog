@@ -7,12 +7,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
+import R3F from "../components/R3F.tsx";
+
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="w-full">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -24,21 +26,7 @@ const posts = (await getCollection("blog")).sort(
     <br />
     <br />
     <main class="w-full flex flex-col">
-      <br />
-      <h1 class="text-3xl font-virgil">What's the Name?</h1>
-      <br />
-      <!-- <p class="font-virgil text-center self-center opacity-50">
-				"the faster you can do something efficiently, the better you are
-				at it"
-			</p> -->
-      <p class="font-virgil text-center self-center opacity-50">
-        "taking ideas from 0 to concepts at mach speed"
-      </p>
-      <br />
-      <img class="w-1/2 self-center" src="/explainer.png" alt="" />
-      <br />
-      <br />
-      <br />
+      <R3F client:visible />
       <h1 class="text-3xl font-virgil">The Blog Posts</h1>
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
