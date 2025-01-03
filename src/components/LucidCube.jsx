@@ -4,7 +4,7 @@ const LucidCube = (props) => {
   const { nodes, materials } = useGLTF("/lucidcube.glb");
   return (
     <group {...props} dispose={null}>
-      <group position={[0, -0.008, -0.015]} rotation={[0, Math.PI / 2, 0]}>
+      <group position={[0, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
         <mesh
           castShadow
           receiveShadow
