@@ -3,7 +3,7 @@ title: 'How we built the app that will make you more "Productive"'
 description: "a UX research case study on what is productivity; how to become more productive and how to make an app that can make anyone more productive"
 pubDate: "Jan 1 2025"
 type: "Misc"
-heroImage: "/appr-ml/hero.png"
+heroImage: "/public/how-we-built-the-app-what-will-make-you-more-productive/hero.png"
 ---
 
 all of this began when i started my masters degree
@@ -16,7 +16,7 @@ i wanted to work on a problem that hasn't been solved before despite having had 
 
 ## Search for a Problem
 
-i was doing a masters degree in one of the most rigourous universities in australia... famous for it's intense assignment load on it's students
+i was doing a masters degree in one of the most rigourous universities in australia... imfamous for it's intense assignment load on it's students
 
 while i breezing my way through the course... not all my peers were
 
@@ -30,7 +30,7 @@ if i wanted to get something done... i'd work on it untill it was over [i had di
 
 </center>
 
-i spoke to some people and i kinda realised these some people wanted a proper todo app... they'd use pen and paper cuz most apps they used lacked some feature or the other
+i spoke to some people and i kinda realised maybe people wanted a proper todo app... they'd use pen and paper cuz most apps they used lacked some feature or the other
 
 but the problem with pen and paper was people would forget that they maintained a todo list after a while/gap
 
@@ -70,7 +70,7 @@ about this time was when i got into a student team on campus... and the team lea
 
 <center>
 
-![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRW6n0N5NVFJhglILQYRF9hswb8iQ4lOw3cF2Qy7pH9aRPLZEnGW9cUbWYhyqTko_VJL7D8zQ)
+![everywhere, everything all at once](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRW6n0N5NVFJhglILQYRF9hswb8iQ4lOw3cF2Qy7pH9aRPLZEnGW9cUbWYhyqTko_VJL7D8zQ)
 
 </center>
 
@@ -91,3 +91,128 @@ this concept is also something that Ali Abdaal talks in his book [Feel Good Prod
 ![feel good productivity](<https://cdn.prod.website-files.com/64886b96bd8c1f835e194c5f/64aff3d459a44668e410ca47_fgp-book-cover-final%20(1).png>)
 
 </center>
+
+## Arc#3 - The Search Within
+
+i really wanted to figure out what made productive people "productive"... so i started watching videos on Elon Musk, Steve Jobs, Jensen Huang and other celebrities known to be super productive
+
+and then i took it a step down and started looking at the most productive people i have/had worked with - Varun Mayya, Sarat Angajala, Rohan Kalanje... and then i did the reverse... looking at people who couldn't get much done no matter how much time you give them
+
+and then i looked in between - particularly this one super super super close friend of mine, who was lazy for like 99.99% of the time but the 0.01% of time where she was not lazy - she was super super super intense productive
+
+finally i started looking at myself, for the longest time... i hadn't really done anything, i'd just go to school, listen to classes, come back home, do my homework, watch a movie and fall asleep
+
+that was how my life looked like for the longest time... untill one day in the middle of COVID-19, i watched this one movie that made me question my exisitance and redefined the way i looked at life
+
+<center>
+
+![21](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-xuI756F-rGwSAD9loXFvl8vJnNfyuIIJqDOxCvrl5jfVTS0fFdkj4BnTCk2I2EzppCkiuA)
+
+</center>
+
+the movie starts with this phrase
+
+> The Robinson is going to go to someone who dazzles... somebody who just jumps off the page. You need to really explain to us why you're special... what life experience separates you from the rest. what can you tell me Ben that's going to dazzle me
+
+and ends with this phrase
+
+> So in my senior year of collage, i joined this team and i learnt this new skill. I went to Vegas 17 times to use it.i made 100s of 1000s of dollars counting cards. and then i had it all stolen from me. TWICE. How's that for a life experience professor... did I dazzle you?
+
+<center>
+
+![qoute from 21](/public/how-we-built-the-app-what-will-make-you-more-productive/life-experience.png)
+
+</center>
+
+i took this movie a lil more seriosly than i should have and i made a list of everything even remotely dazzling i had ever done and i didn't like the length of that list
+
+i started conciously trying to grab every oppurtunity that came my way to increase the size of that list of dazzling_things...
+
+1. i went to tokyo as part of a sem exchange
+2. i asked that girl i liked out
+3. i ended up getting into a relationship [never thought that would be even remotely possible]
+4. i ended up joining a startup my seniors we're building
+5. i gave everything up to become an concept/automobile designer
+6. i ended up meeting and working with one of my heros - Varun Mayya
+7. i gave everything up to pursue a building better AI/learning algorithms
+
+basically i wanted to "live a life, i'd remember" - G.O.A.T [Avicii] or like yuji in jujutsu kaisen said
+
+<center>
+
+![itadori yuji](https://i.pinimg.com/564x/82/b1/c2/82b1c2d57bf4556dd09c206c862beacd.jpg)
+
+</center>
+
+## Arc#4 - Productivity Starts With...
+
+having had ample time to reflect and observe productive people and unproductive people... i began to start listing traits that make people more productive
+
+1. had thier life on a calander [works because once it's on your calander... you get a reminder to do it and hence the task stays on top of your head]
+2. white boards / sticky notes [works because you'll see it very very frequently]
+3. had a solid idea on what they wanted to do, almost always were on a backlog of stuff they wanted to do
+
+and i started thinking about which trait should i build something for, i didn't really have much incentive to build a calander app... cuz i didn't know how i'd be able to build a better calander system
+
+the second one... Rohan recommended to build something for the AR/VR future but i didn't see much impact possibility
+
+the third one really intrigued me, because for the long time i didn't know what i wanted to do on a day to day basis as well
+
+i started looking at productivity from this angle did a bunch of research on this
+
+and i figured you start knowing what you want to do [and in-turn you become more productive once you start logging/tracking your life]
+
+## Gamifying your Life
+
+there is this whole thing called "Journaling" which pretty much does this exact same thing... you start logging and tracking your life / ideas / feelings every day
+
+but there is one another crucial aspect for "Productivity" when compared to "LifeTracking/Journaling" and that is **deciding what you want to do** and then _getting it done_
+
+but also my whole approach works for stuff that you want to do... what about those things that you have to do [due to the situations that you are in]... not everything is something that be dazzle-worthy
+
+this is where all that book reading became helpful... Ali Abdaal in his book **Feel Good Productivity** pushed this idea of calling the major task you wanted/have to do "an adventure"
+
+ideally each day would have max 1 or 2 adventures...
+
+while i'd recommend having only 1 adventure and leaving the rest of the day for fun stuff you want to do
+
+with all this insight we started to build an app
+
+i had very recently gotten close with this kid named Taiyeb, who on hearing the whole idea told me it sounded like an chrome extension he used called momentum, so we looked at it and saw that it did the one adventure a day thing... took some design ideas from momentum and started building
+
+## The Final Product [or should i say the Minimum Viable Product]
+
+so the idea was simple, you'd set 2 times in a day...
+
+1. one in the morning [for a prompt to make you think about what you "want" to do for the day]
+2. one at night [for a reflection time / classic journal input]
+
+<center>
+
+![AoTD - Settings](/public/how-we-built-the-app-what-will-make-you-more-productive/settingPage.png)
+
+</center>
+
+and at the respective times of the day you'd get a notification to either plan/reflect on your day
+
+<center>
+
+![AoTD - Prompts](/public/how-we-built-the-app-what-will-make-you-more-productive/wallpapers.png)
+
+</center>
+
+## But Why Should I use your App, if I can just journal and ask myself what I want to do every day?
+
+well, that sounds perfect... i'd definetly never use the app myself... pen and paper are soooo much more effective and just 🤌
+
+but the reason i do use the app here is... this will **down the line** become a second brain - a literal AI assistant that knows what i've wanted to do, how likely i am to do a task and all of my best life experiences/memories
+
+and the best part? it isn't an AI that will assist in keeping you product but **all data doesn't leave your device**
+
+how???
+
+presenting IPFS - the same technology that powers torrent applications P2P file/information transportation
+
+![how to make jarvis](/public/how-we-built-the-app-what-will-make-you-more-productive/jarvis.png)
+
+i was considering using blockchain but to me blockchain makes no sense... it's rediculus why i'd have to store a copy of the whole chain [including data that has no relevence to me]
