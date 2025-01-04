@@ -8,11 +8,11 @@ heroImage: "/public/how-we-built-the-app-what-will-make-you-more-productive/hero
 
 all of this began when i started my masters degree
 
-all of a sudden... i was in a new country, surrounded by new people and not a lot to do [ignoring all the assignments, classes and all the socialising you have to do to gain a life]
+all of a sudden... i was in a new country, surrounded by new people and had not a lot to do [ignoring all the assignments, classes and all the socialising you have to do to create a life]
 
-it had been an year since i last built something meaningful with my time. [i was either busy with work or just winding down with my friends from the PG i stayed in]
+it had been an year since i HAD last built something meaningful with my time. [i was either busy with work or just winding down with my friends from the PG i stayed in]
 
-i wanted to work on a problem that hasn't been solved before despite having had many attempts, solely cuz that just ment a market existed... [i had previously worked in a robotics startup - and the market for consumer robots wasn't there yet]
+i wanted to work on a problem that had an existing market for and hasn't been properly solved before... [i had previously worked in a robotics startup - and the market for consumer robots wasn't there yet]
 
 ## Search for a Problem
 
@@ -22,7 +22,7 @@ while i breezing my way through the course... not all my peers were
 
 well i wasn't exactly a very productive dude... i just didn't procastinate
 
-if i wanted to get something done... i'd work on it untill it was over [i had different issues... wanting to do "something"]
+if i wanted to get something done... i'd work on it untill it was over [my issues with productivity were more me wanting to do "something"]
 
 <center>
 
@@ -52,9 +52,9 @@ results were about 50% of the people wanted a better todo app and the other 50% 
 3. have you tried microsoft tasks
 4. google calender is the ultimate todo app n\*gga
 
-most responses were super expected to me except the "google calender is the ultimate todo app n\*gga" so i got super curious on this went on a rabbit hole of understanding this response
+most responses were super expected to me except the "google calender is the ultimate todo app n\*gga" so i got super curious on this and went on a rabbit hole of understanding this response
 
-even before i stated going down this rabbit hole... i had put a team together and so i started making wireframes for the app... multiple brainstorming sessions later we came up with these wireframes:
+but even before i stated going down this rabbit hole, i had put a team together... so, i started making wireframes for the app... multiple brainstorming sessions later we came up with these wireframes:
 
 <center>
 
@@ -64,9 +64,9 @@ even before i stated going down this rabbit hole... i had put a team together an
 
 ## Arc#2 - Rabbit Hole
 
-i was reading / watching as much content as possible on how people use calanders cuz umm well it would boost my personal productivity
+i was reading / watching as much content as possible on how people use calanders cuz umm well it would personally boost my productivity / style of work
 
-about this time was when i got into a student team on campus... and the team lead there - [Rohan Kalange](https://www.linkedin.com/in/rohankalanje/) just seemed to be everywhere, everything all at once
+about this time was when i got into a student team on campus... and the team lead there - **Rohan Kalange** just seemed to be everywhere, everything all at once
 
 <center>
 
@@ -74,9 +74,9 @@ about this time was when i got into a student team on campus... and the team lea
 
 </center>
 
-he played crutial roles in like 10 - 20 clubs/teams on campus... the more important question would have been "what did Rohan not do"
+he played crutial roles in like 10 - 20 clubs/teams on campus... and so the more important question would have been "what did Rohan not do"
 
-and this man really used google calander - i mean he was late all the time but umm well he still get a lot of stuff done and more importantly both of us had very similar definitions for productivity - he'd consider doomscrolling for like 2hrs productive as long as it was something he wanted/planned to do
+and this man did really use google calander - i mean he was late all the time but umm well he get a **lot** of stuff **done** AND more importantly both of us had very similar definitions for productivity - he'd consider doomscrolling for like 2hrs productive as long as it was something he wanted/planned to do
 
 most people would define productivity as "doing the right stuff that would get you the most outcomes"
 
@@ -96,11 +96,11 @@ this concept is also something that Ali Abdaal talks in his book [Feel Good Prod
 
 i really wanted to figure out what made productive people "productive"... so i started watching videos on Elon Musk, Steve Jobs, Jensen Huang and other celebrities known to be super productive
 
-and then i took it a step down and started looking at the most productive people i have/had worked with - Varun Mayya, Sarat Angajala, Rohan Kalanje... and then i did the reverse... looking at people who couldn't get much done no matter how much time you give them
+and then i took it a step down and started looking at the most productive people i have/had worked with - Varun Mayya, Sarat Angajala, Rohan Kalanje... after which then i did the reverse... looking at people who couldn't get much done no matter how much time you give them
 
 and then i looked in between - particularly this one super super super close friend of mine, who was lazy for like 99.99% of the time but the 0.01% of time where she was not lazy - she was super super super intense productive
 
-finally i started looking at myself, for the longest time... i hadn't really done anything, i'd just go to school, listen to classes, come back home, do my homework, watch a movie and fall asleep
+finally i started retrospecting myself, because for the longest time... i hadn't really done anything ever, i'd just go to school, listen to classes, come back home, do my homework, watch a movie and fall asleep
 
 that was how my life looked like for the longest time... untill one day in the middle of COVID-19, i watched this one movie that made me question my exisitance and redefined the way i looked at life
 
@@ -112,11 +112,11 @@ that was how my life looked like for the longest time... untill one day in the m
 
 the movie starts with this phrase
 
-> The Robinson is going to go to someone who dazzles... somebody who just jumps off the page. You need to really explain to us why you're special... what life experience separates you from the rest. what can you tell me Ben that's going to dazzle me
+> The Robinson Scholorship is going to go to someone who dazzles... somebody who just jumps off the page. You need to really explain to us why you're special... what life experience separates you from the rest. what can you tell me Ben that's going to dazzle me
 
 and ends with this phrase
 
-> So in my senior year of collage, i joined this team and i learnt this new skill. I went to Vegas 17 times to use it.i made 100s of 1000s of dollars counting cards. and then i had it all stolen from me. TWICE. How's that for a life experience professor... did I dazzle you?
+> So in my senior year of collage, i joined this team and i learnt this new skill. I went to Vegas 17 times to use it.i made 100s of 1000s of dollars counting cards. and then i had it all stolen from me. TWICE. How's that for a life experience professor... did I dazzle?
 
 <center>
 
@@ -124,19 +124,19 @@ and ends with this phrase
 
 </center>
 
-i took this movie a lil more seriosly than i should have and i made a list of everything even remotely dazzling i had ever done and i didn't like the length of that list
+i took this movie a lil more seriosly than i probably should have and i made a list of everything even remotely dazzling i had ever done and i didn't like how small that list was... 🥲
 
 i started conciously trying to grab every oppurtunity that came my way to increase the size of that list of dazzling_things...
 
 1. i went to tokyo as part of a sem exchange
 2. i asked that girl i liked out
 3. i ended up getting into a relationship [never thought that would be even remotely possible]
-4. i ended up joining a startup my seniors we're building
-5. i gave everything up to become an concept/automobile designer
+4. i ended up joining a startup my seniors we're building [robotics]
+5. and them i gave everything up to become an concept/automobile designer [which i didn't really like after i started getting decent]
 6. i ended up meeting and working with one of my heros - Varun Mayya
-7. i gave everything up to pursue a building better AI/learning algorithms
+7. i gave everything up to pursue building better AI/learning algorithms [i really liked my time in tokyo as an undergrad research assistant]
 
-basically i wanted to "live a life, i'd remember" - G.O.A.T [Avicii] or like yuji in jujutsu kaisen said
+basically like yuji in jujutsu kaisen said "i didn't want live with any regrets"
 
 <center>
 
@@ -154,17 +154,17 @@ having had ample time to reflect and observe productive people and unproductive 
 
 and i started thinking about which trait should i build something for, i didn't really have much incentive to build a calander app... cuz i didn't know how i'd be able to build a better calander system
 
-the second one... Rohan recommended to build something for the AR/VR future but i didn't see much impact possibility
+the second one... Rohan recommended i build something for the AR/VR future but i didn't see much impact possibility
 
-the third one really intrigued me, because for the long time i didn't know what i wanted to do on a day to day basis as well
+the third one really intrigued me, because for the longest of time i didn't know what i wanted to do on a day to day basis. [apart from school given tasks]
 
 i started looking at productivity from this angle did a bunch of research on this
 
-and i figured you start knowing what you want to do [and in-turn you become more productive once you start logging/tracking your life]
+and i figured you start knowing what you want to do [once you start logging/tracking your life] and then and in-turn you become more productive
 
 ## Gamifying your Life
 
-there is this whole thing called "Journaling" which pretty much does this exact same thing... you start logging and tracking your life / ideas / feelings every day
+there is this whole thing called "Maintaining a Diary" / "Journaling" which pretty much does this exact same thing... you start logging and tracking your life / ideas / feelings every day
 
 but there is one another crucial aspect for "Productivity" when compared to "LifeTracking/Journaling" and that is **deciding what you want to do** and then _getting it done_
 
@@ -174,15 +174,17 @@ this is where all that book reading became helpful... Ali Abdaal in his book **F
 
 ideally each day would have max 1 or 2 adventures...
 
-while i'd recommend having only 1 adventure and leaving the rest of the day for fun stuff you want to do
+while i'd recommend having only 1 adventure and leaving the rest of the day for chilling around / taking a break
 
 with all this insight we started to build an app
 
-i had very recently gotten close with this kid named Taiyeb, who on hearing the whole idea told me it sounded like an chrome extension he used called momentum, so we looked at it and saw that it did the one adventure a day thing... took some design ideas from momentum and started building
+i had very recently gotten close with this kid named Taiyeb, who on hearing the whole idea told me it sounded like a chrome extension he used called momentum, so we looked at it and saw that it did the one adventure a day thing... took some design ideas from momentum and started building
+
+> PS: Momentum didn't do the journaling stuff... it only did the goal setting / planning stuff
 
 ## The Final Product [or should i say the Minimum Viable Product]
 
-so the idea was simple, you'd set 2 times in a day...
+so the idea was simple, you'd set 2 reminders in a day...
 
 1. one in the morning [for a prompt to make you think about what you "want" to do for the day]
 2. one at night [for a reflection time / classic journal input]
@@ -205,14 +207,18 @@ and at the respective times of the day you'd get a notification to either plan/r
 
 well, that sounds perfect... i'd definetly never use the app myself... pen and paper are soooo much more effective and just 🤌
 
-but the reason i do use the app here is... this will **down the line** become a second brain - a literal AI assistant that knows what i've wanted to do, how likely i am to do a task and all of my best life experiences/memories
+but the reason i do use the app here is... this will **down the line** become a second brain - a literal **AI assistant** that knows what i've wanted to do, how likely i am to do a certain task along with all of my best life experiences/memories
 
-and the best part? it isn't an AI that will assist in keeping you product but **all data doesn't leave your device**
+and the best part? **no data leaves your device**
 
-how???
-
-presenting IPFS - the same technology that powers torrent applications P2P file/information transportation
+how??? using IPFS - the same technology that powers torrent applications P2P file/information transportation
 
 ![how to make jarvis](/public/how-we-built-the-app-what-will-make-you-more-productive/jarvis.png)
 
 i was considering using blockchain but to me blockchain makes no sense... it's rediculus why i'd have to store a copy of the whole chain [including data that has no relevence to me]
+
+## Talk is Cheap, Show me the App
+
+sure... here you go, it's still in the development phase but our mvp is out for trial use... lemme know what you think as you get more productive...
+
+[install APK](https://github.com/LucidMach/AoTD/releases)
