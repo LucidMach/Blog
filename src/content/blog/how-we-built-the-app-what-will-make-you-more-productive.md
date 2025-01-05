@@ -3,7 +3,7 @@ title: 'How we built the app that will make you more "Productive"'
 description: "a UX research case study on what is productivity; how to become more productive and how to make an app that can make anyone more productive"
 pubDate: "Jan 1 2025"
 type: "Misc"
-heroImage: "/public/how-we-built-the-app-what-will-make-you-more-productive/hero.png"
+heroImage: "/how-we-built-the-app-what-will-make-you-more-productive/hero.png"
 ---
 
 all of this began when i started my masters degree
@@ -58,7 +58,7 @@ but even before i stated going down this rabbit hole, i had put a team together.
 
 <center>
 
-![wireframes](/public/how-we-built-the-app-what-will-make-you-more-productive/wireframes.jpg)
+![wireframes](/how-we-built-the-app-what-will-make-you-more-productive/wireframes.jpg)
 
 </center>
 
@@ -120,7 +120,7 @@ and ends with this phrase
 
 <center>
 
-![qoute from 21](/public/how-we-built-the-app-what-will-make-you-more-productive/life-experience.png)
+![qoute from 21](/how-we-built-the-app-what-will-make-you-more-productive/life-experience.png)
 
 </center>
 
@@ -191,7 +191,7 @@ so the idea was simple, you'd set 2 reminders in a day...
 
 <center>
 
-![AoTD - Settings](/public/how-we-built-the-app-what-will-make-you-more-productive/settingPage.png)
+![AoTD - Settings](/how-we-built-the-app-what-will-make-you-more-productive/settingPage.png)
 
 </center>
 
@@ -199,7 +199,7 @@ and at the respective times of the day you'd get a notification to either plan/r
 
 <center>
 
-![AoTD - Prompts](/public/how-we-built-the-app-what-will-make-you-more-productive/wallpapers.png)
+![AoTD - Prompts](/how-we-built-the-app-what-will-make-you-more-productive/wallpapers.png)
 
 </center>
 
@@ -213,7 +213,7 @@ and the best part? **no data leaves your device**
 
 how??? using IPFS - the same technology that powers torrent applications P2P file/information transportation
 
-![how to make jarvis](/public/how-we-built-the-app-what-will-make-you-more-productive/jarvis.png)
+![how to make jarvis](/how-we-built-the-app-what-will-make-you-more-productive/jarvis.png)
 
 i was considering using blockchain but to me blockchain makes no sense... it's rediculus why i'd have to store a copy of the whole chain [including data that has no relevence to me]
 
