@@ -13,24 +13,50 @@ function Rig() {
   });
 }
 
-const colors = ["#f1f1f1", "#f87171"];
+const colors = [
+  "#f1f1f1",
+  "#fc7272",
+  "#faaa00",
+  "#60a5fa",
+  "#818cf8",
+  "#34d399",
+];
+
+const bgColors = [
+  "#1a1a1a",
+  "#fc7272",
+  "#faaa00",
+  "#60a5fa",
+  "#818cf8",
+  "#34d399",
+];
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);
 
   return (
     <Canvas
-      style={{ height: "100vh", width: "100%" }}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        height: "100vh",
+        width: "100vw",
+      }}
       camera={{ position: [0, 0, 7.5] }}
       onClick={() =>
-        // setColor(`#${Math.floor(Math.random() * 16777215).toString(16)}`)
-        setColor(color === 0 ? 1 : 0)
+        setColor((color) => (color < colors.length - 1 ? color + 1 : 0))
       }
     >
-      {/* <directionalLight position={[0, 0, 5]} intensity={5} /> */}
+      <color attach="background" args={[bgColors[color]]} />
       <directionalLight
         color={colors[color]}
         position={[0, 0, 5]}
+        intensity={5}
+      />
+      <directionalLight
+        position={[0, 0, -5]}
+        rotation={[0, Math.PI, 0]}
         intensity={5}
       />
       <LucidCube
