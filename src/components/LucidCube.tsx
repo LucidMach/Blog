@@ -1,10 +1,17 @@
 import { useGLTF } from "@react-three/drei";
 
-const LucidCube = (props) => {
+interface props {
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+}
+
+const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   const { nodes, materials } = useGLTF("/lucidcube.glb");
+
   return (
-    <group {...props} dispose={null}>
-      <group position={[0, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+    <group position={position} rotation={rotation} scale={scale}>
+      <group position={[0, -0.008, -0.015]} rotation={[0, Math.PI / 2, 0]}>
         <mesh
           castShadow
           receiveShadow

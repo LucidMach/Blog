@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
@@ -15,16 +14,11 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <!doctype html>
-<html lang="en" class="w-full">
+<html lang="en" class="w-full bg-[#1a1a1a]">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-assistant w-full">
-    <br />
-    <br />
-    <Header title={SITE_TITLE} />
-    <br />
-    <br />
     <main class="w-full flex flex-col">
       <R3F client:visible />
       <h1 class="text-3xl font-virgil">The Blog Posts</h1>
@@ -34,7 +28,7 @@ const posts = (await getCollection("blog")).sort(
           posts.slice(-5).map((post, i) => (
             <li>
               <a
-                class="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
+                class="hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
                 href={`/blog/${post.slug}/`}
               >
                 <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
