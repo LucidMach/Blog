@@ -1,0 +1,7 @@
+curl -X POST "https://accounts.spotify.com/api/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id=46bae78453fd46afa540daa657ac59d7&client_secret=3680419f25cb44c4897b12e4c2b856e8"
+
+curl --request GET \ 
+     --url https://api.spotify.com/v1/me/player/currently-playing \
+     --header 'Authorization: Bearer 46bae78453fd46afa540daa657ac59d7'

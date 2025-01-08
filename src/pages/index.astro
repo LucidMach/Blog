@@ -10,7 +10,8 @@ import FormattedDate from "../components/FormattedDate.astro";
 import R3F from "../components/R3F.tsx";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
+    a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
@@ -27,18 +28,25 @@ const posts = (await getCollection("blog")).sort(
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
         {
-          posts.slice(-5).map((post, i) => (
-            <li>
-              <a
-                class="hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
-                href={`/blog/${post.slug}/`}
-              >
-                <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
+          posts
+            .slice(-5)
+            .map(
+              (
+                post: { slug: any; data: { title: unknown; pubDate: Date } },
+                i: any
+              ) => (
+                <li>
+                  <a
+                    class="hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
+                    href={`/blog/${post.slug}/`}
+                  >
+                    <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
 
-                <FormattedDate date={post.data.pubDate} />
-              </a>
-            </li>
-          ))
+                    <FormattedDate date={post.data.pubDate} />
+                  </a>
+                </li>
+              )
+            )
         }
       </ul>
       <a class="text-left hover:text-red-400 hover:cursor-pointer" href="/blog"
