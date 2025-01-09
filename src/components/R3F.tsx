@@ -47,8 +47,8 @@ const R3F = () => {
           position: "fixed",
           top: 0,
           left: 0,
-          height: h,
-          width: w,
+          height: "100%",
+          width: "100%",
         }}
         camera={{ position: [0, 0, 7.5] }}
         onClick={() =>
