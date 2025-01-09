@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import Rig from "./Rig";
 import Lucid3DText from "./Lucid3DText";
 import LucidCube from "../components/LucidCube";
-import { MNETCube } from "./MNETCube";
 import SeaOfMNET from "./SeaOfMNET";
 
 const colors = [
@@ -27,8 +26,8 @@ const bgColors = [
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);
-  const [w, setW] = useState<number>();
-  const [h, setH] = useState<number>();
+  const [w, setW] = useState<number>(0);
+  const [h, setH] = useState<number>(0);
 
   useEffect(() => {
     setW(window.innerWidth);
@@ -47,8 +46,8 @@ const R3F = () => {
           position: "fixed",
           top: 0,
           left: 0,
-          height: "100%",
-          width: "100%",
+          height: h,
+          width: w,
         }}
         camera={{ position: [0, 0, 7.5] }}
         onClick={() =>
