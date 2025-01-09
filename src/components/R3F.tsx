@@ -27,12 +27,17 @@ const bgColors = [
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);
-  const [w, setW] = useState<number>(0);
-  const [h, setH] = useState<number>(0);
+  const [w, setW] = useState<number>();
+  const [h, setH] = useState<number>();
 
   useEffect(() => {
     setW(window.innerWidth);
     setH(window.innerHeight);
+
+    window.addEventListener("resize", () => {
+      setW(window.innerWidth);
+      setH(window.innerHeight);
+    });
   }, []);
 
   return (
