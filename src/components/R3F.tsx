@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Text3D } from "@react-three/drei";
+import { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 
 import Rig from "./Rig";
 import Lucid3DText from "./Lucid3DText";
 import LucidCube from "../components/LucidCube";
+import { MNETCube } from "./MNETCube";
+import SeaOfMNET from "./SeaOfMNET";
 
 const colors = [
   "#f1f1f1",
@@ -26,6 +27,13 @@ const bgColors = [
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);
+  const [w, setW] = useState<number>(0);
+  const [h, setH] = useState<number>(0);
+
+  useEffect(() => {
+    setW(window.innerWidth);
+    setH(window.innerHeight);
+  }, []);
 
   return (
     <>
@@ -34,8 +42,8 @@ const R3F = () => {
           position: "fixed",
           top: 0,
           left: 0,
-          height: "100vh",
-          width: "100vw",
+          height: h,
+          width: w,
         }}
         camera={{ position: [0, 0, 7.5] }}
         onClick={() =>
@@ -53,13 +61,19 @@ const R3F = () => {
           color={colors[color]}
           position={[0, 1, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}
-          scale={1.5}
+          scale={w > h ? 1.5 : 1}
+        />
+        <SeaOfMNET
+          position={[0, 0, 0]}
+          rotation={[0, 0, w > h ? 0 : Math.PI / 2]}
+          scale={w > h ? 1 : 0.75}
         />
         <Lucid3DText
           title="LucidMach"
           subtitle="dream it... build it!"
           link="/blog"
           color={colors[color]}
+          scale={w > h ? 1 : 0.5}
         />
         <Rig />
       </Canvas>

@@ -47,7 +47,7 @@ const Lucid3DText: React.FC<props> = ({
         font={"/fonts/Comfortaa Regular.json"}
       >
         click anywhere to go to {link}
-        <meshStandardMaterial color="#fc7272" />
+        <meshToonMaterial color="#fc7272" />
       </Text3D>
     </group>
   );
