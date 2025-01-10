@@ -15,9 +15,18 @@ export const MNETCube: React.FC<props> = ({ position, rotation, scale }) => {
 
   const cube = useRef<THREE.Mesh>();
 
+  // random movement between -0.05 and 0.05
+  const moveX = Math.random() * 0.1 - 0.05;
+  const moveY = Math.random() * 0.1 - 0.05;
+  const moveZ = Math.random() * 0.1 - 0.05;
+
   useFrame(() => {
     if (cube.current) {
       cube.current.rotation.x += 0.0075;
+
+      cube.current.position.x += moveX;
+      cube.current.position.y += moveY;
+      cube.current.position.z += moveZ;
     }
   });
 
