@@ -63,9 +63,9 @@ const R3F = () => {
         />
         <LucidCube
           color={colors[color]}
-          position={[0, 1, -1]}
+          position={[0, 0.5, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}
-          scale={w > h ? 1.5 : 1}
+          scale={1}
         />
         <SeaOfMNET
           position={[0, 0, 0]}
@@ -77,6 +77,7 @@ const R3F = () => {
           subtitle="dream it... build it!"
           link="/blog"
           color={colors[color]}
+          position={[0, w > h ? 0 : -0.5, 0]}
           scale={w > h ? 1 : 0.5}
         />
         <Rig />
