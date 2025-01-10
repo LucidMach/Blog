@@ -1,19 +1,11 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import { Suspense } from "react";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
-
+import BaseHead from "../components/BaseHead.astro";
 import R3F from "../components/R3F.tsx";
 import Socials from "../components/Socials.astro";
-
-const posts = (await getCollection("blog")).sort(
-  (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
-    a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+import Menu from "../components/Menu";
 ---
 
 <!doctype html>
@@ -22,70 +14,18 @@ const posts = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-assistant w-full">
-    <Header title={SITE_TITLE} />
-    <main class="w-full flex flex-col">
-      <R3F client:visible />
-      <div class="fixed bottom-4 left-0 w-full bg-transparent">
-        <Socials />
-      </div>
-      <h1 class="text-3xl font-virgil">The Blog Posts</h1>
-      <br />
-      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        {
-          posts
-            .slice(-5)
-            .map(
-              (
-                post: { slug: any; data: { title: unknown; pubDate: Date } },
-                i: any
-              ) => (
-                <li>
-                  <a
-                    class="hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex w-full justify-between"
-                    href={`/blog/${post.slug}/`}
-                  >
-                    <p class="max-w-[240px] md:max-w-xl">{post.data.title}</p>
-
-                    <FormattedDate date={post.data.pubDate} />
-                  </a>
-                </li>
-              )
-            )
-        }
-      </ul>
-      <a class="text-left hover:text-red-400 hover:cursor-pointer" href="/blog"
-        >view more...</a
-      >
-      <br />
-      <br />
-      <br />
-      <h1 class="text-3xl font-virgil">Who Am I?</h1>
-      <br />
-
-      <section class="font-virgil prose prose-invert">
-        👋 hieeeeeeee!
-        <br />
-        my name is <a
-          class="hover:cursor-pointer text-red-400"
-          href="https://lucidlinks.vercel.app">suraj nukala</a
+    <main class="flex flex-col">
+      <Suspense>
+        <div
+          class="fixed top-4 z-10 left-0 w-full bg-transparent flex justify-center"
         >
-        <img class="rounded-lg" src="/LucidMach.jpg" alt="" />
-        i constantly teach myself "to build stuff that i think will blow my mind"
-        and on the internet i call myself the
-        <a
-          class="hover:cursor-pointer text-red-400"
-          href="https://lucidlinks.vercel.app"
-          >lucidmach
-        </a>
-        <br />
-        <br />
-        this time i decided to blog out my learnings as i learn and build some really
-        cool stuff along the way
-        <br />
-        <br />
-        pretty sure you know the rest 😉
-      </section>
+          <Menu client:visible />
+        </div>
+        <R3F client:visible />
+        <div class="fixed bottom-4 left-0 w-full bg-transparent">
+          <Socials />
+        </div>
+      </Suspense>
     </main>
-    <Footer />
   </body>
 </html>

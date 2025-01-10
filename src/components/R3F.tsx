@@ -1,33 +1,22 @@
 import { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
+import { useAtom } from "jotai";
 
 import Rig from "./Rig";
 import Lucid3DText from "./Lucid3DText";
 import LucidCube from "../components/LucidCube";
 import SeaOfMNET from "./SeaOfMNET";
+import activeAtom from "../atoms/active";
 
-const colors = [
-  "#f1f1f1",
-  "#fc7272",
-  "#FACC14",
-  "#60a5fa",
-  "#818cf8",
-  "#34d399",
-];
-
-const bgColors = [
-  "#1a1a1a",
-  "#fc7272",
-  "#FACC14",
-  "#60a5fa",
-  "#818cf8",
-  "#34d399",
-];
+import bgColors from "../content/bgColors";
+import colors from "../content/colors";
+import sections from "../content/sections";
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);
   const [w, setW] = useState<number>(0);
   const [h, setH] = useState<number>(0);
+  const [active, setActive] = useAtom(activeAtom);
 
   useEffect(() => {
     setW(window.innerWidth);
@@ -73,9 +62,6 @@ const R3F = () => {
           scale={w > h ? 1 : 0.75}
         />
         <Lucid3DText
-          title="LucidMach"
-          subtitle="dream it... build it!"
-          link="/blog"
           color={colors[color]}
           position={[0, w > h ? 0 : -0.5, 0]}
           scale={w > h ? 1 : 0.5}
