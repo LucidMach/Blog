@@ -8,6 +8,7 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
 import R3F from "../components/R3F.tsx";
+import Socials from "../components/Socials.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
@@ -24,6 +25,9 @@ const posts = (await getCollection("blog")).sort(
     <Header title={SITE_TITLE} />
     <main class="w-full flex flex-col">
       <R3F client:visible />
+      <div class="fixed bottom-4 left-0 w-full bg-transparent">
+        <Socials />
+      </div>
       <h1 class="text-3xl font-virgil">The Blog Posts</h1>
       <br />
       <ul class="flex flex-col gap-5 w-full text-sm md:text-base">

@@ -48,7 +48,7 @@ const Lucid3DText: React.FC<props> = ({
       <Center position={[0, -3, 2]}>
         <Text3D scale={0.15} font={"/fonts/Comfortaa Regular.json"}>
           click anywhere to go to {link}
-          <meshToonMaterial color="#fc7272" />
+          <meshMatcapMaterial color="#fc8181" />
         </Text3D>
       </Center>
     </group>
