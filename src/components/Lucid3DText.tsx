@@ -14,16 +14,34 @@ interface props {
 
 const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
   const [active, setActive] = useAtom(activeAtom);
+  const [titleX, setTitleX] = useState(0);
+  const [subtitleX, setSubtitleX] = useState(0);
+  const [ctaX, setCtaX] = useState(0);
 
   // const [title, setTitle] = useState(sections[active].title);
   // const [subtitle, setSubtitle] = useState(sections[active].subtitle);
   // const [cta, setCta] = useState(sections[active].cta);
 
-  // useEffect(() => {
-  //   setTitle(sections[active].title);
-  //   setSubtitle(sections[active].subtitle);
-  //   setCta(sections[active].cta);
-  // }, [active]);
+  useEffect(() => {
+    if (active === 0) {
+      setTitleX(0);
+      setSubtitleX(0);
+      setCtaX(0);
+    } else if (active === 1) {
+      setTitleX(0.25);
+      setSubtitleX(-0.5);
+      setCtaX(-0.25);
+    } else if (active === 2) {
+      setTitleX(1);
+      setSubtitleX(0.5);
+      setCtaX(-0.35);
+    } else if (active === 3) {
+      setTitleX(1);
+      setSubtitleX(-1);
+      setCtaX(-0.5);
+    } else if (active === 4) {
+    }
+  }, [active]);
 
   const titleRef = useRef();
   const subtitleRef = useRef();
@@ -32,13 +50,13 @@ const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
 
   return (
     <group castShadow rotation={rotation} position={position} scale={scale}>
-      <Center ref={titleRef} position={[0, -Math.PI / 3, 1.5]}>
+      <Center ref={titleRef} position={[titleX, -Math.PI / 3, 1.5]}>
         <Text3D castShadow font={"/fonts/Vampiro One Regular.json"}>
           {sections[active].title}
           <meshStandardMaterial color={color} />
         </Text3D>
       </Center>
-      <Center ref={subtitleRef} position={[0, -Math.PI / 1.75, 1.75]}>
+      <Center ref={subtitleRef} position={[subtitleX, -Math.PI / 1.75, 1.75]}>
         <Text3D
           castShadow
           scale={0.25}
@@ -49,7 +67,7 @@ const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
           <meshMatcapMaterial color={color} />
         </Text3D>
       </Center>
-      <Center position={[0, -3, 2]}>
+      <Center position={[ctaX, -3, 2]}>
         <Text3D scale={0.15} font={"/fonts/Comfortaa Regular.json"}>
           {sections[active].cta}
           <meshMatcapMaterial color="#fc8181" />
