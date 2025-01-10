@@ -12,11 +12,13 @@ const Menu: React.FC = () => {
         <div className="bg-red-400 text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa">
           {sections[active].name}
         </div>
-        <div className="flex">
+        <div className="flex bg-transparent">
           {sections.map((section, index) => (
-            <div className="flex items-center">
+            <div
+              key={section.name}
+              className="flex items-center bg-transparent"
+            >
               <div
-                key={section.name}
                 className={`${
                   active === index ? "bg-[#f1f1f1]" : "bg-red-400"
                 } hover:bg-[#f1f1f1] p-2 rounded-full w-12 h-12 flex justify-center items-center`}

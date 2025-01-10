@@ -10,7 +10,6 @@ import activeAtom from "../atoms/active";
 
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
-import sections from "../content/sections";
 
 const R3F = () => {
   const [color, setColor] = useState<number>(0);

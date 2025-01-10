@@ -1,7 +1,10 @@
-import { useGLTF } from "@react-three/drei";
-import { useRef } from "react";
+import { useGLTF, useScroll } from "@react-three/drei";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import heartBeating from "../hooks/heartBeating";
+import { useAtom } from "jotai";
+import activeAtom from "../atoms/active";
+import { useFrame } from "@react-three/fiber";
 
 interface props {
   color: string;
@@ -12,9 +15,30 @@ interface props {
 
 const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
   const { nodes, materials } = useGLTF("/lucidcube.glb");
+  const [active, setActive] = useAtom(activeAtom);
+  const [rotate, setRotate] = useState<boolean>(false);
+  const [countFrames, setCountFrames] = useState(0);
 
   const cube = useRef<THREE.Mesh>();
   heartBeating(cube);
+
+  useEffect(() => {
+    setRotate(true);
+    setCountFrames(0);
+  }, [active]);
+
+  useFrame(() => {
+    if (cube.current) {
+      // rotate the cube by PI / 20 for 20 frames [1 full rotation]
+      if (rotate) {
+        setCountFrames((count) => countFrames + 1);
+        cube.current.rotation.x -= Math.PI / 20;
+        if (countFrames === 39) {
+          setRotate(false);
+        }
+      }
+    }
+  });
 
   return (
     <group

@@ -21,8 +21,8 @@ const sections: Section[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M306.205 87.0588L153.53 0L0.233406 87.4131L63.0089 123.394L153.53 71.7879L242.301 122.396L306.205 87.0588ZM244.131 124.812L307.06 90.0142V262.639L156.206 348.659V276.871L244.131 226.745V124.812ZM153.206 278.212L153.206 350L0 262.639V90.7372L62.9283 126.806V226.745L153.206 278.212Z"
           fill="#1A1A1A"
         />
