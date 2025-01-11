@@ -38,10 +38,10 @@ const R3F = () => {
           width: w,
         }}
         camera={{ position: [0, 0, 7.5] }}
-        onClick={() =>
-          // setColor((color) => (color < colors.length - 1 ? color + 1 : 0))
-          (window.location.href = "/blog")
-        }
+        // onClick={() =>
+        // setColor((color) => (color < colors.length - 1 ? color + 1 : 0))
+        // (window.location.href = "/blog")
+        // }
       >
         <color attach="background" args={[bgColors[color]]} />
         <directionalLight
