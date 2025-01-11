@@ -31,20 +31,23 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
     setCountFrames(0);
   }, [active]);
 
+  useEffect(() => {
+    if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 3));
+    if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 0));
+  }, [swipe]);
+
   const bind = useDrag(({ movement: [xD, yD] }) => {
     // detect swipe direction
     if (!swipe) {
-      if (xD > 150) {
-        console.log("right swipeing");
+      if (xD > 100) {
+        console.log("left swipeing");
         setSwipe(true);
         setDir("right");
-        setActive((active) => (active < 3 ? active + 1 : 3));
       }
-      if (xD < -150) {
+      if (xD < -100) {
         console.log("left swipeing");
         setSwipe(true);
         setDir("left");
-        setActive((active) => (active > 0 ? active - 1 : 0));
       }
     }
   });

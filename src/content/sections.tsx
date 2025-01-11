@@ -11,7 +11,7 @@ const sections: Section[] = [
     name: "home",
     title: "LucidMach",
     subtitle: "dream it... build it!",
-    cta: "scroll to explore sections",
+    cta: "swipe cube to explore sections",
     icon: (
       <svg
         className="bg-transparent"
