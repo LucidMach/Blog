@@ -31,9 +31,9 @@ const sections: Section[] = [
   },
   {
     name: "blog",
-    title: "Thoughts",
-    subtitle: "curiosity... learnings!",
-    cta: "click anywhere to go to /blog",
+    title: "journal",
+    subtitle: "ideas and learnings!",
+    cta: "double click cube to go to /blog",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,9 +48,9 @@ const sections: Section[] = [
   },
   {
     name: "about",
-    title: "Journey",
-    subtitle: "curious/lofi pro",
-    cta: "click anywhere to go to /about",
+    title: "journey",
+    subtitle: "a curious/lofi pro",
+    cta: "double click cube to go to /about",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,9 +65,9 @@ const sections: Section[] = [
   },
   {
     name: "archive",
-    title: "Archive",
-    subtitle: "evolution... in one place!",
-    cta: "click anywhere to go to /archive",
+    title: "archive",
+    subtitle: "evolution of this page",
+    cta: "double click cube to go to /archive",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

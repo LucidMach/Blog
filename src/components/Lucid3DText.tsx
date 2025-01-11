@@ -28,18 +28,17 @@ const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
       setSubtitleX(0);
       setCtaX(0);
     } else if (active === 1) {
-      setTitleX(0.25);
-      setSubtitleX(-0.5);
-      setCtaX(0);
+      setTitleX(1);
+      setSubtitleX(-0.25);
+      setCtaX(-0.05);
     } else if (active === 2) {
       setTitleX(1);
-      setSubtitleX(0.5);
-      setCtaX(-0.1);
+      setSubtitleX(0.25);
+      setCtaX(-0.15);
     } else if (active === 3) {
       setTitleX(1);
-      setSubtitleX(-1);
+      setSubtitleX(-0.5);
       setCtaX(-0.25);
-    } else if (active === 4) {
     }
   }, [active]);
 

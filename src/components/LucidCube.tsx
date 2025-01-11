@@ -56,7 +56,7 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
     }
     if (!down) setSwipe(false);
 
-    console.log(down, xD, swipe);
+    // console.log(down, xD, swipe);
   });
 
   useFrame(() => {
