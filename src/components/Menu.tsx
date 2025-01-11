@@ -1,10 +1,11 @@
-import { useState } from "react";
 import sections from "../content/sections";
 import { useAtom } from "jotai";
 import activeAtom from "../atoms/active";
+import dirAtom from "../atoms/dir";
 
 const Menu: React.FC = () => {
   const [active, setActive] = useAtom(activeAtom);
+  const [dir, setDir] = useAtom(dirAtom);
 
   return (
     <>
@@ -22,7 +23,12 @@ const Menu: React.FC = () => {
                 className={`${
                   active === index ? "bg-[#f1f1f1]" : "bg-red-400"
                 } hover:bg-[#f1f1f1] p-2 rounded-full w-12 h-12 flex justify-center items-center`}
-                onClick={() => setActive(index)}
+                onClick={() =>
+                  setActive((prev) => {
+                    prev > index ? setDir("left") : setDir("right");
+                    return index;
+                  })
+                }
               >
                 {section.icon}
               </div>

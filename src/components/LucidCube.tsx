@@ -1,11 +1,13 @@
-import { useGLTF, useScroll } from "@react-three/drei";
-import { act, useEffect, useRef, useState } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import heartBeating from "../hooks/heartBeating";
 import { useAtom } from "jotai";
 import activeAtom from "../atoms/active";
 import { useFrame } from "@react-three/fiber";
 import { useDrag } from "@use-gesture/react";
+import dirAtom from "../atoms/dir";
+import sections from "../content/sections";
 
 interface props {
   color: string;
@@ -20,7 +22,7 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
   const [rotate, setRotate] = useState<boolean>(false);
   const [swipe, setSwipe] = useState<boolean>(false);
 
-  const [dir, setDir] = useState<"up" | "down" | "right" | "left">("up");
+  const [dir, setDir] = useAtom(dirAtom);
   const [countFrames, setCountFrames] = useState(0);
 
   const cube = useRef<THREE.Mesh>();
@@ -32,24 +34,29 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
   }, [active]);
 
   useEffect(() => {
-    if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 3));
-    if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 0));
+    if (swipe) {
+      if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 3));
+      if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 0));
+    }
   }, [swipe]);
 
-  const bind = useDrag(({ movement: [xD, yD] }) => {
+  const bind = useDrag(({ down, movement: [xD, yD] }) => {
     // detect swipe direction
-    if (!swipe) {
-      if (xD > 100) {
-        console.log("left swipeing");
+    if (down) {
+      if (xD > 50) {
+        // console.log("left swipeing");
         setSwipe(true);
         setDir("right");
       }
-      if (xD < -100) {
-        console.log("left swipeing");
+      if (xD < -50) {
+        // console.log("left swipeing");
         setSwipe(true);
         setDir("left");
       }
     }
+    if (!down) setSwipe(false);
+
+    console.log(down, xD, swipe);
   });
 
   useFrame(() => {
@@ -74,6 +81,11 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
     <group
       {...bind()}
       ref={cube}
+      onDoubleClick={() =>
+        (window.location.href = `/${
+          sections[active].name === "home" ? "" : sections[active].name
+        }`)
+      }
       castShadow
       receiveShadow
       position={position}
