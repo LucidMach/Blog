@@ -1,5 +1,6 @@
-import { useState } from "react";
-import FormattedDate from "./FormattedDate.astro";
+import { useState, type ReactElement } from "react";
+import BlogCard from "./BlogCard";
+import { element } from "three/examples/jsm/nodes/Nodes.js";
 
 interface props {
   posts: {
@@ -10,6 +11,7 @@ interface props {
 
 const BlogCategorySelector: React.FC<props> = ({ posts }) => {
   const categories: string[] = ["All"];
+  const years: number[] = [];
   const [active, setActive] = useState("All");
 
   posts.forEach((post) => {
@@ -17,6 +19,12 @@ const BlogCategorySelector: React.FC<props> = ({ posts }) => {
       null;
     } else {
       categories.push(post.data.type);
+    }
+
+    if (years.includes(post.data.pubDate.getFullYear())) {
+      null;
+    } else {
+      years.push(post.data.pubDate.getFullYear());
     }
   });
 
@@ -36,12 +44,12 @@ const BlogCategorySelector: React.FC<props> = ({ posts }) => {
       </div>
       <ul className="flex flex-col gap-5 w-full text-sm md:text-base my-2">
         {active === "All" ? (
-          posts.map((post) => <BlogCard post={post} />)
+          <BlogList posts={posts} years={years} />
         ) : (
-          <></>
-        )}
-        {posts.map((post) =>
-          post.data.type === active ? <BlogCard post={post} /> : <></>
+          <BlogList
+            posts={posts.filter((post) => post.data.type === active)}
+            years={years}
+          />
         )}
       </ul>
     </>
@@ -51,28 +59,25 @@ const BlogCategorySelector: React.FC<props> = ({ posts }) => {
 export default BlogCategorySelector;
 
 interface prop {
-  post: any;
+  years: number[];
+  posts: {
+    data: { type: string; title: string; pubDate: Date; heroImage: string };
+    slug: string;
+  }[];
 }
 
-const BlogCard: React.FC<prop> = ({ post }) => {
-  return (
-    <li>
-      <a
-        className="bg-transparent hover:text-red-400 hover:cursor-pointer border-2 rounded-md hover:border-red-400 p-2 flex justify-between items-center w-full"
-        href={`/blog/${post.slug}/`}
-      >
-        <div>
-          <p className="max-w-[240px] md:max-w-xl font-semibold">
-            {post.data.title}
-          </p>
-          {post.data.pubDate.toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}
-        </div>
-        <img src={post.data.heroImage} className="h-10 w-20 md:h-20 md:w-36" />
-      </a>
-    </li>
-  );
+const BlogList: React.FC<prop> = ({ years, posts }) => {
+  const list: ReactElement[] = [];
+
+  years.forEach((year) => {
+    list.push(<h1 className="text-3xl">{year}</h1>);
+    posts.forEach((post) => {
+      if (post.data.pubDate.getFullYear() === year) {
+        list.push(<BlogCard post={post} />);
+      }
+    });
+    list.push(<br />);
+  });
+
+  return <>{list.map((element) => element)}</>;
 };
