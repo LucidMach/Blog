@@ -31,7 +31,7 @@ const sections: Section[] = [
   },
   {
     name: "blog",
-    title: "journal",
+    title: "LucidBlog",
     subtitle: "ideas and learnings!",
     cta: "double click cube to go to /blog",
     icon: (
@@ -48,8 +48,8 @@ const sections: Section[] = [
   },
   {
     name: "about",
-    title: "journey",
-    subtitle: "a curious/lofi pro",
+    title: "about me",
+    subtitle: "curious/lofi pro",
     cta: "double click cube to go to /about",
     icon: (
       <svg
