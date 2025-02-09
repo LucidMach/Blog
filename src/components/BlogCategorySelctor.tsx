@@ -71,11 +71,17 @@ const BlogList: React.FC<prop> = ({ years, posts }) => {
 
   years.forEach((year) => {
     list.push(<h1 className="text-3xl">{year}</h1>);
+
+    let postCount = 0;
+
     posts.forEach((post) => {
       if (post.data.pubDate.getFullYear() === year) {
         list.push(<BlogCard post={post} />);
+        postCount++;
       }
     });
+
+    if (postCount === 0) list.push(<h1>404 - No Blog Posts Written :( </h1>);
     list.push(<br />);
   });
 
