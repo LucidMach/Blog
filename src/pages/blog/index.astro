@@ -18,12 +18,16 @@ const posts = (await getCollection("blog")).sort(
   </head>
   <body class="font-assistant w-full">
     <div class="flex flex-col w-full items-center gap-16">
-      <div
-        class="bg-red-400 text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
+      <a
+        href="/"
+        class="bg-red-400 hover:cursor-pointer text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
       >
-        blog
+        home
+      </a>
+      <div class="flex flex-col items-center mb-16">
+        <h1 class="text-5xl md:text-8xl font-virgil">LucidBlog</h1>
+        <h1 class="font-virgil">a collection of ideas and learnings</h1>
       </div>
-      <h1 class="text-5xl md:text-8xl font-virgil">LucidBlog</h1>
     </div>
     <main class="w-full flex flex-col">
       <BlogCategorySelctor posts={posts} client:visible />

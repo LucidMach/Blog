@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import ViewCounter from "../components/ViewCounter";
@@ -17,20 +16,26 @@ const { title, description, pubDate, heroImage } = Astro.props;
     />
   </head>
   <body>
-    <Header />
     <main class="flex flex-col justify-center items-center">
+      <div class="flex flex-col w-full items-center gap-16">
+        <a
+          href="/blog"
+          class="bg-red-400 hover:cursor-pointer text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
+        >
+          blog
+        </a>
+      </div>
       <br />
       <br />
       <h1 class="text-3xl font-bold text-center">
         {title}
       </h1>
-      <h4 class="text-sm text-center opacity-90">
+      <h4 class="text-sm text-center opacity-90 mb-16">
         <br />
         🗓️ <FormattedDate date={pubDate} />
         <br />
         <ViewCounter title={title} client:load />
       </h4>
-      <br />
       <article
         class="prose prose-invert prose-a:text-red-400 prose-a:cursor-pointer prose-a:no-underline"
       >
