@@ -47,7 +47,7 @@ const sections: Section[] = [
     ),
   },
   {
-    name: "about",
+    name: "about me",
     title: "about me",
     subtitle: "curious/lofi pro",
     cta: "double click cube to go to /about",
