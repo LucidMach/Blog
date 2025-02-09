@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         comfortaa: ["Comfortaa", "sans-serif"],
         virgil: ["Virgil", "sans-serif"],
+        vampiro: ["Vampiro", "sans-serif"],
         assistant: ["Assistant", "sans-serif"],
       },
     },

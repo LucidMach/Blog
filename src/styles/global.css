@@ -2,12 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
 @font-face {
+  font-family: "Vampiro";
+  src: url("/fonts/VampiroOne-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Virgil";
   src: url("/fonts/Virgil.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 * {
   background: #1a1a1a;
   color: #d3d3d3;

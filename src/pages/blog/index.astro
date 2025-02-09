@@ -1,53 +1,33 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
 import BlogCard from "../../components/BlogCard.astro";
+import BlogCategorySelctor from "../../components/BlogCategorySelctor";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="w-full">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-assistant w-full">
-    <br />
-    <br />
-    <Header title={SITE_TITLE} />
-    <br />
-    <br />
+    <div class="flex flex-col w-full items-center gap-16">
+      <div
+        class="bg-red-400 text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
+      >
+        blog
+      </div>
+      <h1 class="text-5xl md:text-8xl font-virgil">LucidBlog</h1>
+    </div>
     <main class="w-full flex flex-col">
-      <h1 class="text-3xl font-virgil">The Blog Posts</h1>
-      <br />
-      <br />
-      <h3 class="text-xl font-virgil text-red-400">ML</h3>
-      <br />
-      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        { posts.map((post) => (post.data.type === "ML"? <BlogCard post={post}/>:<></>)) }
-      </ul>
-      <br />
-      <h3 class="text-xl font-virgil text-red-400">Web Dev</h3>
-	  <p class="italic">
-	  originally posted on <a class="underline" href="https://dev.to/lucidmach">dev.to</a>
-	  </p>
-      <br />
-      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        { posts.map((post) => (post.data.type === "Dev"? <BlogCard post={post}/>:<></>)) }
-      </ul>
-      <br />
-      <h3 class="text-xl font-virgil text-red-400">Misc</h3>
-      <br />
-      <ul class="flex flex-col gap-5 w-full text-sm md:text-base">
-        { posts.map((post) => (post.data.type === "Misc"? <BlogCard post={post}/>:<></>)) }
-      </ul>
+      <BlogCategorySelctor posts={posts} client:visible />
       <br />
       <br />
       <br />
