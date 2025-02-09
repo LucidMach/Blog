@@ -35,8 +35,8 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
 
   useEffect(() => {
     if (swipe) {
-      if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 3));
-      if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 0));
+      if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 0));
+      if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 3));
     }
   }, [swipe]);
 
@@ -81,11 +81,13 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
     <group
       {...bind()}
       ref={cube}
-      onDoubleClick={() =>
-        (window.location.href = `/${
+      onDoubleClick={() => {
+        // const zoomed = new THREE.Vector3(0, 0, 10);
+        // cube.current?.position.lerp(zoomed, 0.3);
+        window.location.href = `/${
           sections[active].name === "home" ? "" : sections[active].name
-        }`)
-      }
+        }`;
+      }}
       castShadow
       receiveShadow
       position={position}
