@@ -35,8 +35,8 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
 
   useEffect(() => {
     if (swipe) {
-      if (dir === "right") setActive((active) => (active < 3 ? active + 1 : 0));
-      if (dir === "left") setActive((active) => (active > 0 ? active - 1 : 3));
+      if (dir === "left") setActive((active) => (active < 3 ? active + 1 : 0));
+      if (dir === "right") setActive((active) => (active > 0 ? active - 1 : 3));
     }
   }, [swipe]);
 
