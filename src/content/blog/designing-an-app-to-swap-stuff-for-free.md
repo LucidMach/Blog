@@ -85,10 +85,6 @@ We didn't reinvent the wheel for messaging. Following **Jakob’s Law**, our cha
 
 On the search results screen, we used a strict visual hierarchy. The item title is bold and prominent, but the swapper’s rating and verified badge are tucked neatly to the right. It gives you the "trust signals" you need without cluttering your scan for the perfect chess board.
 
-### 4. Consistency is King
-
-Across all screens, we maintained uniform typography, button styles (rounded rectangles), and spacing. This follows Shneiderman’s principle of **Striving for Consistency**, allowing users to transfer their knowledge from one screen to the next effortlessly.
-
 ## ♿ Accessibility is Not Optional
 
 We took **WCAG 2.1** seriously.
