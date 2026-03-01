@@ -13,7 +13,7 @@ interface props {
 }
 
 const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
-  const [active, setActive] = useAtom(activeAtom);
+  const [active] = useAtom(activeAtom);
   const [titleX, setTitleX] = useState(0);
   const [subtitleX, setSubtitleX] = useState(0);
   const [ctaX, setCtaX] = useState(0);
@@ -42,8 +42,8 @@ const Lucid3DText: React.FC<props> = ({ color, rotation, position, scale }) => {
     }
   }, [active]);
 
-  const titleRef = useRef();
-  const subtitleRef = useRef();
+  const titleRef = useRef<any>(null);
+  const subtitleRef = useRef<any>(null);
   heartBeating(titleRef);
   heartBeating(subtitleRef);
 

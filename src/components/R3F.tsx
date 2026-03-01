@@ -15,11 +15,11 @@ import bgColors from "../content/bgColors";
 import colors from "../content/colors";
 
 const R3F = () => {
-  const [color, setColor] = useState<number>(0);
+  const [color] = useState<number>(0);
   const [w, setW] = useState<number>(0);
   const [h, setH] = useState<number>(0);
-  const [active, setActive] = useAtom(activeAtom);
-  const [rotating, setRotating] = useAtom(rotatingAtom);
+  const [, setActive] = useAtom(activeAtom);
+  const [rotating] = useAtom(rotatingAtom);
   const [, setDir] = useAtom(dirAtom);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const R3F = () => {
     });
   }, []);
 
-  const bind = useDrag(({ down, movement: [xD], cancel, active: dragging }) => {
+  const bind = useDrag(({ movement: [xD], cancel, active: dragging }) => {
     if (rotating) return;
 
     if (dragging && Math.abs(xD) > 50) {

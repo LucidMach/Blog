@@ -1,6 +1,5 @@
 import { useState, type ReactElement } from "react";
 import BlogCard from "./BlogCard";
-import { element } from "three/examples/jsm/nodes/Nodes.js";
 
 interface props {
   posts: {

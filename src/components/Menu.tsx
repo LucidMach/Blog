@@ -5,7 +5,7 @@ import dirAtom from "../atoms/dir";
 
 const Menu: React.FC = () => {
   const [active, setActive] = useAtom(activeAtom);
-  const [dir, setDir] = useAtom(dirAtom);
+  const [, setDir] = useAtom(dirAtom);
 
   return (
     <>

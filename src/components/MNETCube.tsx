@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -10,10 +9,10 @@ interface props {
 }
 
 export const MNETCube: React.FC<props> = ({ position, rotation, scale }) => {
-  const { nodes, materials } = useGLTF("/mnetcube.glb");
+  const { nodes } = useGLTF("/mnetcube.glb");
   const [hover, setHover] = useState<boolean>(false);
 
-  const cube = useRef<THREE.Mesh>();
+  const cube = useRef<any>(null);
 
   // random movement between -0.05 and 0.05
   const moveX = Math.random() * 0.1 - 0.05;
@@ -33,12 +32,12 @@ export const MNETCube: React.FC<props> = ({ position, rotation, scale }) => {
   return (
     <group position={position} rotation={rotation} scale={scale} dispose={null}>
       <mesh
-        onPointerEnter={(e) => setHover(true)}
-        onPointerLeave={(e) => setHover(false)}
+        onPointerEnter={() => setHover(true)}
+        onPointerLeave={() => setHover(false)}
         ref={cube}
         castShadow
         receiveShadow
-        geometry={nodes.Mnet_Cube.geometry}
+        geometry={(nodes.Mnet_Cube as any).geometry}
         scale={hover ? 1.5 : 1}
       />
       <meshMatcapMaterial />

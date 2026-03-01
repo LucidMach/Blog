@@ -1,6 +1,5 @@
 import { useGLTF } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
 import heartBeating from "../hooks/heartBeating";
 import { useAtom } from "jotai";
 import activeAtom from "../atoms/active";
