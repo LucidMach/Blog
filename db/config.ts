@@ -14,13 +14,6 @@ const Order = defineTable({
   },
 });
 
-const BlogStats = defineTable({
-  columns: {
-    title: column.text(),
-    views: column.number(),
-  },
-});
-
 export default defineDb({
-  tables: { Order, BlogStats },
+  tables: { Order },
 });
