@@ -1,5 +1,5 @@
 ---
-import Socials from "./Socials.astro";
+import Socials from "./Socials";
 
 const today = new Date();
 ---
@@ -13,7 +13,7 @@ const today = new Date();
   <br />
   <br />
   <div class="font-virgil self-center">follow for updates 😁</div>
-  <Socials />
+  <Socials client:visible />
   <br />
   &copy; {today.getFullYear()}
   <a

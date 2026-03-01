@@ -13,9 +13,10 @@ import rotatingAtom from "../atoms/rotating";
 
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
+import colorIndexAtom from "../atoms/colorIndex";
 
 const R3F = () => {
-  const [color] = useState<number>(0);
+  const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
   const [w, setW] = useState<number>(0);
   const [h, setH] = useState<number>(0);
   const [, setActive] = useAtom(activeAtom);
@@ -30,7 +31,13 @@ const R3F = () => {
       setW(window.innerWidth);
       setH(window.innerHeight);
     });
-  }, []);
+
+    const interval = setInterval(() => {
+      setColorIndex((prev) => (prev < colors.length - 1 ? prev + 1 : 0));
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [setColorIndex]);
 
   const bind = useDrag(({ movement: [xD], cancel, active: dragging }) => {
     if (rotating) return;
@@ -56,15 +63,14 @@ const R3F = () => {
         }}
         camera={{ position: [0, 0, 7.5] }}
       >
-        <color attach="background" args={[bgColors[color]]} />
+        <color attach="background" args={[bgColors[0]]} />
         <directionalLight
-          color={colors[color]}
+          color={colors[colorIndex]}
           position={[0, 0, 5]}
           intensity={5}
         />
         <LucidCube
-          color={colors[color]}
-          position={[0, 0.5, -1]}
+          position={[0, 0, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}
           scale={1}
         />
@@ -74,9 +80,9 @@ const R3F = () => {
           scale={w > h ? 1 : 0.75}
         />
         <Lucid3DText
-          color={colors[color]}
           position={[0, w > h ? 0 : -0.5, 0]}
           scale={w > h ? 1 : 0.5}
+          isMobile={w <= h}
         />
         <Rig />
       </Canvas>

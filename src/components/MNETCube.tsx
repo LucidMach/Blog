@@ -39,8 +39,9 @@ export const MNETCube: React.FC<props> = ({ position, rotation, scale }) => {
         receiveShadow
         geometry={(nodes.Mnet_Cube as any).geometry}
         scale={hover ? 1.5 : 1}
-      />
-      <meshMatcapMaterial />
+      >
+        <meshMatcapMaterial color="white" />
+      </mesh>
     </group>
   );
 };

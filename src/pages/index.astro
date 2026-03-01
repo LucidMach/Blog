@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 import BaseHead from "../components/BaseHead.astro";
 import R3F from "../components/R3F.tsx";
-import Socials from "../components/Socials.astro";
+import Socials from "../components/Socials";
 import Menu from "../components/Menu";
 ---
 
@@ -14,6 +14,24 @@ import Menu from "../components/Menu";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-assistant w-full">
+    <a
+      href="/archive"
+      class="fixed top-4 p-2 right-4 bg-[#a1a1a1] bg-opacity-85 rounded-full z-20"
+    >
+      <svg
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        class="bg-transparent"
+        height="24"
+        width="24"
+        fill="#1a1a1a"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          d="m3.503 6.726c1.765-2.836 4.911-4.726 8.495-4.726 5.518 0 9.997 4.48 9.997 9.997 0 5.519-4.479 9.999-9.997 9.999-5.245 0-9.553-4.048-9.966-9.188-.024-.302.189-.811.749-.811.391 0 .715.3.747.69.351 4.369 4.012 7.809 8.47 7.809 4.69 0 8.497-3.808 8.497-8.499 0-4.689-3.807-8.497-8.497-8.497-3.037 0-5.704 1.597-7.206 3.995l1.991.005c.414 0 .75.336.75.75s-.336.75-.75.75h-4.033c-.414 0-.75-.336-.75-.75v-4.049c0-.414.336-.75.75-.75s.75.335.75.75zm7.487.021.007 5.563c0 .288.165.55.424.675l3.978 1.928c.373.18.821.024 1.001-.349s.024-.821-.349-1.001l-3.555-1.725s-.006-5.093-.006-5.093c0-.414-.337-.749-.75-.749-.414 0-.75.337-.75.751z"
+          fill-rule="nonzero"></path></svg
+      >
+    </a>
     <main class="flex flex-col">
       <Suspense>
         <div
@@ -23,7 +41,7 @@ import Menu from "../components/Menu";
         </div>
         <R3F client:visible />
         <div class="fixed bottom-4 left-0 w-full bg-transparent">
-          <Socials />
+          <Socials client:visible />
         </div>
       </Suspense>
     </main>

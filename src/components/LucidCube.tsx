@@ -8,19 +8,22 @@ import dirAtom from "../atoms/dir";
 import rotatingAtom from "../atoms/rotating";
 import sections from "../content/sections";
 
+import colorIndexAtom from "../atoms/colorIndex";
+import colors from "../content/colors";
+
 interface props {
-  color: string;
   position: [number, number, number];
   rotation: [number, number, number];
   scale: number;
 }
 
-const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
+const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   const { nodes } = useGLTF("/lucidcube.glb");
   const [active] = useAtom(activeAtom);
   const [rotating, setRotating] = useAtom(rotatingAtom);
   const [dir] = useAtom(dirAtom);
-  const [countFrames, setCountFrames] = useState(0);
+  const [, setCountFrames] = useState(0);
+  const [colorIndex] = useAtom(colorIndexAtom);
 
   const cube = useRef<any>(null);
   heartBeating(cube);
@@ -75,7 +78,7 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
           <meshMatcapMaterial color={"#1a1a1a"} />
         </mesh>
         <mesh castShadow receiveShadow geometry={(nodes.Cube_2 as any).geometry}>
-          <meshMatcapMaterial color={color} />
+          <meshMatcapMaterial color={"#f1f1f1"} />
         </mesh>
       </group>
       <mesh
@@ -86,7 +89,7 @@ const LucidCube: React.FC<props> = ({ color, position, rotation, scale }) => {
         scale={0.75}
       >
         <boxGeometry args={[2, 2, 2]} />
-        <meshMatcapMaterial color={color} />
+        <meshMatcapMaterial color={"#f1f1f1"} />
       </mesh>
     </group>
   );
