@@ -70,8 +70,8 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
           <meshMatcapMaterial color={colors[colorIndex]} />
         </Text3D>
       </Center>
-      <Center position={[ctaX, isMobile ? 3.5 : 2.7, 2]}>
-        <Text3D scale={0.15} font={"/fonts/Comfortaa Regular.json"}>
+      <Center position={[ctaX, isMobile ? 7.2 : 2.7, 2]}>
+        <Text3D scale={isMobile ? 0.25 : 0.15} font={"/fonts/Comfortaa Regular.json"}>
           {sections[active].cta}
           <meshMatcapMaterial color={colors[colorIndex]} />
         </Text3D>
