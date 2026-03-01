@@ -6,7 +6,10 @@ import Rig from "./Rig";
 import Lucid3DText from "./Lucid3DText";
 import LucidCube from "../components/LucidCube";
 import SeaOfMNET from "./SeaOfMNET";
+import { useDrag } from "@use-gesture/react";
 import activeAtom from "../atoms/active";
+import dirAtom from "../atoms/dir";
+import rotatingAtom from "../atoms/rotating";
 
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
@@ -16,6 +19,8 @@ const R3F = () => {
   const [w, setW] = useState<number>(0);
   const [h, setH] = useState<number>(0);
   const [active, setActive] = useAtom(activeAtom);
+  const [rotating, setRotating] = useAtom(rotatingAtom);
+  const [, setDir] = useAtom(dirAtom);
 
   useEffect(() => {
     setW(window.innerWidth);
@@ -27,8 +32,20 @@ const R3F = () => {
     });
   }, []);
 
+  const bind = useDrag(({ down, movement: [xD], cancel, active: dragging }) => {
+    if (rotating) return;
+
+    if (dragging && Math.abs(xD) > 50) {
+      const newDir = xD > 0 ? "right" : "left";
+      setDir(newDir);
+      if (newDir === "left") setActive((prev) => (prev < 3 ? prev + 1 : 0));
+      if (newDir === "right") setActive((prev) => (prev > 0 ? prev - 1 : 3));
+      cancel();
+    }
+  });
+
   return (
-    <>
+    <div {...bind()} style={{ touchAction: "none" }}>
       <Canvas
         style={{
           position: "fixed",
@@ -38,10 +55,6 @@ const R3F = () => {
           width: w,
         }}
         camera={{ position: [0, 0, 7.5] }}
-        // onClick={() =>
-        // setColor((color) => (color < colors.length - 1 ? color + 1 : 0))
-        // (window.location.href = "/blog")
-        // }
       >
         <color attach="background" args={[bgColors[color]]} />
         <directionalLight
@@ -67,7 +80,7 @@ const R3F = () => {
         />
         <Rig />
       </Canvas>
-    </>
+    </div>
   );
 };
 
