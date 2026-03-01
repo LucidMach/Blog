@@ -8,8 +8,7 @@ import BlogCategorySelctor from "../../components/BlogCategorySelctor";
 import Menu from "../../components/Menu";
 
 const posts = (await getCollection("blog")).sort(
-  (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
