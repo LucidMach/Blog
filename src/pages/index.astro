@@ -6,6 +6,7 @@ import BaseHead from "../components/BaseHead.astro";
 import R3F from "../components/R3F.tsx";
 import Socials from "../components/Socials";
 import Menu from "../components/Menu";
+import PageSelector from "../components/PageSelector";
 ---
 
 <!doctype html>
@@ -40,6 +41,7 @@ import Menu from "../components/Menu";
           <Menu client:visible />
         </div>
         <R3F client:visible />
+        <PageSelector client:load />
         <div class="fixed bottom-4 left-0 w-full bg-transparent">
           <Socials client:visible />
         </div>
