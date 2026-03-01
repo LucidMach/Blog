@@ -38,7 +38,7 @@ const PageSelector = () => {
         ) : (
             <div className="flex items-center gap-2">
 
-            <p className="text-lg">check out the</p>
+            <p className="text-lg">{active === 3 ? "check me out" : "check out the"}</p>
           <a
             href={`/${sections[active].name}`}
             style={{ backgroundColor: colors[colorIndex] }}

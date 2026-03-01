@@ -42,6 +42,6 @@ body {
   overflow-wrap: break-word;
   line-height: 1.5;
 }
-a{
+a,svg{
   cursor: pointer;
 }

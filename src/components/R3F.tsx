@@ -19,17 +19,32 @@ import useMobile from "../hooks/useMobile";
 const R3F = () => {
   const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
   const { w, h } = useMobile();
-  const [, setActive] = useAtom(activeAtom);
+  const [active, setActive] = useAtom(activeAtom);
   const [rotating] = useAtom(rotatingAtom);
   const [, setDir] = useAtom(dirAtom);
 
   useEffect(() => {
+    if (active === 0) {
+      setColorIndex(5);
+    }
+    if (active === 1) {
+      setColorIndex(1);
+      // return;
+    }
+    if (active === 2) {
+      setColorIndex(2);
+      // return;
+    }
+    if (active === 3) {
+      setColorIndex(4);
+    }
+    
     const interval = setInterval(() => {
       setColorIndex((prev) => (prev < colors.length - 1 ? prev + 1 : 0));
-    }, 2000);
+    }, 1400);
 
     return () => clearInterval(interval);
-  }, [setColorIndex]);
+  }, [setColorIndex, active]);
 
   const bind = useDrag(({ movement: [xD], cancel, active: dragging }) => {
     if (rotating) return;
