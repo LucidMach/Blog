@@ -2,6 +2,7 @@
 title: "Reimagining Barter System for the Mordern World"
 description: "How Team Bulbasaur turned user research into a high-fidelity prototype for trust-based item swapping."
 pubDate: "Nov 19, 2025"
+type: "UX"
 tags: ["UX Design", "Prototyping", "Case Study", "Product Design"]
 ---
 

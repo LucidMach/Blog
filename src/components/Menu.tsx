@@ -5,10 +5,19 @@ import dirAtom from "../atoms/dir";
 import colorIndexAtom from "../atoms/colorIndex";
 import colors from "../content/colors";
 
-const Menu: React.FC = () => {
+interface Props {
+  currentActive?: number;
+  currentColorIndex?: number;
+  singleClickMode?: boolean;
+}
+
+const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMode }) => {
   const [active, setActive] = useAtom(activeAtom);
   const [, setDir] = useAtom(dirAtom);
-  const [colorIndex] = useAtom(colorIndexAtom);
+  const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
+
+  setActive(currentActive || active);
+  setColorIndex(currentColorIndex || colorIndex);
 
   return (
     <>

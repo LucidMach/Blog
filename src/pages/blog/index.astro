@@ -5,9 +5,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import { getCollection } from "astro:content";
 import BlogCategorySelctor from "../../components/BlogCategorySelctor";
+import Menu from "../../components/Menu";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a: { data: { pubDate: number } }, b: { data: { pubDate: number } }) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -18,15 +20,23 @@ const posts = (await getCollection("blog")).sort(
   </head>
   <body class="font-assistant w-full">
     <div class="flex flex-col w-full items-center gap-16">
-      <a
+      <!-- <a
         href="/"
         class="bg-red-400 hover:cursor-pointer text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
       >
         home
-      </a>
+      </a> -->
+      <Menu
+        singleClickMode
+        currentActive={1}
+        currentColorIndex={1}
+        client:visible
+      />
       <div class="flex flex-col items-center mb-16">
-        <h1 class="text-5xl md:text-8xl font-virgil">LucidBlog</h1>
-        <h1 class="font-virgil">a collection of ideas and learnings</h1>
+        <h1 class="text-5xl md:text-8xl font-virgil">Ziro2Mach</h1>
+        <h1 class="font-virgil">
+          a collection of writings - ideas and learnings - blog posts
+        </h1>
       </div>
     </div>
     <main class="w-full flex flex-col">

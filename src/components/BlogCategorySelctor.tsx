@@ -29,7 +29,7 @@ const BlogCategorySelector: React.FC<props> = ({ posts }) => {
 
   return (
     <>
-      <div className="flex w-full gap-8 my-8 flex-wrap">
+      <div className="flex w-full gap-8 my-6 flex-wrap justify-center">
         {categories.map((cat) => (
           <div
             className={`${cat === active ? "bg-red-400" : "bg-white"} 

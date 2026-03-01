@@ -2,7 +2,7 @@
 title: 'How we built the app that will make you more "Productive"'
 description: "a UX research case study on what is productivity; how to become more productive and how to make an app that can make anyone more productive"
 pubDate: "Jan 1 2025"
-type: "Misc"
+type: "UX"
 heroImage: "/how-we-built-the-app-what-will-make-you-more-productive/hero.png"
 ---
 
