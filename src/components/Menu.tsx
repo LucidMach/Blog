@@ -31,13 +31,16 @@ const Menu: React.FC = () => {
                     active === index ? colorIndex === 0? "#a1a1a1": "#f1f1f1" : colors[colorIndex],
                   color: active === index ? colors[colorIndex] : "#1a1a1a",
                 }}
-                className={`hover:bg-[#f1f1f1] hover:text-[#1a1a1a] p-2 rounded-full w-12 h-12 flex justify-center items-center`}
+                className={`hover:bg-[#f1f1f1] hover:text-[#1a1a1a] p-2 rounded-full w-12 h-12 flex justify-center items-center cursor-pointer`}
                 onClick={() =>
                   setActive((prev) => {
                     prev > index ? setDir("left") : setDir("right");
                     return index;
                   })
                 }
+                onDoubleClick={() => {
+                  window.location.href = section.name === "home" ? "/" : `/${section.name}`;
+                }}
               >
                 {section.icon}
               </div>

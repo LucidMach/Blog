@@ -2,27 +2,15 @@ import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import colorIndexAtom from "../atoms/colorIndex";
 import activeAtom from "../atoms/active";
+import { P } from "../../dist/_astro/three.module.CbO7aUhW";
+import useMobile from "../hooks/useMobile";
 import colors from "../content/colors";
 import sections from "../content/sections";
 
 const PageSelector = () => {
   const [colorIndex] = useAtom(colorIndexAtom);
   const [active] = useAtom(activeAtom);
-  const [w, setW] = useState(0);
-  const [h, setH] = useState(0);
-
-  useEffect(() => {
-    setW(window.innerWidth);
-    setH(window.innerHeight);
-    const handleResize = () => {
-      setW(window.innerWidth);
-      setH(window.innerHeight);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isMobile = w <= h;
+  const { isMobile } = useMobile();
 
   return (
     <div

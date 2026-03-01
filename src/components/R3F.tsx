@@ -14,24 +14,16 @@ import rotatingAtom from "../atoms/rotating";
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
 import colorIndexAtom from "../atoms/colorIndex";
+import useMobile from "../hooks/useMobile";
 
 const R3F = () => {
   const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
-  const [w, setW] = useState<number>(0);
-  const [h, setH] = useState<number>(0);
+  const { w, h } = useMobile();
   const [, setActive] = useAtom(activeAtom);
   const [rotating] = useAtom(rotatingAtom);
   const [, setDir] = useAtom(dirAtom);
 
   useEffect(() => {
-    setW(window.innerWidth);
-    setH(window.innerHeight);
-
-    window.addEventListener("resize", () => {
-      setW(window.innerWidth);
-      setH(window.innerHeight);
-    });
-
     const interval = setInterval(() => {
       setColorIndex((prev) => (prev < colors.length - 1 ? prev + 1 : 0));
     }, 2000);
