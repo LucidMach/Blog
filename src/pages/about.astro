@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
+import Menu from "../components/Menu";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -11,12 +12,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body class="font-assistant w-full">
     <div class="flex flex-col w-full items-center gap-16">
-      <a
-        href="/"
-        class="bg-red-400 hover:cursor-pointer text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
-      >
-        home
-      </a>
+      <Menu client:visible currentActive={3} currentColorIndex={2} />
       <div class="flex flex-col items-center mb-16">
         <h1 class="text-5xl md:text-8xl font-virgil">About Me</h1>
         <h1 class="font-virgil">This is My Tale</h1>
