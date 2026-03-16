@@ -1,8 +1,6 @@
 import { useAtom } from "jotai";
-import { useEffect, useState } from "react";
 import colorIndexAtom from "../atoms/colorIndex";
 import activeAtom from "../atoms/active";
-import { P } from "../../dist/_astro/three.module.CbO7aUhW";
 import useMobile from "../hooks/useMobile";
 import colors from "../content/colors";
 import sections from "../content/sections";
@@ -22,7 +20,10 @@ const PageSelector = () => {
           <>
             <a
               href="/projects"
-              style={{ borderColor: colors[colorIndex], color: colors[colorIndex] }}
+              style={{
+                borderColor: colors[colorIndex],
+                color: colors[colorIndex],
+              }}
               className="px-6 py-1 border rounded-full mr-2 hover:opacity-70 transition-opacity"
             >
               projects
@@ -36,17 +37,18 @@ const PageSelector = () => {
             </a>
           </>
         ) : (
-            <div className="flex items-center gap-2">
-
-            <p className="text-lg">{active === 3 ? "check me out" : "check out the"}</p>
-          <a
-            href={`/${sections[active].name}`}
-            style={{ backgroundColor: colors[colorIndex] }}
-            className="px-6 py-1 text-black rounded-full hover:opacity-70 transition-opacity"
-          >
-            /{sections[active].name}
-          </a>
-            </div>
+          <div className="flex items-center gap-2">
+            <p className="text-lg">
+              {active === 3 ? "check me out" : "check out the"}
+            </p>
+            <a
+              href={`/${sections[active].name}`}
+              style={{ backgroundColor: colors[colorIndex] }}
+              className="px-6 py-1 text-black rounded-full hover:opacity-70 transition-opacity"
+            >
+              /{sections[active].name}
+            </a>
+          </div>
         )}
       </div>
     </div>
