@@ -1,0 +1,47 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+import { getCollection } from "astro:content";
+import Menu from "../../components/Menu";
+import ProjectCard from "../../components/ProjectCard";
+
+const projects = (await getCollection("projects")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en" class="w-full">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="font-assistant w-full">
+    <div class="flex flex-col w-full items-center gap-16">
+      <Menu
+        singleClickMode
+        currentActive={2}
+        currentColorIndex={2}
+        client:visible
+      />
+      <div class="flex flex-col items-center mb-16 text-center">
+        <h1 class="text-5xl md:text-8xl font-virgil text-center">Projects</h1>
+        <h1 class="font-virgil">
+          my github repositories, open-source work & more
+        </h1>
+      </div>
+    </div>
+    <main class="w-full flex flex-col items-center">
+      <ul class="flex flex-col gap-5 w-full max-w-2xl text-sm md:text-base my-2">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </ul>
+      <br />
+      <br />
+      <br />
+    </main>
+    <Footer />
+  </body>
+</html>
