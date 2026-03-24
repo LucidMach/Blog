@@ -24,27 +24,21 @@ const ProjectCard: React.FC<prop> = ({ project, index }) => {
         <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
       </div>
       <a
-        className="bg-[#fdfdfd] text-[#1a1a1a] shadow-[0_10px_20px_rgba(0,0,0,0.1)] border border-[#e5e5e5] p-4 pb-12 flex flex-col items-center w-full min-h-[300px] h-full"
+        className="block bg-[#fdfdfd] text-[#1a1a1a] shadow-xl border border-[#e5e5e5] p-4 pb-8 w-full"
         href={`/projects/${project.slug}/`}
       >
-        <div className="w-full aspect-square bg-[#1a1a1a] flex flex-col items-center justify-center p-4 text-center overflow-hidden relative">
-          <p className="font-virgil text-white text-xl z-10 mb-2">
-            {project.data.title}
-          </p>
-          <div className="absolute inset-0 opacity-10 bg-gradient-to-tr from-white to-transparent mix-blend-overlay"></div>
+        <div className="w-full aspect-[3/4] bg-[#1a1a1a] overflow-hidden">
+          <img
+            src={project.data.heroImage || "/meta.png"}
+            alt={project.data.title}
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        <div className="mt-4 flex flex-col justify-between h-full w-full">
-          <p className="text-sm font-virgil text-center leading-tight line-clamp-3">
-            {project.data.description || "No description provided."}
+        <div className="flex items-center justify-center">
+          <p className="bg-white w-full pt-6 text-black text-2xl font-virgil text-center">
+            {project.data.title}
           </p>
-          <div className="flex gap-2 justify-center mt-3 flex-wrap">
-            {project.data.tags?.slice(0, 3).map((tag: string) => (
-              <span key={tag} className="text-[10px] bg-red-100 text-red-800 px-2 py-0.5 rounded-full font-assistant font-bold">
-                {tag}
-              </span>
-            ))}
-          </div>
         </div>
       </a>
     </div>
