@@ -12,16 +12,21 @@ const projects = (await getCollection("projects")).sort(
 );
 
 // Group by year
-const projectsByYear = projects.reduce((acc, project) => {
-  const year = project.data.pubDate.getFullYear();
-  if (!acc[year]) {
-    acc[year] = [];
-  }
-  acc[year].push(project);
-  return acc;
-}, {} as Record<number, any[]>);
+const projectsByYear = projects.reduce(
+  (acc, project) => {
+    const year = project.data.pubDate.getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(project);
+    return acc;
+  },
+  {} as Record<number, any[]>,
+);
 
-const years = Object.keys(projectsByYear).map(Number).sort((a, b) => b - a);
+const years = Object.keys(projectsByYear)
+  .map(Number)
+  .sort((a, b) => b - a);
 ---
 
 <!doctype html>
@@ -29,7 +34,7 @@ const years = Object.keys(projectsByYear).map(Number).sort((a, b) => b - a);
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="font-assistant w-full bg-[#f4f4f4]">
+  <body class="font-assistant w-full">
     <div class="flex flex-col w-full items-center gap-16">
       <Menu
         singleClickMode
@@ -38,28 +43,31 @@ const years = Object.keys(projectsByYear).map(Number).sort((a, b) => b - a);
         client:visible
       />
       <div class="flex flex-col items-center mb-8 mt-4 text-[#1a1a1a]">
-        <h1 class="text-5xl md:text-8xl font-virgil text-center">Projects Wall</h1>
-        <h1 class="font-virgil mt-2 text-center text-lg md:text-2xl opacity-80 max-w-xl mx-auto">
-          a wall of my github repositories, acting like polaroid memories across the years
+        <h1
+          class="font-virgil mt-2 text-center text-lg md:text-2xl opacity-80 max-w-xl mx-auto"
+        >
+          snapshots of (almost) everything i've built 🤞
         </h1>
       </div>
     </div>
-    <main class="w-full flex flex-col items-center px-4 md:px-12 mt-12 overflow-hidden">
-      {years.map(year => (
-        <section class="w-full max-w-7xl mb-24 relative">
-          <div class="absolute -left-4 top-4 bottom-4 w-1 bg-red-400 opacity-20 rounded-full md:block hidden"></div>
-          
-          <h2 class="text-6xl md:text-8xl font-virgil text-[#1a1a1a] opacity-10 mb-12 pl-4">
-            {year}
-          </h2>
-          
-          <div class="flex flex-wrap gap-12 justify-center pb-8 pt-4">
-            {projectsByYear[year].map((project, index) => (
-              <ProjectCard project={project} index={index} />
-            ))}
-          </div>
-        </section>
-      ))}
+    <main
+      class="w-full flex flex-col items-center px-4 md:px-12 mt-12 overflow-hidden"
+    >
+      {
+        years.map((year) => (
+          <section class="w-full max-w-7xl mb-24 relative">
+            <h2 class="text-4xl md:text-6xl text-center font-virgil text-yellow-400 mb-12 pl-4">
+              {year}
+            </h2>
+
+            <div class="flex flex-wrap gap-12 justify-center pb-8 pt-4">
+              {projectsByYear[year].map((project, index) => (
+                <ProjectCard project={project} index={index} />
+              ))}
+            </div>
+          </section>
+        ))
+      }
     </main>
     <Footer />
   </body>

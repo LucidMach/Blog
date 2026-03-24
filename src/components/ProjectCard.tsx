@@ -20,8 +20,8 @@ const ProjectCard: React.FC<prop> = ({ project, index }) => {
     <div
       className={`group w-64 ${rotation} hover:rotate-0 transition-transform duration-300 ease-out flex-shrink-0 relative`}
     >
-      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#f1f1f1] shadow-inner opacity-80 z-10 flex items-center justify-center">
-        <div className="w-2 h-2 rounded-full bg-red-400 opacity-60"></div>
+      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#000] shadow-inner opacity-80 z-10 flex items-center justify-center">
+        <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
       </div>
       <a
         className="bg-[#fdfdfd] text-[#1a1a1a] shadow-[0_10px_20px_rgba(0,0,0,0.1)] border border-[#e5e5e5] p-4 pb-12 flex flex-col items-center w-full min-h-[300px] h-full"
