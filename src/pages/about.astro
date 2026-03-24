@@ -12,28 +12,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body class="font-assistant w-full">
     <div class="flex flex-col w-full items-center gap-16">
-      <Menu client:visible currentActive={3} currentColorIndex={2} />
-      <div class="flex flex-col items-center mb-16">
-        <h1 class="text-5xl md:text-8xl font-virgil">About Me</h1>
-        <h1 class="font-virgil">This is My Tale</h1>
-      </div>
+      <Menu
+        client:visible
+        currentActive={3}
+        currentColorIndex={4}
+        singleClickMode
+      />
     </div>
     <main class="w-full flex flex-col">
-      <h1 class="text-3xl font-virgil">Who Am I?</h1>
-      <br />
-
-      <section class="font-virgil prose prose-invert">
-        👋 hieeeeeeee!
-        <br />
-        my name is <a
-          class="hover:cursor-pointer text-red-400"
+      <section class="font-virgil prose prose-invert mt-24">
+        <h2>hieeeeeeee! 👋</h2>
+        I am <a
+          class="hover:cursor-pointer text-indigo-400"
           href="https://www.linkedin.com/in/lucidmach/">suraj nukala</a
         >
         <img class="rounded-lg" src="/LucidMach.jpg" alt="" />
         i constantly teach myself "to build stuff that i think will blow my mind"
         and on the internet i call myself the
         <a
-          class="hover:cursor-pointer text-red-400"
+          class="hover:cursor-pointer text-indigo-400"
           href="https://lucidlinks.vercel.app"
           >lucidmach
         </a>
