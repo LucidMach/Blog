@@ -26,7 +26,7 @@ const projects = defineCollection({
     githubUrl: z.string().url().optional().nullable(),
     demoUrl: z.string().optional().nullable(),
     tags: z.array(z.string()).default([]),
-    heroImage: z.string().default("/meta.png"),
+    heroImage: z.string().default("/scratched-out.png"),
   }),
 });
 

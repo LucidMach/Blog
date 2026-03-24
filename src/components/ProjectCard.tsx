@@ -29,7 +29,7 @@ const ProjectCard: React.FC<prop> = ({ project, index }) => {
       >
         <div className="w-full aspect-[3/4] bg-[#1a1a1a] overflow-hidden">
           <img
-            src={project.data.heroImage || "/meta.png"}
+            src={project.data.heroImage || "/scratched-out.png"}
             alt={project.data.title}
             className="w-full h-full object-cover"
           />
