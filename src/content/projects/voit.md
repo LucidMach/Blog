@@ -2,8 +2,7 @@
 title: "VOIT"
 description: "A UI for ESP8266 Robots [VoiceOperatedInternetThing]"
 pubDate: "2021-02-20"
-githubUrl: "https://github.com/LucidMach/VOIT"
-demoUrl: "http://voit-beta.herokuapp.com/"
+demoUrl: "https://github.com/LucidMach/VOIT"
 tags: ["esp8266-arduino","expressjs","iot","ui"]
 ---
 

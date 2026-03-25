@@ -2,8 +2,7 @@
 title: "SaGe"
 description: "SaGe is a facial recognition based Home Security System "
 pubDate: "2020-09-11"
-githubUrl: "https://github.com/LucidMach/SaGe"
-
+demoUrl: "https://github.com/LucidMach/SaGe"
 tags: []
 ---
 

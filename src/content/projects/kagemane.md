@@ -2,8 +2,8 @@
 title: "kagemane"
 description: "a teleoperation/shadow control platform for robots"
 pubDate: "2022-08-14"
-githubUrl: "https://github.com/LucidMach/kagemane"
-demoUrl: "kagemane.vercel.app"
+demoUrl: "https://github.com/LucidMach/kagemane"
+heroImage: "/projects/kagemane.gif"
 tags: []
 ---
 

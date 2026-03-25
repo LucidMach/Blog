@@ -3,7 +3,8 @@ title: "Habitat"
 description: "No description provided."
 pubDate: "2021-12-16"
 githubUrl: "https://github.com/LucidMach/Habitat"
-demoUrl: "habitat.vercel.app"
+demoUrl: "https://habitat.vercel.app"
+heroImage: "/projects/habitat.png"
 tags: []
 ---
 

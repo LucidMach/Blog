@@ -24,8 +24,8 @@ const ProjectCard: React.FC<prop> = ({ project, index }) => {
         <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
       </div>
       <a
-        className="block bg-[#fdfdfd] text-[#1a1a1a] shadow-xl border border-[#e5e5e5] p-4 pb-8 w-full"
-        href={`/projects/${project.slug}/`}
+        className="block bg-[#fdfdfd] cursor-pointer text-[#1a1a1a] shadow-xl border border-[#e5e5e5] p-4 pb-8 w-full"
+        href={project.data.demoUrl}
       >
         <div className="w-full aspect-[3/4] bg-[#1a1a1a] overflow-hidden">
           <img

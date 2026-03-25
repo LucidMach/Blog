@@ -2,8 +2,8 @@
 title: "poimandres-ghostty"
 description: "the unofficial poimandres theme for ghostty terminal"
 pubDate: "2025-01-13"
-githubUrl: "https://github.com/LucidMach/poimandres-ghostty"
-demoUrl: "https://ghostty.org/"
+demoUrl: "https://github.com/LucidMach/poimandres-ghostty"
+heroImage: "/projects/poimandres-ghostty.png"
 tags: ["ghostty","ghostty-config","ghostty-theme","poimandres","poimandres-theme"]
 ---
 
