@@ -4,7 +4,7 @@ description: "Environment Visualisation Software for TurtleBot3"
 pubDate: "2023-01-12"
 githubUrl: "https://github.com/LucidMach/ENVIouS"
 demoUrl: "https://lucidmach.notion.site/Documentation-e2b6b57269374ffc91839d174ffeafc9"
-tags: []
+tags: ["data visualisation", "robotics"]
 heroImage: "/projects/envious.gif"
 ---
 

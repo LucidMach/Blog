@@ -5,7 +5,7 @@ pubDate: "2021-09-08"
 githubUrl: "https://github.com/LucidMach/LucidFolio"
 demoUrl: "https://lucidmach.vercel.app/"
 heroImage: "/projects/lucidfolio.png"
-tags: ["cyberpunk","nextjs","portfolio","react","yellow"]
+tags: ["web (frontend)"]
 ---
 
 My Portfolio WebSite

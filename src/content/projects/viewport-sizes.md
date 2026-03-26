@@ -4,7 +4,7 @@ description: "a tool for designers... returns viewport size for more accurate de
 pubDate: "2021-12-04"
 githubUrl: "https://github.com/LucidMach/ViewPort-Sizes"
 demoUrl: "https://viewport-sizes.netlify.app/"
-tags: ["design","react","typescript","ui","ux"]
+tags: ["web (frontend)"]
 heroImage: "/projects/viewport-sizes.png"
 ---
 

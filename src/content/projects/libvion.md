@@ -4,7 +4,7 @@ description: "Books Sharing Platform + Pseudo Dating Site"
 pubDate: "2021-06-15"
 demoUrl: "https://github.com/LucidMach/LibVion"
 heroImage: "/projects/libvion.png"
-tags: []
+tags: ["web (frontend)", "web (backend)"]
 ---
 
 Books Sharing Platform + Pseudo Dating Site

@@ -4,7 +4,7 @@ description: "The Ultimate Random Color Combination Generator Tool"
 pubDate: "2021-04-23"
 githubUrl: "https://github.com/LucidMach/Color-Swatch"
 demoUrl: "https://colorswatch.netlify.app/"
-tags: ["color-picker","react"]
+tags: ["web (frontend)"]
 heroImage: "/projects/color-swatch.png"
 ---
 

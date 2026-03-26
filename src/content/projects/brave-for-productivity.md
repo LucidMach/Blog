@@ -5,7 +5,7 @@ pubDate: "2024-01-19"
 githubUrl: "https://github.com/LucidMach/brave-for-productivity"
 demoUrl: "/blog/digital-minimalism"
 heroImage: "/projects/ublock.png"
-tags: ["brave-browser","instagram","reels","shorts","ublock-origin-filters","youtube"]
+tags: ["open source"]
 ---
 
 an adblock filter list for productivity on brave (and ublock)

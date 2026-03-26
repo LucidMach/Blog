@@ -6,9 +6,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import Menu from "../../components/Menu";
 import ProjectCard from "../../components/ProjectCard";
+import { getTagColor } from "../../utils/tagColors";
 
 const projects = (await getCollection("projects")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Collect all unique tags
+const allTags = [...new Set(projects.flatMap((p) => p.data.tags || []))].sort(
+  (a, b) => a.localeCompare(b),
 );
 
 // Group by year
@@ -44,11 +50,33 @@ const years = Object.keys(projectsByYear)
       />
       <div class="flex flex-col items-center mb-8 mt-4 text-[#1a1a1a]">
         <h1
-          class="font-virgil mt-2 text-center text-lg md:text-2xl opacity-80 max-w-xl mx-auto"
+          class="font-virgil mb-8 text-center text-lg md:text-2xl opacity-80 max-w-xl mx-auto px-4"
         >
-          As someone who sees life as a series of projects... this is my attempt
+          as someone who sees life as a series of projects... this is my attempt
           to document as many of them as I can
         </h1>
+
+        {/* Filters */}
+        <div
+          class="flex flex-wrap items-center justify-center gap-2 mt-8 max-w-5xl px-4"
+          id="project-filters"
+        >
+          <button
+            class="filter-btn active px-3 py-1 rounded-full text-sm font-semibold border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white transition-all opacity-100"
+            data-tag="all">All</button
+          >
+          {
+            allTags.map((tag) => (
+              <button
+                class="filter-btn text-[#1a1a1a] px-3 py-1 rounded-full text-sm font-semibold border-2 border-transparent transition-all opacity-80 hover:opacity-100"
+                style={`background-color: ${getTagColor(tag)}`}
+                data-tag={tag}
+              >
+                {tag}
+              </button>
+            ))
+          }
+        </div>
       </div>
     </div>
     <main
@@ -56,7 +84,7 @@ const years = Object.keys(projectsByYear)
     >
       {
         years.map((year) => (
-          <section class="w-full max-w-7xl mb-24 relative">
+          <section class="year-section w-full max-w-7xl mb-24 relative">
             <h2 class="text-4xl md:text-6xl text-center font-virgil text-yellow-400 mb-12 pl-4">
               {year}
             </h2>
@@ -71,5 +99,62 @@ const years = Object.keys(projectsByYear)
       }
     </main>
     <Footer />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+        const yearSections = document.querySelectorAll(".year-section");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const selectedTag = btn.getAttribute("data-tag");
+
+            // Update active class on buttons
+            filterBtns.forEach((b) => {
+              if (b === btn) {
+                b.classList.remove("opacity-50", "border-transparent");
+                b.classList.add("opacity-100", "border-[#1a1a1a]");
+              } else {
+                b.classList.remove("opacity-100", "border-[#1a1a1a]");
+                b.classList.add("opacity-50", "border-transparent");
+              }
+            });
+
+            // Loop over cards
+            projectCards.forEach((card) => {
+              const cardTagsAttr = card.getAttribute("data-tags");
+              const cardTags = cardTagsAttr ? cardTagsAttr.split(",") : [];
+
+              if (
+                !selectedTag ||
+                selectedTag === "all" ||
+                cardTags.includes(selectedTag)
+              ) {
+                // To display an element cleanly without messing up flex layout, we can just remove a hidden class
+                // But inline display block or flex would be fine as well.
+                // Using hidden class is safer for Tailwind
+                card.classList.remove("hidden");
+              } else {
+                card.classList.add("hidden");
+              }
+            });
+
+            // Loop over sections to hide empty years
+            yearSections.forEach((section) => {
+              // querySelectorAll project-card inside section that does not have hidden class
+              const visibleCards = section.querySelectorAll(
+                ".project-card:not(.hidden)",
+              );
+              if (visibleCards.length === 0) {
+                section.classList.add("hidden");
+              } else {
+                section.classList.remove("hidden");
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>

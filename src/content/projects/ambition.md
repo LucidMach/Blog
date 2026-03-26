@@ -1,8 +1,8 @@
 ---
 title: "Ambition"
 description: "Artwork - Ambition"
-pubDate: "2025-03-25"
+pubDate: "2024-03-25"
 heroImage: "/graphics/ambition.png"
 demoUrl: "/graphics/ambition.png"
-tags: ["graphics"]
+tags: ["wallpaper"]
 ---

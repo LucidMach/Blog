@@ -5,7 +5,7 @@ pubDate: "2023-12-04"
 githubUrl: "https://github.com/LucidMach/Ethel"
 demoUrl: "https://conceptethel.vercel.app"
 heroImage: "/projects/ethel.gif"
-tags: []
+tags: ["web (frontend)"]
 ---
 
 A WebGL experiment website showcasing a design concept. 

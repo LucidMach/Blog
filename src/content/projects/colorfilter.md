@@ -4,7 +4,7 @@ description: "( ReactJS + Numpy + NodeJs ) * Image Color Filter"
 pubDate: "2020-06-02"
 githubUrl: "https://github.com/LucidMach/ColorFilter"
 demoUrl: "https://dev.to/lucidmach/react-ui-for-python-scripts-on-node-js-1dfa"
-tags: ["image-manipulation","nodejs","numpy","pillow","reactjs"]
+tags: ["web (backend)", "web (frontend)"]
 heroImage: "/projects/colorfilter.png"
 ---
 
