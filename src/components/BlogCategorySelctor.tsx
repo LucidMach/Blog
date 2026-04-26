@@ -69,19 +69,23 @@ const BlogList: React.FC<prop> = ({ years, posts }) => {
   const list: ReactElement[] = [];
 
   years.forEach((year) => {
-    list.push(<h1 className="text-3xl">{year}</h1>);
+    const yearPosts = posts.filter(
+      (post) => post.data.pubDate.getFullYear() === year,
+    );
 
-    let postCount = 0;
+    if (yearPosts.length > 0) {
+      list.push(
+        <h1 className="text-3xl" key={year}>
+          {year}
+        </h1>,
+      );
 
-    posts.forEach((post) => {
-      if (post.data.pubDate.getFullYear() === year) {
-        list.push(<BlogCard post={post} />);
-        postCount++;
-      }
-    });
+      yearPosts.forEach((post) => {
+        list.push(<BlogCard key={post.slug} post={post} />);
+      });
 
-    if (postCount === 0) list.push(<h1>404 - No Blog Posts Written :( </h1>);
-    list.push(<br />);
+      list.push(<br key={`br-${year}`} />);
+    }
   });
 
   return <>{list.map((element) => element)}</>;
