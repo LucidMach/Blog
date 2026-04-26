@@ -6,6 +6,7 @@ import BaseHead from "../components/BaseHead.astro";
 import R3F from "../components/R3F.tsx";
 import Socials from "../components/Socials";
 import Menu from "../components/Menu";
+import LucidCTA from "../components/LucidCTA";
 ---
 
 <!doctype html>
@@ -40,6 +41,9 @@ import Menu from "../components/Menu";
           <Menu client:visible />
         </div>
         <R3F client:load />
+        <div class="fixed bottom-32 z-50 left-0 w-full bg-transparent flex justify-center pointer-events-none">
+          <LucidCTA client:load />
+        </div>
         <div class="fixed bottom-4 z-50 left-0 w-full bg-transparent">
           <Socials client:visible />
         </div>

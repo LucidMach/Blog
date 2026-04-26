@@ -22,7 +22,7 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   const [active] = useAtom(activeAtom);
   const [rotating, setRotating] = useAtom(rotatingAtom);
   const [dir] = useAtom(dirAtom);
-  const [, setCountFrames] = useState(0);
+  const countFrames = useRef(0);
   const [colorIndex] = useAtom(colorIndexAtom);
 
   const cube = useRef<any>(null);
@@ -31,26 +31,23 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   useEffect(() => {
     if (active !== undefined) {
       setRotating(true);
-      setCountFrames(0);
+      countFrames.current = 0;
     }
   }, [active, setRotating]);
 
   useFrame(() => {
     if (cube.current && rotating) {
-      setCountFrames((prev) => {
-        const next = prev + 1;
+      countFrames.current += 1;
         
-        if (dir === "up") cube.current.rotation.x -= Math.PI / 20;
-        if (dir === "down") cube.current.rotation.x += Math.PI / 20;
-        if (dir === "right") cube.current.rotation.y += Math.PI / 20;
-        if (dir === "left") cube.current.rotation.y -= Math.PI / 20;
+      if (dir === "up") cube.current.rotation.x -= Math.PI / 20;
+      if (dir === "down") cube.current.rotation.x += Math.PI / 20;
+      if (dir === "right") cube.current.rotation.y += Math.PI / 20;
+      if (dir === "left") cube.current.rotation.y -= Math.PI / 20;
 
-        if (next >= 40) {
-          setRotating(false);
-          return 0;
-        }
-        return next;
-      });
+      if (countFrames.current >= 40) {
+        setRotating(false);
+        countFrames.current = 0;
+      }
     }
   });
 

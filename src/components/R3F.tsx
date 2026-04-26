@@ -14,8 +14,8 @@ import rotatingAtom from "../atoms/rotating";
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
 import colorIndexAtom from "../atoms/colorIndex";
-import LucidCTA from "./LucidCTA";
 import useMobile from "../hooks/useMobile";
+import heartBeatAtom from "../atoms/heartBeat";
 
 const R3F = () => {
   const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
@@ -46,6 +46,16 @@ const R3F = () => {
 
     return () => clearInterval(interval);
   }, [setColorIndex, active]);
+
+  const [, setHeartBeat] = useAtom(heartBeatAtom);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeartBeat((prev) => (prev === 1 ? 1.1 : 1));
+    }, 820);
+
+    return () => clearInterval(interval);
+  }, [setHeartBeat]);
 
   const bind = useDrag(({ movement: [xD], cancel, active: dragging }) => {
     if (rotating) return;
@@ -92,7 +102,6 @@ const R3F = () => {
           scale={w > h ? 1 : 0.5}
           isMobile={w <= h}
         />
-        <LucidCTA />
         <Rig />
       </Canvas>
     </div>
