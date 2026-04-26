@@ -6,7 +6,6 @@ import BaseHead from "../components/BaseHead.astro";
 import R3F from "../components/R3F.tsx";
 import Socials from "../components/Socials";
 import Menu from "../components/Menu";
-import PageSelector from "../components/PageSelector";
 ---
 
 <!doctype html>
@@ -36,13 +35,12 @@ import PageSelector from "../components/PageSelector";
     <main class="flex flex-col">
       <Suspense>
         <div
-          class="fixed top-4 z-10 left-0 w-full bg-transparent flex justify-center"
+          class="fixed top-4 z-50 left-0 w-full bg-transparent flex justify-center"
         >
           <Menu client:visible />
         </div>
-        <R3F client:visible />
-        <PageSelector client:load />
-        <div class="fixed bottom-4 left-0 w-full bg-transparent">
+        <R3F client:load />
+        <div class="fixed bottom-4 z-50 left-0 w-full bg-transparent">
           <Socials client:visible />
         </div>
       </Suspense>

@@ -24,7 +24,7 @@ const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMo
 
   return (
     <>
-      <div className="flex flex-col items-center gap-8 bg-transparent z-20">
+      <div className="flex flex-col items-center gap-4 bg-transparent z-20">
         <div
           style={{ backgroundColor: colors[colorIndex] }}
           className="text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
@@ -71,6 +71,12 @@ const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMo
             </div>
           ))}
         </div>
+          <p
+            className="font-comfortaa text-center transition-all duration-500 opacity-80 bg-transparent"
+            style={{ color: colors[colorIndex] }}
+          >
+            {sections[active].cta}
+          </p>
       </div>
     </>
   );

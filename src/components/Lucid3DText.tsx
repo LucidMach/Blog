@@ -20,7 +20,6 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
   const [active] = useAtom(activeAtom);
   const [titleX, setTitleX] = useState(0);
   const [subtitleX, setSubtitleX] = useState(0);
-  const [ctaX, setCtaX] = useState(0);
 
   // const [title, setTitle] = useState(sections[active].title);
   // const [subtitle, setSubtitle] = useState(sections[active].subtitle);
@@ -30,19 +29,15 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
     if (active === 0) {
       setTitleX(0);
       setSubtitleX(0);
-      setCtaX(0);
     } else if (active === 1) {
       setTitleX(0.15);
       setSubtitleX(-0.75);
-      setCtaX(-0.05);
     } else if (active === 2) {
       setTitleX(1);
       setSubtitleX(0);
-      setCtaX(-0.25);
     } else if (active === 3) {
       setTitleX(0.3);
       setSubtitleX(0.4);
-      setCtaX(-0.15);
     }
   }, [active]);
 
@@ -67,12 +62,6 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
           font={"/fonts/Comfortaa Regular.json"}
         >
           {sections[active].subtitle}
-          <meshMatcapMaterial color={colors[colorIndex]} />
-        </Text3D>
-      </Center>
-      <Center position={[ctaX, isMobile ? 7.2 : 2.7, 2]}>
-        <Text3D scale={isMobile ? 0.25 : 0.15} font={"/fonts/Comfortaa Regular.json"}>
-          {sections[active].cta}
           <meshMatcapMaterial color={colors[colorIndex]} />
         </Text3D>
       </Center>

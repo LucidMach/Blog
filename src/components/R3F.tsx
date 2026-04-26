@@ -14,6 +14,7 @@ import rotatingAtom from "../atoms/rotating";
 import bgColors from "../content/bgColors";
 import colors from "../content/colors";
 import colorIndexAtom from "../atoms/colorIndex";
+import LucidCTA from "./LucidCTA";
 import useMobile from "../hooks/useMobile";
 
 const R3F = () => {
@@ -91,6 +92,7 @@ const R3F = () => {
           scale={w > h ? 1 : 0.5}
           isMobile={w <= h}
         />
+        <LucidCTA />
         <Rig />
       </Canvas>
     </div>
