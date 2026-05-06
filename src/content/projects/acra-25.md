@@ -6,3 +6,7 @@ heroImage: "/projects/acra-25.png"
 demoUrl: "https://arxiv.org/abs/2512.17241"
 tags: ["UX research", "robotics"]
 ---
+
+ToDo[s]:
+- [ ] Cognizant AMFI - Terminal Velocity
+- [ ] UnStitch
