@@ -88,7 +88,7 @@ const R3F = () => {
           intensity={5}
         />
         <LucidCube
-          position={[0, 0, -1]}
+          position={[0, 0.5, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}
           scale={1}
         />

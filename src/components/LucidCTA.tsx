@@ -50,9 +50,9 @@ const LucidCTA = () => {
             href={`/${sections[active].name}`}
             style={{
               backgroundColor: colors[colorIndex],
-              boxShadow: `0 0 25px ${colors[colorIndex]}77`,
+              boxShadow: `0 0 20px ${colors[colorIndex]}55`,
             }}
-            className="px-8 py-2 text-black rounded-full text-xl font-extrabold tracking-widest uppercase hover:scale-110 active:scale-95 transition-all duration-300 shadow-xl"
+            className="px-6 py-1.5 text-black rounded-full text-lg font-bold tracking-wider hover:scale-110 active:scale-95 transition-all duration-300 shadow-md"
           >
             /{sections[active].name}
           </a>
