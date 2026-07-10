@@ -54,7 +54,7 @@ The fix isn't just "sleep more." It's "sleep _consistently_."
 
 If the Sankey shows the chaotic destination (wake time), the **Sleep Quality Heatmap** reveals the lack of a stable origin.
 
-![Sleep Heatmap and Recovery](/fixing-my-sleep-cycle/SleepHeatmap+Recovery.gif)
+![Sleep Quality Heatmap — Quality view](/fixing-my-sleep-cycle/dashboard-quality-good-night.png)
 
 From a dataviz perspective, this is where the **indent/bulge** encoding in the Sleep Quality Heatmap earns its keep. Squares that "indent" to highlight under-sleep and squares that "pop" to highlight over-sleep.
 
@@ -66,7 +66,7 @@ A consistent bedtime is a _prior_ your body learns. Without it, your circadian r
 
 The instability shown in the previous charts leads directly to a deeper issue: I was spending plenty of time in bed, but my **Sleep Quality Ratio** was chronically low.
 
-![Sleep Quality Heatmap](/fixing-my-sleep-cycle/SleepHeatmap-V1.jpeg)
+![Sleep Quality Breakdown — Overall Average](/fixing-my-sleep-cycle/dashboard-quantity-overall.png)
 
 In the first iteration of the dashboard, my overall average quality sat at just **34%** (a raw ratio, not normalized to a traditional 0–100 scale). To understand why that’s a problem, you have to look at the formula:
 
@@ -92,7 +92,7 @@ This _feels_ like recovery. The data says otherwise.
 
 Sleep debt isn't a bank account. You can't deposit 11 hours on Sunday and withdraw it evenly across the week. What oversleeping actually does is delay your sleep onset the following night (because sleep pressure hasn't had time to rebuild), which pushes your bedtime later, which shortens the next night's sleep, which triggers another oversleeping compensation and the cycle continues.
 
-![Recovery Heatmap](/fixing-my-sleep-cycle/SleepHeatmap-Recovery.gif)
+![Recovery view — a bad night's compensation](/fixing-my-sleep-cycle/dashboard-recovery-view.png)
 
 This _feels_ like recovery, but the **Recovery Heatmap** tells a different story. While my **Recovery Effectiveness** (1.63x) shows my body _can_ recover well, oversleeping actually pushes the next night’s bedtime even later.
 
