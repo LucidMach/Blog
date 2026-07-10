@@ -1,6 +1,6 @@
 ---
 title: "Unstitch: Designing the Tessellation System Behind the Future of Upcycling"
-description: "as UI/UX designer and product engineer on Unstitch, I helped turn a university showcase concept into a tessellation-based design system for upcycled fashion — a digital playground for a fundamentally new way to build products out of waste fabric."
+description: "as UI/UX designer and product engineer, I partnered with industrial designer Yi Jing Ang to build the digital half of Unstitch — a tessellation-based design system for upcycled fashion, and the thesis behind it."
 pubDate: "Jul 11 2026"
 type: "UX"
 heroImage: "/unstitch/hero.jpg"
@@ -10,7 +10,7 @@ heroImage: "/unstitch/hero.jpg"
 
 it started the way most interesting things start for me now... in a random discord server, on a random wednesday
 
-a girl posted in the server looking for someone who could "do threejs stuff"
+someone posted in the server looking for anyone who could "do threejs stuff." her name was **Yi Jing Ang**, an industrial designer who mostly goes by Astra.
 
 i don't know what it was exactly, maybe it was the vagueness of the ask, maybe it was just being in the right place at the right time, but i got excited. i said hi.
 
@@ -18,11 +18,11 @@ we got talking. a few messages in, we decided to just meet in person instead of 
 
 ## The Idea
 
-turns out she was prepping to exhibit at a university showcase. the concept: **upcycling old clothes into tessellated units** small, repeatable geometric pieces cut from fabric that used to be someone's jeans or shirt or bedsheet that could be woven together into entirely new items. bags, pouches, whatever you wanted to make out of them.
+Yi Jing was prepping to exhibit at a Monash University showcase, and the idea was already fully formed by the time i heard it, which is more than i can say for most people who reach out about "threejs stuff." her framing, not mine: **90% of Australian textiles end up in the landfill or get shipped offshore.** the fashion industry's version of recycling mostly just delays the landfill trip.
 
-this is the part that actually got me excited, not the threejs. upcycling has always had a scale problem: every piece of waste fabric is a different size, shape, and condition, so every "upcycled" product ends up bespoke, slow, and expensive to make. tessellation solves that. by cutting everything down to a repeatable unit, you turn irregular waste into a standardized building block, something you can design *systems* around instead of one-off crafts. that's the actual unlock: tessellation is what makes upcycling composable, and composable is what makes it scalable. every bag still ends up a one-of-a-kind patchwork of someone else's old clothes, but the *process* of making one stops being a craft project and starts being a product line.
+her answer to that was **Unstitch**: cut old clothes down to one repeatable geometric unit, a tessellated tile, and let people build entirely new products, bags first, out of the offcuts. her line for it, and it's a good one: **"one square, endless possibilities."**
 
-that reframing is what pulled me in as more than a threejs contractor. if the whole pitch is "tessellation turns waste into a design system," then the digital product has to prove that, not just render a bag.
+what got me was how deliberately this sat at, in her words, **"the intersection of design, mathematics and business."** this wasn't a craft-fair upcycling project. it was a proposed manufacturing system: an 8-stage circular production pipeline meant to take unwanted textiles in one end and configurable products out the other, built to be adaptable from community workshops to corporate supply chains. tessellation was the mechanism that made that possible. every piece of waste fabric is a different size, shape, and condition, so ordinarily every "upcycled" product ends up bespoke, slow, and expensive to make one at a time. cut it down to a standard unit instead, and you turn irregular waste into a building block you can design *systems* around. every bag still ends up a one-of-a-kind patchwork of someone else's old clothes, but the *process* of making one stops being a craft project and starts being a product line.
 
 <center>
 
@@ -30,28 +30,28 @@ that reframing is what pulled me in as more than a threejs contractor. if the wh
 
 </center>
 
-she wanted someone to build a digital simulation of this whole process. that's where the threejs came in, and that's where i came in.
+Yi Jing wanted someone to build a digital simulation of this whole system. that's where the threejs came in, and that's where i came in, to build the digital proof of a thesis she'd already worked out.
 
 ## Six Months of Coffee and Google Docs
 
-what followed was about six months of meeting up, mostly coffee shops and campus corners, to figure out how to take this from "cool exhibition project" to something closer to a startup.
+what followed was about six months of meeting up, mostly coffee shops and campus corners, to figure out how to take her idea from "showcase exhibit" to something closer to a startup.
 
-i went in expecting to write threejs and came out doing product design and business strategy instead, and that shift was deliberate, not incidental. tessellation is a systems idea, so someone had to actually own the system: the pricing model, who the customer even was (someone buying a bag? someone donating clothes? both, at different points in the same funnel?), and the information architecture for a website that had to explain a genuinely novel process to a stranger in about ten seconds before they bounced. nobody else on the project was going to make those calls, so i did.
+i went in expecting to write threejs and came out doing product design and business strategy instead, working alongside Yi Jing's own research into materials, manufacturing, and circular design. we talked pricing models, we talked about who the actual customer was (someone buying a bag? someone donating clothes? both, at different points in the same funnel?), we talked information architecture for a website that had to explain her system to a stranger in about ten seconds before they bounced. she owned the thesis and the physical system; i owned making the digital side hold up to the same standard.
 
-she told me at some point that she was glad i turned out to be more than just an engineer, someone who cared about how the product looked and felt to use, not just whether the code ran. that's the distinction i try to design around now: writing the code is maybe a third of the job, the rest is deciding what the product should even be.
+she told me at some point that she was glad i turned out to be more than just an engineer, someone who cared about how the product looked and felt to use, not just whether the code ran. that's the distinction i try to design around now: writing the code is maybe a third of the job, the rest is deciding what the product should even be, in service of someone else's vision, not instead of it.
 
 ## The Iterations
 
 we went through a lot of versions of a lot of things before anything felt right:
 
-- a **landing page** that had to sell the idea of tessellated upcycling to someone who'd never heard of it
+- a **landing page** that had to sell Yi Jing's tessellated upcycling system to someone who'd never heard of it
 - an **EOI (expression of interest)** flow, since this was still pre-manufacturing and we needed to gauge real demand before committing to anything physical
-- a **documentation journey** walking people through how a pile of old clothes actually becomes a bag
+- a **documentation journey** walking people through how a pile of old clothes actually becomes a bag, true to her 8-stage circular process
 - a **collection page** for the work itself, so the physical prototypes had somewhere to live online
 
 each of these went through multiple rounds of "does this actually make sense to someone seeing it for the first time." every review session we killed a feature or a page we personally thought was clever, because it didn't hold up against that question.
 
-along the way the brand found its shape too: **Unstitch** the logo distills the tessellated unit pattern into a single mark, and it even got its own mascot.
+along the way the brand found its shape too: **Unstitch**, Yi Jing's name for the system, the logo distills the tessellated unit pattern into a single mark, and it even got its own mascot.
 
 <center>
 
@@ -62,7 +62,7 @@ along the way the brand found its shape too: **Unstitch** the logo distills the 
 
 ## Scanning the Bags
 
-somewhere in the middle of all this i started playing with **gaussian splats** as a way to bring the physical prototypes into the digital world. instead of modelling the bags by hand, which would've meant losing all the irregularity and texture that makes upcycled fabric actually look upcycled, we scanned the real bags and reconstructed them as splats.
+somewhere in the middle of all this i started playing with **gaussian splats** as a way to bring Yi Jing's physical prototypes into the digital world. instead of modelling the bags by hand, which would've meant losing all the irregularity and texture that makes upcycled fabric actually look upcycled, we scanned her real, hand-assembled totes and reconstructed them as splats.
 
 the early scans were rough. reconstructing a soft, irregular, textured object like a felt-and-fabric tote is a much harder problem than scanning something rigid, most gaussian splatting pipelines are tuned for hard surfaces, not fuzzy tessellated wool.
 
@@ -78,9 +78,9 @@ that's an early pass, taken straight off the capture screen. getting from that t
 
 all of it, the pipeline, the prototypes, the brand, the splats, landed in what we ended up calling the digital playground: a threejs-based space where you can see the tessellated units and the bags they build up into the way you'd see them in person.
 
-this is where the "upcycling as a design system" thesis had to actually hold up. it's easy to say tessellation makes upcycled fashion scalable, it's a different thing to build an interface that lets someone configure a product out of standardized fabric units the same way they'd configure furniture or sneakers. the playground is the proof: a real, direct-manipulation configurator for a product category that's historically been one-off and un-configurable by design.
+this is where Yi Jing's "one square, endless possibilities" thesis had to actually hold up as software. it's easy to say tessellation makes upcycled fashion scalable, it's a different thing to build an interface that lets someone configure a product out of standardized fabric units the same way they'd configure furniture or sneakers. the playground is the proof: a real, direct-manipulation configurator for a product category that's historically been one-off and un-configurable by design.
 
-the tessellation motif doesn't just live in the product, it's load-bearing in the interface too. the site's own navigation is three diamond tiles that fall into place on load, "Home," "Work," "PlayGround", which is the same tessellated-unit shape the whole brand is built around, just repurposed as a nav bar. it's a small thing, but it means the idea is legible before you've read a word of copy.
+the tessellation motif doesn't just live in the product, it's load-bearing in the interface too. the site's own navigation is three diamond tiles that fall into place on load, "Home," "Work," "PlayGround", which is the same tessellated-unit shape the whole brand is built around, just repurposed as a nav bar. it's a small thing, but it means her idea is legible before you've read a word of copy.
 
 <center>
 
@@ -112,10 +112,14 @@ put together in the actual canvas, it looks like this: select a panel, drag the 
 
 </center>
 
+none of that toolbar was as simple as the gif makes it look. undo/redo alone took multiple passes, our first version let you undo but not redo the same action afterward, which is a genuinely confusing thing to hit as a user and took a while to actually track down. folding had its own long tail of bugs: ghost tiles left behind after a fold, nodes that needed cleaning up mid-fold, and eventually root-node folding, where you select an arc on the base tile itself and fold from there, which needed its own prompt-to-select-an-arc flow and smooth transitions so the model didn't just pop between states. we capped version history at five moves rather than unbounded, added local-cache persistence so refreshing the page didn't nuke your work, and put a short "how to use this" hint directly in the playground rather than burying it in a docs page nobody would read before touching the tool.
+
+we also swapped the original three.js loading screen for a lighter, sprite-based one after the showcase, partly for load performance, but also because a fancy 3D loader was exactly the kind of "we thought it was clever" feature that didn't earn its place. and we added a credits entry to the nav menu, a small thing, but the kind of small thing that matters: Yi Jing's name belongs on every surface of this product, not just the pitch deck.
+
 ## What This Taught Me
 
 if you'd asked me a year ago what "product engineering" meant, i'd have said something about full-stack skills and shipping fast. i don't think that's wrong, but it's incomplete.
 
-Unstitch is the project that turned that into a conviction: tessellation isn't just a nice pattern for upcycled fashion, it's the mechanism that makes upcycling viable at any real scale, and proving that took as much UI/UX design as it did engineering. sitting in on the business conversations i wasn't technically needed for, caring about the words on a landing page as much as the render loop, building an interface that could actually stand in as evidence for the whole business idea, that's the work, not a side effect of it.
+Unstitch is the project that turned that into a conviction, and it's Yi Jing's thesis, not mine, that made me believe it: tessellation isn't just a nice pattern for upcycled fashion, it's the mechanism that makes upcycling viable at any real scale. proving that took as much UI/UX design as it did engineering, and it took someone with her research into materials and circular manufacturing to give the digital work something true to actually prove. sitting in on the business conversations i wasn't technically needed for, caring about the words on a landing page as much as the render loop, building an interface that could stand in as evidence for someone else's vision, that's the work, not a side effect of it.
 
-that's the version of "product engineer" i'm actually building toward, someone who designs the system and ships it too.
+that's the version of "product engineer" i'm actually building toward: someone who can take somebody else's system, understand it well enough to earn a say in it, and help ship the version that proves it works. all credit for the "one square, endless possibilities" idea belongs to Yi Jing Ang, you can see more of her work at [yijingang.com](https://www.yijingang.com/).
