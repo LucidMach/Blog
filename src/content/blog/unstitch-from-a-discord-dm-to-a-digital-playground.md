@@ -6,23 +6,11 @@ type: "UX"
 heroImage: "/unstitch/hero.jpg"
 ---
 
-## A Random Wednesday
+## One Square, Endless Possibilities
 
-it started the way most interesting things start for me now... in a random discord server, on a random wednesday
+90% of Australian textiles end up in the landfill or get shipped offshore. the fashion industry's version of recycling mostly just delays that trip. **Yi Jing Ang**, an industrial designer who goes by Astra, built her answer to that problem: **Unstitch**, a system that cuts old clothes down to one repeatable geometric unit, a tessellated tile, and lets people build entirely new products, bags first, out of the offcuts. her line for it: **"one square, endless possibilities."**
 
-someone posted in the server looking for anyone who could "do threejs stuff." her name was **Yi Jing Ang**, an industrial designer who mostly goes by Astra.
-
-i don't know what it was exactly, maybe it was the vagueness of the ask, maybe it was just being in the right place at the right time, but i got excited. i said hi.
-
-we got talking. a few messages in, we decided to just meet in person instead of continuing over text.
-
-## The Idea
-
-Yi Jing was prepping to exhibit at a Monash University showcase, and the idea was already fully formed by the time i heard it, which is more than i can say for most people who reach out about "threejs stuff." her framing, not mine: **90% of Australian textiles end up in the landfill or get shipped offshore.** the fashion industry's version of recycling mostly just delays the landfill trip.
-
-her answer to that was **Unstitch**: cut old clothes down to one repeatable geometric unit, a tessellated tile, and let people build entirely new products, bags first, out of the offcuts. her line for it, and it's a good one: **"one square, endless possibilities."**
-
-what got me was how deliberately this sat at, in her words, **"the intersection of design, mathematics and business."** this wasn't a craft-fair upcycling project. it was a proposed manufacturing system: an 8-stage circular production pipeline meant to take unwanted textiles in one end and configurable products out the other, built to be adaptable from community workshops to corporate supply chains. tessellation was the mechanism that made that possible. every piece of waste fabric is a different size, shape, and condition, so ordinarily every "upcycled" product ends up bespoke, slow, and expensive to make one at a time. cut it down to a standard unit instead, and you turn irregular waste into a building block you can design *systems* around. every bag still ends up a one-of-a-kind patchwork of someone else's old clothes, but the *process* of making one stops being a craft project and starts being a product line.
+what convinced me this was worth building for was how deliberately it sat at, in her words, **"the intersection of design, mathematics and business."** this wasn't a craft-fair upcycling project, it was a proposed manufacturing system: an 8-stage circular production pipeline meant to take unwanted textiles in one end and configurable products out the other, built to scale from community workshops to corporate supply chains. tessellation is the mechanism that makes that possible. every piece of waste fabric is a different size, shape, and condition, so ordinarily every "upcycled" product gets made bespoke, one at a time, slow and expensive. cut it down to a standard unit instead, and irregular waste becomes a building block you can design *systems* around. every bag still ends up a one-of-a-kind patchwork of someone else's old clothes, but the *process* of making one stops being a craft project and starts being a product line.
 
 <center>
 
@@ -30,7 +18,9 @@ what got me was how deliberately this sat at, in her words, **"the intersection 
 
 </center>
 
-Yi Jing wanted someone to build a digital simulation of this whole system. that's where the threejs came in, and that's where i came in, to build the digital proof of a thesis she'd already worked out.
+i met Yi Jing on a random wednesday, in a discord server, where she'd posted looking for someone who could build a 3D web experience for a Monash University showcase. the ask sounded generic, the thesis behind it wasn't. a few messages turned into meeting in person, and meeting in person turned into building out what she'd already worked out on paper.
+
+she wanted someone to build a digital simulation of this whole system. that's where the threejs came in, and that's where i came in, to build the digital proof of her thesis.
 
 ## Six Months of Coffee and Google Docs
 
