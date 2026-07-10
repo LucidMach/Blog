@@ -1,6 +1,6 @@
 ---
 title: "Unstitch: Designing a Tessellation System for Upcycled Fashion"
-description: "as UI/UX designer and product engineer, I partnered with industrial designer Yi Jing Ang to build the digital side of Unstitch, a tessellation-based design system for upcycled fashion."
+description: "UI/UX design, product engineering, business strategy, and a 3D immersive web experience, all in service of Yi Jing Ang's tessellation-based design system for upcycled fashion."
 pubDate: "Jul 11 2026"
 type: "UX"
 heroImage: "/unstitch/hero.jpg"
@@ -28,7 +28,7 @@ she wanted someone to build a digital version of the whole system. that's where 
 
 what followed was about six months of meeting up, mostly coffee shops and campus corners, trying to take her idea from "cool showcase exhibit" to something closer to an actual startup.
 
-I went in expecting to write threejs and mostly ended up doing product design and business strategy instead, which, tbh, was not what I signed up for but I'm glad it's what I got. we talked pricing models, we talked about who the actual customer even was (someone buying a bag? someone donating clothes? both, at different points?), we talked information architecture for a website that had to explain her whole system to a total stranger in about ten seconds before they bounced. it was her idea and her research into materials and manufacturing, I just tried to make sure the digital side didn't embarrass it.
+I went in expecting to write threejs and mostly ended up doing product design and business strategy instead, which, tbh, was not what I signed up for but I'm glad it's what I got. one of the first real business calls we made was splitting the funnel: donating old clothes and buying a finished bag are two completely different asks, and trying to sell both in the same breath to the same person just confuses the pitch, so we treated them as separate acquisition paths with their own pages instead of one blended "join the movement" message. we talked pricing models, we picked an EOI flow over anything resembling a pre-order specifically because we were pre-manufacturing and needed real demand signal before committing to physical production costs, and we talked information architecture for a website that had to explain her whole system to a total stranger in about ten seconds before they bounced. it was her idea and her research into materials and manufacturing, I just tried to make sure the business and the digital side around it didn't embarrass it.
 
 she told me at some point that she was glad I turned out to be more than just an engineer, someone who actually cared how the product felt to use and not just whether the code ran. writing the code is maybe a third of the job, the rest is figuring out what the product should even be.
 
@@ -110,6 +110,6 @@ we also swapped the original three.js loading screen for a lighter, sprite-based
 
 if you'd asked me a year ago what "product engineering" meant, I'd have said something about full-stack skills and shipping fast. I don't think that's wrong, it's just incomplete.
 
-this was the project that showed me it's just as much about sitting in on the business conversations you're not technically needed for, caring about the words on a landing page as much as the render loop, and being willing to throw away a feature you spent a week on because it just didn't earn its place in someone's first ten seconds with the product. and honestly, it was a good reminder that the ideas I'm proudest to have built for aren't always mine. sometimes the job is just helping someone else's idea hold up as well in software as it already does on paper.
+Unstitch is the project where I actually felt all four parts of the job at once: whether it looks and feels right (UI/UX), whether it holds up as software (engineering), whether it makes sense as a business someone could actually fund and run (the pricing, the funnel, the EOI logic), and whether the 3D web experience does its one job of making an untested idea feel real before a single unit gets manufactured. none of those four are optional if you're trying to prove a concept like this actually works, and honestly it was a good reminder that the ideas I'm proudest to have built for aren't always mine. sometimes the job is just helping someone else's idea hold up, across all four of those, as well in software as it already does on paper.
 
 all credit for "one square, endless possibilities" goes to Yi Jing Ang, go check out more of her work at [yijingang.com](https://www.yijingang.com/) 🧵
