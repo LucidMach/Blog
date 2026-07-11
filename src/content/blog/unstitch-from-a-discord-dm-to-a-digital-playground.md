@@ -1,5 +1,5 @@
 ---
-title: "Unstitch: Designing a Tessellation System for Upcycled Fashion"
+title: "Unstitch: Revolutionising Upcycling with Tessellation"
 description: "UI/UX design, product engineering, business strategy, and a 3D immersive web experience, all in service of Yi Jing Ang's tessellation-based design system for upcycled fashion."
 pubDate: "Jul 11 2026"
 type: "UX"
@@ -10,27 +10,25 @@ heroImage: "/unstitch/hero.jpg"
 
 **90% of Australian textiles end up in the landfill or get shipped offshore.** most "recycled" fashion just delays that trip by a few years, it doesn't actually stop it.
 
-**Yi Jing Ang**, an industrial designer who goes by Astra, had an idea for actually doing something about that: **Unstitch**. cut old clothes down to one repeatable geometric unit, a tessellated tile, and let people build entirely new products, bags to start, out of the offcuts. her line for it, and it's a good one: **"one square, endless possibilities."**
-
-the part that got me wasn't the shape, it was the reasoning behind it. every piece of waste fabric is a different size, shape and condition, which is exactly why upcycled products usually end up one-off, slow, and expensive to make. cut everything down to a standard unit instead, and suddenly irregular waste is something you can actually design around. every bag still ends up a one-of-a-kind patchwork of someone else's old clothes, it's just that making one stops being a craft project and starts looking a lot more like a product line.
-
 <center>
 
 ![one of the finished bags, built entirely out of tessellated fabric units](/unstitch/hero.jpg)
 
 </center>
 
-I met Yi Jing on a random wednesday, in a discord server of all places, where she'd posted looking for someone who could build a 3D web experience for a Monash University showcase. the ask itself was pretty generic, but the idea behind it wasn't, and a few messages in we decided to just meet up in person instead.
+I met Yi Jing on a random wednesday through a friend, she'd been looking for someone who could build a 3D web experiences. she wanted someone to build a digital playground / simulation of a concept she was play around and testing - cutting old cloths into tessalted unit that can join up to form new cloth items
 
-she wanted someone to build a digital version of the whole system. that's where the threejs came in, and that's where I came in.
+| think lego but with fabric
 
-## Six Months of Coffee and Google Docs
+that's where the threejs came in, and that's how I came in.
 
-what followed was about six months of meeting up, mostly coffee shops and campus corners, trying to take her idea from "cool showcase exhibit" to something closer to an actual startup.
+## Six Months of Coffee
 
-I went in expecting to write threejs and mostly ended up doing product design and business strategy instead, which, tbh, was not what I signed up for but I'm glad it's what I got. one of the first real business calls we made was splitting the funnel: donating old clothes and buying a finished bag are two completely different asks, and trying to sell both in the same breath to the same person just confuses the pitch, so we treated them as separate acquisition paths with their own pages instead of one blended "join the movement" message. we talked pricing models, we picked an EOI flow over anything resembling a pre-order specifically because we were pre-manufacturing and needed real demand signal before committing to physical production costs, and we talked information architecture for a website that had to explain her whole system to a total stranger in about ten seconds before they bounced. it was her idea and her research into materials and manufacturing, I just tried to make sure the business and the digital side around it didn't embarrass it.
+what followed was about six months of meeting up, mostly libraries and campus corners, trying to take her idea from "cool showcase exhibit" to something that can make us actual money.
 
-she told me at some point that she was glad I turned out to be more than just an engineer, someone who actually cared how the product felt to use and not just whether the code ran. writing the code is maybe a third of the job, the rest is figuring out what the product should even be.
+I went in expecting to write threejs and but mostly ended up doing a lot of product design and business strategy instead which, while was not what I signed up for... but I had so much fun and learnings. it was her idea and her research into materials and manufacturing, I just tried to make sure the business and the digital side around could hold up, excite and hook people into our ambitions.
+
+she told me at some point that she was glad I turned out to be more than just an engineer, someone who actually cared how the product felt to use and not just whether the code ran.
 
 ## The Iterations
 
@@ -39,7 +37,7 @@ we went through a lot of versions of a lot of things before anything felt right:
 - a **landing page** that had to explain tessellated upcycling to someone who'd genuinely never heard of it before
 - an **EOI (expression of interest)** flow, since this was still pre-manufacturing and we needed real demand signal before committing to anything physical
 - a **documentation journey** walking people through how a pile of old clothes actually becomes a bag
-- a **collection page** for the work itself, so the physical prototypes had somewhere to live online
+- a **collection page** for the work itself, by people who tried out our prototypes... the interesting things they built - the physical creations of our community.
 
 each of these went through a bunch of rounds of "does this actually make sense to someone seeing it for the first time." we killed features and whole pages we personally thought were clever more than once, because they didn't hold up against that one question.
 
@@ -54,7 +52,7 @@ along the way the brand found its shape too, **Unstitch**, the logo distills the
 
 ## Scanning the Bags
 
-somewhere in the middle of all this I started playing with **gaussian splats** as a way to bring Yi Jing's physical prototypes into the digital world. modelling the bags by hand would've meant losing all the irregularity and texture that makes upcycled fabric actually look upcycled, so instead we scanned her real, hand-assembled totes and reconstructed them as splats.
+somewhere in the middle of all this I started playing with **gaussian splats** as a way to bring Yi Jing's physical prototypes into the digital world. modelling the bags by hand would've taken soo long and not to mention loosing all the irregularity and texture that makes upcycled fabric feel, so instead we scanned her real, hand-assembled totes and reconstructed them as splats.
 
 the early scans were rough, like really rough. reconstructing a soft, irregular, textured object like a felt-and-fabric tote is a much harder problem than scanning something rigid, most gaussian splatting pipelines are tuned for hard surfaces, not fuzzy tessellated wool.
 
@@ -64,13 +62,9 @@ the early scans were rough, like really rough. reconstructing a soft, irregular,
 
 </center>
 
-that's an early pass, taken straight off the capture screen. getting from that to something clean enough to actually render in a browser took a lot of iteration on capture technique alone: lighting, camera paths, how many photos, how slow to move around the object.
+## The Navigation
 
-## The Digital Playground
-
-all of it, the pipeline, the prototypes, the brand, the splats, landed in what we ended up calling the digital playground: a threejs-based space where you can see the tessellated units and the bags they build up into, the way you'd actually see them in person.
-
-the tessellation shape doesn't just live in the product, it shows up in the interface too. the site's own navigation is three diamond tiles that fall into place on load, "Home," "Work," "PlayGround", the exact same tessellated-unit shape the whole brand is built around, just repurposed as a nav bar. small thing, but it means the idea is legible before you've even read a word of copy.
+One thing I'm really proud of / think is really clever is the navigation system on our website... which inherently gets the user used to the idea of the tessellation way before they are introduced to it.
 
 <center>
 
@@ -78,7 +72,9 @@ the tessellation shape doesn't just live in the product, it shows up in the inte
 
 </center>
 
-the playground itself is where the idea turns into something you can actually touch. it's an orthographic, top-down workspace where each tessellated unit is a draggable panel you can fold relative to its neighbour, dragging a fold-angle slider rotates the selected panel in real time and the numeric degree readout updates right alongside it, so you're never guessing what "-52°" is gonna look like before you commit to it.
+## The Digital Playground
+
+all of it, the pipeline, the prototypes, the brand, the splats, landed in what we ended up calling the digital playground: a threejs-based space where you can see the tessellated units and construct the bags into any shape and dimension you can imagine... ofc this whole process would be soo much more fun and different in real life but the digital playground would be quick hook to loop our potential customers into our ecosystem
 
 <center>
 
@@ -86,7 +82,7 @@ the playground itself is where the idea turns into something you can actually to
 
 </center>
 
-the part I'm most proud of, interaction-design-wise, is the history scrubber on the toolbar. undo/redo is table stakes, sure, but we turned the history itself into a little dot-trail you can see and scrub through directly, and the delete button only turns red and shows up once there's actually something selected to delete. small bit of restraint, don't show someone a trash can when there's nothing to throw away, and it came directly out of one of those "does this actually make sense to someone seeing it for the first time" sessions.
+another part I'm most proud of, interaction-design-wise, is the history scrubber on the toolbar. undo/redo is table stakes, sure, but we turned the history itself into a little dot-trail you can see and scrub through directly, and the delete button only turns red and shows up once there's actually something selected to delete. small bit of restraint, don't show someone a trash can when there's nothing to throw away, and it came directly out of one of those "does this actually make sense to someone seeing it for the first time" sessions.
 
 <center>
 
