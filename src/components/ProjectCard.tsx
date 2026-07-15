@@ -41,7 +41,7 @@ const ProjectCard: React.FC<prop> = ({ project, index }) => {
               {project.data.tags.map((tag: string, i: number) => {
                 const bgColor = getTagColor(tag);
                 return (
-                  <span key={i} className="text-xs px-2 py-1 flex items-center justify-center rounded-sm text-[#1a1a1a] shadow-sm font-semibold opacity-90" style={{ backgroundColor: bgColor }}>
+                  <span key={i} className="text-xs px-2 py-1 flex items-center justify-center rounded-sm text-[#0a0a0a] shadow-md border border-black/20 font-bold" style={{ backgroundColor: bgColor }}>
                     {tag}
                   </span>
                 );

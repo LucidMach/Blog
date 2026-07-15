@@ -4,5 +4,5 @@ description: "an interactive D3 narrative visualisation mapping the Translation 
 pubDate: "2026-7-15"
 heroImage: "/find-my-slipstream/cover.png"
 demoUrl: "https://find-my-slipstream.vercel.app/"
-tags: ["data visualisation", "UX design", "web (frontend)"]
+tags: ["data visualisation", "UI/UX", "web (frontend)"]
 ---
