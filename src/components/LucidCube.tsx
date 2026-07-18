@@ -42,10 +42,12 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
     }
   }, [active, setRotating]);
 
-  useFrame(() => {
-    if (cube.current && rotating) {
+  useFrame((state) => {
+    if (!cube.current) return;
+
+    if (rotating) {
       countFrames.current += 1;
-        
+
       if (dir === "up") cube.current.rotation.x -= Math.PI / 20;
       if (dir === "down") cube.current.rotation.x += Math.PI / 20;
       if (dir === "right") cube.current.rotation.y += Math.PI / 20;
@@ -55,7 +57,18 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
         setRotating(false);
         countFrames.current = 0;
       }
+      return;
     }
+
+    // Idle "wants to be swiped" nudge on the home section: a mild tilt + bob
+    // on axes the swipe animation never touches (z rotation, y position), so
+    // it can never fight or desync from the real drag-triggered spin above.
+    const t = state.clock.elapsedTime;
+    const idleTilt = active === 0 ? Math.sin(t * 1.3) * 0.09 : 0;
+    const idleBob = active === 0 ? Math.sin(t * 1.7) * 0.06 : 0;
+    cube.current.rotation.z += (idleTilt - cube.current.rotation.z) * 0.05;
+    cube.current.position.y +=
+      (position[1] + idleBob - cube.current.position.y) * 0.05;
   });
 
   // Base scale centers the max-dimension of the SVG to exactly 4 units.

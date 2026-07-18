@@ -1,13 +1,10 @@
 import { useAtom } from "jotai";
 import colorIndexAtom from "../atoms/colorIndex";
-import activeAtom from "../atoms/active";
 import useMobile from "../hooks/useMobile";
 import colors from "../content/colors";
-import sections from "../content/sections";
 
 const PageSelector = () => {
   const [colorIndex] = useAtom(colorIndexAtom);
-  const [active] = useAtom(activeAtom);
   const { isMobile } = useMobile();
 
   return (
@@ -16,40 +13,23 @@ const PageSelector = () => {
       style={{ bottom: isMobile ? "25%" : "176px" }}
     >
       <div className="flex pointer-events-auto">
-        {active === 0 ? (
-          <>
-            <a
-              href="/projects"
-              style={{
-                borderColor: colors[colorIndex],
-                color: colors[colorIndex],
-              }}
-              className="px-6 py-1 border rounded-full mr-2 hover:opacity-70 transition-opacity"
-            >
-              projects
-            </a>
-            <a
-              href="/blog"
-              style={{ backgroundColor: colors[colorIndex] }}
-              className="px-6 py-1 text-black rounded-full hover:opacity-70 transition-opacity"
-            >
-              blog
-            </a>
-          </>
-        ) : (
-          <div className="flex items-center gap-2">
-            <p className="text-lg">
-              {active === 3 ? "check me out" : "check out the"}
-            </p>
-            <a
-              href={`/${sections[active].name}`}
-              style={{ backgroundColor: colors[colorIndex] }}
-              className="px-6 py-1 text-black rounded-full hover:opacity-70 transition-opacity"
-            >
-              /{sections[active].name}
-            </a>
-          </div>
-        )}
+        <a
+          href="/projects"
+          style={{
+            borderColor: colors[colorIndex],
+            color: colors[colorIndex],
+          }}
+          className="px-6 py-1 border rounded-full mr-2 hover:opacity-70 transition-opacity"
+        >
+          projects
+        </a>
+        <a
+          href="/blog"
+          style={{ backgroundColor: colors[colorIndex] }}
+          className="px-6 py-1 text-black rounded-full hover:opacity-70 transition-opacity"
+        >
+          blog
+        </a>
       </div>
     </div>
   );
