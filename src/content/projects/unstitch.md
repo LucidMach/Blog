@@ -4,5 +4,5 @@ description: "UI/UX design and product engineering for a tessellation-based desi
 pubDate: "2026-7-11"
 heroImage: "/unstitch/home-nav.gif"
 demoUrl: "https://unstitchx.com"
-tags: ["UI/UX", "fashion design", "3D Web"]
+tags: ["UI/UX", "fashion design", "WebXR"]
 ---

@@ -62,13 +62,13 @@ const years = Object.keys(projectsByYear)
           id="project-filters"
         >
           <button
-            class="filter-btn active px-3 py-1 rounded-full text-sm font-semibold border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white transition-all opacity-100"
+            class="filter-btn active px-3 py-1 rounded-full text-sm font-semibold border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white transition-all opacity-100 hover-wiggle cursor-pointer"
             data-tag="all">All</button
           >
           {
             allTags.map((tag) => (
               <button
-                class="filter-btn text-[#1a1a1a] px-3 py-1 rounded-full text-sm font-semibold border-2 border-transparent transition-all opacity-80 hover:opacity-100"
+                class="filter-btn text-[#1a1a1a] px-3 py-1 rounded-full text-sm font-semibold border-2 border-transparent transition-all opacity-100 hover-wiggle cursor-pointer"
                 style={`background-color: ${getTagColor(tag)}`}
                 data-tag={tag}
               >
@@ -110,14 +110,25 @@ const years = Object.keys(projectsByYear)
           btn.addEventListener("click", () => {
             const selectedTag = btn.getAttribute("data-tag");
 
-            // Update active class on buttons
+            // Update active state and opacity on filter buttons
             filterBtns.forEach((b) => {
-              if (b === btn) {
-                b.classList.remove("opacity-50", "border-transparent");
-                b.classList.add("opacity-100", "border-[#1a1a1a]");
+              const tag = b.getAttribute("data-tag");
+              if (selectedTag === "all" || !selectedTag) {
+                if (tag === "all") {
+                  b.classList.remove("opacity-50", "border-transparent");
+                  b.classList.add("opacity-100", "border-[#1a1a1a]");
+                } else {
+                  b.classList.remove("opacity-50", "border-[#1a1a1a]");
+                  b.classList.add("opacity-100", "border-transparent");
+                }
               } else {
-                b.classList.remove("opacity-100", "border-[#1a1a1a]");
-                b.classList.add("opacity-50", "border-transparent");
+                if (tag === selectedTag) {
+                  b.classList.remove("opacity-50", "border-transparent");
+                  b.classList.add("opacity-100", "border-[#1a1a1a]");
+                } else {
+                  b.classList.remove("opacity-100", "border-[#1a1a1a]");
+                  b.classList.add("opacity-50", "border-transparent");
+                }
               }
             });
 

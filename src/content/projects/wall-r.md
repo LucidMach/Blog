@@ -4,7 +4,7 @@ description: "IoT Smart Dustbin - Custom Built from Scratch "
 pubDate: "2022-01-03"
 githubUrl: "https://github.com/LucidMach/Wall-R"
 demoUrl: "https://wallr.vercel.app"
-tags: ["IoT", "web (backend)", "web (frontend)", "robotics"]
+tags: ["IoT", "web (backend)", "UI/UX", "robotics"]
 heroImage: "/projects/wall-r.png"
 ---
 

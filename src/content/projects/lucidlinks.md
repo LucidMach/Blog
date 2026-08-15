@@ -5,7 +5,7 @@ pubDate: "2022-01-08"
 githubUrl: "https://github.com/LucidMach/LucidLinks"
 demoUrl: "https://lucidlinks.vercel.app"
 heroImage: "/projects/lucidlinks.png"
-tags: ["web (frontend)"]
+tags: ["UI/UX"]
 ---
 
 a webGL [threejs] portfolio... (kinda)

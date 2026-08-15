@@ -4,7 +4,7 @@ description: "a teleoperation/shadow control platform for robots"
 pubDate: "2022-08-14"
 demoUrl: "https://github.com/LucidMach/kagemane"
 heroImage: "/projects/kagemane.gif"
-tags: ["robotics", "web (frontend)", "web (backend)"]
+tags: ["robotics", "UI/UX", "web (backend)"]
 ---
 
 a teleoperation/shadow control platform for robots
