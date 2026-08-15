@@ -146,7 +146,7 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
       scale={scale}
     >
       {/* Occasional Thought Bubble anchored to top-right of 3D logo */}
-      {active === 0 && bubbleText && bubbleVisible && (
+      {bubbleText && bubbleVisible && (
         <Html className="bg-transparent" position={[1.4, 1.5, 0]} center distanceFactor={8} zIndexRange={[100, 0]}>
           <div className="pointer-events-none transition-all duration-500 ease-out bg-transparent transform scale-100 translate-y-0">
             <div className="relative rounded-full">
