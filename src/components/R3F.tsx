@@ -26,25 +26,17 @@ const R3F = () => {
 
   useEffect(() => {
     if (active === 0) {
-      setColorIndex(5);
+      setColorIndex(3);
     }
     if (active === 1) {
       setColorIndex(1);
-      // return;
     }
     if (active === 2) {
-      setColorIndex(2);
-      // return;
-    }
-    if (active === 3) {
       setColorIndex(4);
     }
-    
-    const interval = setInterval(() => {
-      setColorIndex((prev) => (prev < colors.length - 1 ? prev + 1 : 0));
-    }, 1400);
-
-    return () => clearInterval(interval);
+    if (active === 3) {
+      setColorIndex(2);
+    }
   }, [setColorIndex, active]);
 
   const [, setHeartBeat] = useAtom(heartBeatAtom);
@@ -68,6 +60,34 @@ const R3F = () => {
       cancel();
     }
   });
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
+    const handleWheel = (e: WheelEvent) => {
+      if (rotating || timeoutId) return;
+      if (Math.abs(e.deltaY) < 20) return;
+
+      if (e.deltaY > 0) {
+        // scrolling down -> next section (right/left depending on direction)
+        setDir("left");
+        setActive((prev) => (prev < 3 ? prev + 1 : 0));
+      } else if (e.deltaY < 0) {
+        // scrolling up -> previous section
+        setDir("right");
+        setActive((prev) => (prev > 0 ? prev - 1 : 3));
+      }
+
+      timeoutId = setTimeout(() => {
+        timeoutId = null;
+      }, 400);
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [rotating, setActive, setDir]);
 
   return (
     <div {...bind()} style={{ touchAction: "none" }}>

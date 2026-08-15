@@ -7,6 +7,7 @@ import R3F from "../components/R3F.tsx";
 import Socials from "../components/Socials";
 import Menu from "../components/Menu";
 import LucidCTA from "../components/LucidCTA";
+import ScrollIndicator from "../components/ScrollIndicator";
 ---
 
 <!doctype html>
@@ -41,6 +42,7 @@ import LucidCTA from "../components/LucidCTA";
           <Menu client:visible />
         </div>
         <R3F client:load />
+        <ScrollIndicator client:load />
         <div class="fixed bottom-32 z-50 left-0 w-full bg-transparent flex justify-center pointer-events-none">
           <LucidCTA client:load />
         </div>
