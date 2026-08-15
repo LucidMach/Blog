@@ -71,12 +71,14 @@ const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMo
             </div>
           ))}
         </div>
-          <p
-            className="font-comfortaa text-center transition-all duration-500 opacity-80 bg-transparent"
-            style={{ color: colors[colorIndex] }}
-          >
-            {sections[active].cta}
-          </p>
+          {!singleClickMode && (
+            <p
+              className="font-comfortaa text-center transition-all duration-500 opacity-80 bg-transparent"
+              style={{ color: colors[colorIndex] }}
+            >
+              {sections[active].cta}
+            </p>
+          )}
       </div>
     </>
   );

@@ -58,8 +58,16 @@ const MNETCubeInstance = ({ args }: { args: any }) => {
       onPointerEnter={(e) => {
         e.stopPropagation();
         setHover(true);
+        document.body.style.cursor = "pointer";
       }}
-      onPointerLeave={() => setHover(false)}
+      onPointerLeave={() => {
+        setHover(false);
+        document.body.style.cursor = "auto";
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        window.open("https://monashemerging.tech", "_blank", "noopener,noreferrer");
+      }}
     />
   );
 };

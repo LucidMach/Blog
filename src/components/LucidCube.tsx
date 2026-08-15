@@ -19,10 +19,9 @@ interface props {
 }
 
 const PROMPTS = [
+  "this is a 3D immersive experience 👋",
   "Spin me! 👉👈",
-  "Drag to spin! 👋",
-  "Wanna see more? Swipe! ✨",
-  "Give me a toss! 🖐️",
+  "Drag left or right to spin! 🫰",
 ];
 
 const svgString = `<svg width="308" height="350" viewBox="0 0 308 350" fill="none" xmlns="http://www.w3.org/2000/svg">
