@@ -11,7 +11,7 @@ import colors from "../content/colors";
 import { useExtrudedGeometry } from "3dsvg";
 import { DoubleSide } from "three";
 import { getToonGradientMap } from "../utils/toonGradient";
-import { getWebglColor } from "../utils/webglColorOverride";
+import { getWebglColorTreatment } from "../utils/webglColorOverride";
 
 interface props {
   position: [number, number, number];
@@ -88,6 +88,7 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   // Base scale centers the max-dimension of the SVG to exactly 4 units.
   // Scale up to 1.4 for high visibility and impact.
   const finalScale = baseScale * 0.7;
+  const webglColor = getWebglColorTreatment(colors[colorIndex]);
 
   return (
     <group
@@ -118,7 +119,9 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
             position={[-center.x, -center.y, -center.z]}
           >
             <meshToonMaterial
-              color={getWebglColor(colors[colorIndex])}
+              color={webglColor.color}
+              emissive={webglColor.emissive}
+              emissiveIntensity={webglColor.emissiveIntensity}
               side={DoubleSide}
               gradientMap={getToonGradientMap() as any}
             />

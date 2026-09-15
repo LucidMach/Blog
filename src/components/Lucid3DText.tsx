@@ -7,7 +7,7 @@ import sections from "../content/sections";
 import colorIndexAtom from "../atoms/colorIndex";
 import colors from "../content/colors";
 import { getToonGradientMap } from "../utils/toonGradient";
-import { getWebglColor } from "../utils/webglColorOverride";
+import { getWebglColorTreatment } from "../utils/webglColorOverride";
 
 interface props {
   rotation?: [number, number, number];
@@ -47,12 +47,19 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
   heartBeating(titleRef);
   heartBeating(subtitleRef);
 
+  const webglColor = getWebglColorTreatment(colors[colorIndex]);
+
   return (
     <group castShadow rotation={rotation} position={position} scale={scale}>
       <Center ref={titleRef} position={[titleX, -Math.PI / 3, 1.5]}>
         <Text3D castShadow font={"/fonts/Vampiro One Regular.json"}>
           {sections[active].title}
-          <meshToonMaterial color={getWebglColor(colors[colorIndex])} gradientMap={getToonGradientMap() as any} />
+          <meshToonMaterial
+            color={webglColor.color}
+            emissive={webglColor.emissive}
+            emissiveIntensity={webglColor.emissiveIntensity}
+            gradientMap={getToonGradientMap() as any}
+          />
         </Text3D>
       </Center>
       <Center ref={subtitleRef} position={[subtitleX, -Math.PI / 1.75, 1.75]}>
@@ -63,7 +70,12 @@ const Lucid3DText: React.FC<props> = ({ rotation, position, scale, isMobile }) =
           font={"/fonts/Comfortaa Regular.json"}
         >
           {sections[active].subtitle}
-          <meshToonMaterial color={getWebglColor(colors[colorIndex])} gradientMap={getToonGradientMap() as any} />
+          <meshToonMaterial
+            color={webglColor.color}
+            emissive={webglColor.emissive}
+            emissiveIntensity={webglColor.emissiveIntensity}
+            gradientMap={getToonGradientMap() as any}
+          />
         </Text3D>
       </Center>
     </group>

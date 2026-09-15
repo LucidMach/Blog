@@ -40,7 +40,7 @@ const R3F = () => {
       setColorIndex(1);
     }
     if (active === 2) {
-      setColorIndex(4);
+      setColorIndex(3);
     }
     if (active === 3) {
       setColorIndex(2);
