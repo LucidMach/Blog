@@ -11,6 +11,7 @@ import colors from "../content/colors";
 import { useExtrudedGeometry } from "3dsvg";
 import { DoubleSide } from "three";
 import { getToonGradientMap } from "../utils/toonGradient";
+import { getWebglColor } from "../utils/webglColorOverride";
 
 interface props {
   position: [number, number, number];
@@ -117,7 +118,7 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
             position={[-center.x, -center.y, -center.z]}
           >
             <meshToonMaterial
-              color={colors[colorIndex]}
+              color={getWebglColor(colors[colorIndex])}
               side={DoubleSide}
               gradientMap={getToonGradientMap() as any}
             />

@@ -6,6 +6,7 @@ import Rig from "./Rig";
 import Lucid3DText from "./Lucid3DText";
 import LucidCube from "../components/LucidCube";
 import SeaOfMNET from "./SeaOfMNET";
+import CursorLight from "./CursorLight";
 import { useDrag } from "@use-gesture/react";
 import activeAtom from "../atoms/active";
 import dirAtom from "../atoms/dir";
@@ -136,8 +137,8 @@ const R3F = () => {
         camera={{ position: [0, 0, 7.5] }}
       >
         <color attach="background" args={[bgColors[0]]} />
-        <directionalLight position={[0, 0, 5]} intensity={1.5} />
-        <ambientLight intensity={0.65} />
+        <CursorLight intensity={1.3} />
+        <ambientLight intensity={0.67} />
         <LucidCube
           position={[0, 0.5, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}
