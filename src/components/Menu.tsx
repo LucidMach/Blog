@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import sections from "../content/sections";
 import { useAtom } from "jotai";
 import activeAtom from "../atoms/active";
@@ -12,19 +12,60 @@ interface Props {
   singleClickMode?: boolean;
 }
 
+const IDLE_THRESHOLD_MS = 6000;
+const IDLE_WIGGLE_INTERVAL_MS = 4000;
+const ACTIVITY_EVENTS = ["mousemove", "touchstart", "wheel", "keydown", "pointerdown"] as const;
+
 const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMode }) => {
   const [active, setActive] = useAtom(activeAtom);
   const [, setDir] = useAtom(dirAtom);
   const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
+  const [wiggleKey, setWiggleKey] = useState(0);
 
   useEffect(() => {
     if (currentActive !== undefined) setActive(currentActive);
     if (currentColorIndex !== undefined) setColorIndex(currentColorIndex);
   }, [currentActive, currentColorIndex, setActive, setColorIndex]);
 
+  // Nudge the sticker with a wiggle once the visitor has gone quiet for a
+  // while, repeating every few seconds until they interact again.
+  useEffect(() => {
+    if (singleClickMode) return;
+
+    let idleTimer: NodeJS.Timeout;
+    let wiggleInterval: NodeJS.Timeout;
+
+    const stopWiggling = () => {
+      if (wiggleInterval) clearInterval(wiggleInterval);
+    };
+
+    const startWiggling = () => {
+      stopWiggling();
+      setWiggleKey((k) => k + 1);
+      wiggleInterval = setInterval(() => setWiggleKey((k) => k + 1), IDLE_WIGGLE_INTERVAL_MS);
+    };
+
+    const resetIdleTimer = () => {
+      stopWiggling();
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(startWiggling, IDLE_THRESHOLD_MS);
+    };
+
+    resetIdleTimer();
+    ACTIVITY_EVENTS.forEach((event) =>
+      window.addEventListener(event, resetIdleTimer, { passive: true }),
+    );
+
+    return () => {
+      clearTimeout(idleTimer);
+      stopWiggling();
+      ACTIVITY_EVENTS.forEach((event) => window.removeEventListener(event, resetIdleTimer));
+    };
+  }, [singleClickMode]);
+
   return (
     <>
-      <div className="flex flex-col items-center gap-4 bg-transparent z-20">
+      <div className="flex flex-col items-center gap-4 bg-transparent z-20 pointer-events-auto">
         <div
           style={{ backgroundColor: colors[colorIndex] }}
           className="text-[#1a1a1a] text-left rounded-full px-6 w-fit font-comfortaa"
@@ -72,12 +113,20 @@ const Menu: React.FC<Props> = ({ currentActive, currentColorIndex, singleClickMo
           ))}
         </div>
           {!singleClickMode && (
-            <p
-              className="font-comfortaa text-center transition-all duration-500 opacity-80 bg-transparent"
-              style={{ color: colors[colorIndex] }}
-            >
-              {sections[active].cta}
-            </p>
+            <div key={wiggleKey} className="relative self-stretch idle-wiggle">
+              {/* Pushpin, matching the project-card sticker convention */}
+              <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black shadow-inner z-10 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
+              </div>
+              <p
+                role="status"
+                aria-live="polite"
+                className="font-virgil text-base leading-snug text-center w-full py-2.5 px-4 rounded-sm shadow-md border-2 border-black/80 text-[#1a1a1a]"
+                style={{ backgroundColor: colors[colorIndex] }}
+              >
+                {sections[active].cta}
+              </p>
+            </div>
           )}
       </div>
     </>

@@ -18,7 +18,7 @@ import useMobile from "../hooks/useMobile";
 import heartBeatAtom from "../atoms/heartBeat";
 
 const R3F = () => {
-  const [colorIndex, setColorIndex] = useAtom(colorIndexAtom);
+  const [, setColorIndex] = useAtom(colorIndexAtom);
   const { w, h } = useMobile();
   const [active, setActive] = useAtom(activeAtom);
   const [rotating] = useAtom(rotatingAtom);
@@ -26,7 +26,14 @@ const R3F = () => {
 
   useEffect(() => {
     if (active === 0) {
-      setColorIndex(3);
+      // Home section cycles through the full palette instead of sitting on one color.
+      let i = 0;
+      setColorIndex(i);
+      const interval = setInterval(() => {
+        i = (i + 1) % colors.length;
+        setColorIndex(i);
+      }, 1600);
+      return () => clearInterval(interval);
     }
     if (active === 1) {
       setColorIndex(1);
@@ -89,6 +96,33 @@ const R3F = () => {
     };
   }, [rotating, setActive, setDir]);
 
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (rotating || timeoutId) return;
+
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        setDir("left");
+        setActive((prev) => (prev < 3 ? prev + 1 : 0));
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        setDir("right");
+        setActive((prev) => (prev > 0 ? prev - 1 : 3));
+      } else {
+        return;
+      }
+
+      timeoutId = setTimeout(() => {
+        timeoutId = null;
+      }, 400);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [rotating, setActive, setDir]);
+
   return (
     <div {...bind()} style={{ touchAction: "none" }}>
       <Canvas
@@ -102,11 +136,8 @@ const R3F = () => {
         camera={{ position: [0, 0, 7.5] }}
       >
         <color attach="background" args={[bgColors[0]]} />
-        <directionalLight
-          color={colors[colorIndex]}
-          position={[0, 0, 5]}
-          intensity={5}
-        />
+        <directionalLight position={[0, 0, 5]} intensity={1.5} />
+        <ambientLight intensity={0.65} />
         <LucidCube
           position={[0, 0.5, -1]}
           rotation={[Math.PI / 6, -Math.PI / 4, 0]}

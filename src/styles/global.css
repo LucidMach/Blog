@@ -58,3 +58,8 @@ a,svg{
   animation: tag-wiggle 0.4s ease-in-out;
   display: inline-block;
 }
+
+.idle-wiggle {
+  animation: tag-wiggle 0.6s ease-in-out;
+  display: inline-block;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import heartBeating from "../hooks/heartBeating";
 import { useAtom } from "jotai";
 import activeAtom from "../atoms/active";
@@ -7,22 +7,16 @@ import dirAtom from "../atoms/dir";
 import rotatingAtom from "../atoms/rotating";
 import sections from "../content/sections";
 import colorIndexAtom from "../atoms/colorIndex";
-import colors, { contrastColors } from "../content/colors";
+import colors from "../content/colors";
 import { useExtrudedGeometry } from "3dsvg";
 import { DoubleSide } from "three";
-import { Html } from "@react-three/drei";
+import { getToonGradientMap } from "../utils/toonGradient";
 
 interface props {
   position: [number, number, number];
   rotation: [number, number, number];
   scale: number;
 }
-
-const PROMPTS = [
-  "this is a 3D immersive experience 👋",
-  "Spin me! 👉👈",
-  "Drag left or right to spin! 🫰",
-];
 
 const svgString = `<svg width="308" height="350" viewBox="0 0 308 350" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M306.205 87.0588L153.53 0L0.233406 87.4131L63.0089 123.394L153.53 71.7879L242.301 122.396L306.205 87.0588ZM244.131 124.812L307.06 90.0142V262.639L156.206 348.659V276.871L244.131 226.745V124.812ZM153.206 278.212L153.206 350L0 262.639V90.7372L62.9283 126.806V226.745L153.206 278.212Z" fill="#F1F1F1"/>
@@ -34,9 +28,6 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
   const [dir] = useAtom(dirAtom);
   const countFrames = useRef(0);
   const [colorIndex] = useAtom(colorIndexAtom);
-
-  const [bubbleText, setBubbleText] = useState<string | null>(null);
-  const [bubbleVisible, setBubbleVisible] = useState(false);
 
   const cube = useRef<any>(null);
   heartBeating(cube);
@@ -51,37 +42,6 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
       countFrames.current = 0;
     }
   }, [active, setRotating]);
-
-  // Occasional thought bubble interval (shows every 6-9 seconds for 3.5 seconds)
-  useEffect(() => {
-    let hideTimer: NodeJS.Timeout;
-    const interval = setInterval(() => {
-      if (active === 0) {
-        const randomPrompt = PROMPTS[Math.floor(Math.random() * PROMPTS.length)];
-        setBubbleText(randomPrompt);
-        setBubbleVisible(true);
-
-        hideTimer = setTimeout(() => {
-          setBubbleVisible(false);
-        }, 3500);
-      }
-    }, 7000);
-
-    // Trigger initial prompt shortly after load
-    const initialTimer = setTimeout(() => {
-      if (active === 0) {
-        setBubbleText(PROMPTS[0]);
-        setBubbleVisible(true);
-        hideTimer = setTimeout(() => setBubbleVisible(false), 3500);
-      }
-    }, 2000);
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(hideTimer);
-      clearTimeout(initialTimer);
-    };
-  }, [active]);
 
   useFrame((state) => {
     if (!cube.current) return;
@@ -144,36 +104,6 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
       // Keep outer scale as prop scale, so the heartBeating hook can lerp it correctly
       scale={scale}
     >
-      {/* Occasional Thought Bubble anchored to top-right of 3D logo */}
-      {bubbleText && bubbleVisible && (
-        <Html className="bg-transparent" position={[1.4, 1.5, 0]} center distanceFactor={8} zIndexRange={[100, 0]}>
-          <div className="pointer-events-none transition-all duration-500 ease-out bg-transparent transform scale-100 translate-y-0">
-            <div className="relative rounded-full">
-              {/* Cloud-like main thought bubble */}
-              <div
-                className="relative font-semibold px-4 py-2.5 rounded-full whitespace-nowrap text-sm tracking-wide font-sans select-none flex items-center gap-1.5 transition-colors duration-700 shadow-md"
-                style={{
-                  backgroundColor: colors[colorIndex],
-                }}
-              >
-                <span style={
-                  { color: contrastColors[colorIndex] }
-                }>{bubbleText}</span>
-              </div>
-              {/* Thought Bubble Dots (classic cloud tail leading down-left toward the cube) */}
-              <div
-                className="absolute -bottom-2.5 left-4 w-3.5 h-3.5 rounded-full transition-colors duration-700"
-                style={{ backgroundColor: colors[colorIndex] }}
-              />
-              <div
-                className="absolute -bottom-5 left-2 w-2 h-2 rounded-full transition-colors duration-700"
-                style={{ backgroundColor: colors[colorIndex] }}
-              />
-            </div>
-          </div>
-        </Html>
-      )}
-
       {/* Nested group applies the final 3D SVG base scale and Y-inversion, shielding it from heartBeating lerp */}
       <group
         scale={[finalScale, -finalScale, finalScale]}
@@ -186,11 +116,10 @@ const LucidCube: React.FC<props> = ({ position, rotation, scale }) => {
             geometry={geometry}
             position={[-center.x, -center.y, -center.z]}
           >
-            <meshStandardMaterial
+            <meshToonMaterial
               color={colors[colorIndex]}
-              roughness={0.8}
-              metalness={0.2}
               side={DoubleSide}
+              gradientMap={getToonGradientMap() as any}
             />
           </mesh>
         ))}
