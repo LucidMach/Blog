@@ -6,6 +6,7 @@ githubUrl: "https://github.com/LucidMach/LucidLinks"
 demoUrl: "https://lucidlinks.vercel.app"
 heroImage: "/projects/lucidlinks.png"
 tags: ["UI/UX"]
+isSpecial: true
 ---
 
 a webGL [threejs] portfolio... (kinda)

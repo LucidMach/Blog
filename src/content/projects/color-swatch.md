@@ -6,6 +6,7 @@ githubUrl: "https://github.com/LucidMach/Color-Swatch"
 demoUrl: "https://colorswatch.netlify.app/"
 tags: ["UI/UX"]
 heroImage: "/projects/color-swatch.png"
+isSpecial: true
 ---
 
 The Ultimate Random Color Combination Generator Tool

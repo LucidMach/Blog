@@ -27,6 +27,7 @@ const projects = defineCollection({
     demoUrl: z.string().optional().nullable(),
     tags: z.array(z.string()).default([]),
     heroImage: z.string().default("/scratched-out.png"),
+    isSpecial: z.boolean().default(false),
   }),
 });
 

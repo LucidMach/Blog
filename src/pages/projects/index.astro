@@ -65,6 +65,14 @@ const years = Object.keys(projectsByYear)
             class="filter-btn active px-3 py-1 rounded-full text-sm font-semibold border-2 border-[#1a1a1a] bg-[#1a1a1a] text-white transition-all opacity-100 hover-wiggle cursor-pointer"
             data-tag="all">All</button
           >
+          <button
+            class="filter-btn text-[#1a1a1a] px-3.5 py-1 rounded-full text-sm font-bold border-2 border-transparent transition-all opacity-100 hover-wiggle cursor-pointer bg-[#818cf8] flex items-center gap-1.5 shadow-sm"
+            data-tag="special"
+            title="Special Projects"
+          >
+            <span class="text-base leading-none text-[#1a1a1a]">★</span>
+            <span class="text-[#1a1a1a]">Featured</span>
+          </button>
           {
             allTags.map((tag) => (
               <button
@@ -85,7 +93,7 @@ const years = Object.keys(projectsByYear)
       {
         years.map((year) => (
           <section class="year-section w-full max-w-7xl mb-24 relative">
-            <h2 class="text-4xl md:text-6xl text-center font-virgil text-yellow-400 mb-12 pl-4">
+            <h2 class="text-4xl md:text-6xl text-center font-virgil text-[#818cf8] mb-12 pl-4">
               {year}
             </h2>
 
@@ -136,10 +144,12 @@ const years = Object.keys(projectsByYear)
             projectCards.forEach((card) => {
               const cardTagsAttr = card.getAttribute("data-tags");
               const cardTags = cardTagsAttr ? cardTagsAttr.split(",") : [];
+              const isSpecialCard = card.getAttribute("data-special") === "true";
 
               if (
                 !selectedTag ||
                 selectedTag === "all" ||
+                (selectedTag === "special" && isSpecialCard) ||
                 cardTags.includes(selectedTag)
               ) {
                 // To display an element cleanly without messing up flex layout, we can just remove a hidden class

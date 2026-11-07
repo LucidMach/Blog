@@ -6,6 +6,7 @@ githubUrl: "https://github.com/LucidMach/ENVIouS"
 demoUrl: "https://lucidmach.notion.site/Documentation-e2b6b57269374ffc91839d174ffeafc9"
 tags: ["data visualisation", "robotics"]
 heroImage: "/projects/envious.gif"
+isSpecial: true
 ---
 
 Environment Visualisation Software for TurtleBot3
