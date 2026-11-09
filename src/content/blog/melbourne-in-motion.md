@@ -6,35 +6,27 @@ type: "Data"
 heroImage: "/melbourne-in-motion/hero.gif"
 ---
 
-## Every Melburnian's Villain Origin Story
+## The Hackathon
 
-if you've lived in Melbourne long enough, you've had this exact moment: you're standing on a platform, you checked the app, it said the train was "on time," and then it just... wasn't. no notification, no warning, nothing. you just stood there watching the countdown reset
+there was a Notion hackathon we took part in, the **Notion x Vercel AI Agent Hackathon**, Friday 21 Aug 2026, me and **Vivek**, **Nathan**, and **Karthick**. we decided to build a feature into Notion Calendar that takes delays and commute times into account
 
-every single Melburnian has a version of this story, usually about the one route they take every single day
-
-so when **Vivek**, **Nathan**, **Karthick** and i sat down for the **Notion x Vercel AI Agent Hackathon** on Friday, 21 Aug 2026, we didn't have to brainstorm very hard for a problem worth solving
-
-## The Pitch
-
-the idea was simple to say and annoying to build: a feature inside Notion Calendar that actually understood your commute. not just "here's your 9am meeting," but "here's your 9am meeting, and the 86 tram you usually take is running 12 minutes late, so leave now instead of in 10"
-
-calendars know when you need to be somewhere. they just have never bothered to ask how you're going to get there, or whether getting there today is going to go the way it usually does
-
-## Teaching a Calendar to Read Timetables
-
-getting from "wouldn't it be cool if" to an actual working feature meant building a full routing backend from scratch, in a weekend, on top of Melbourne's public transport network
+primarily around public transport in Melbourne, because every Melburnian has faced this exact frustration: not being notified of a delay, especially on the route you routinely take. you check the app, it says the train's on time, and then it just... isn't. no notification, nothing
 
 <center>
 
-![the finished digital twin: trains moving live along Melbourne's rail corridors, rendered over a monochrome extruded city model](/melbourne-in-motion/hero.gif)
+![the original hackathon concept: a dashed "Commute to Agora Saturdays" block auto-inserted before the real calendar event, sized to however long the trip actually takes](/melbourne-in-motion/motionCalanderConcept.png)
 
 </center>
 
-we pulled in PTV's GTFS schedule data for the static shape of the network (stops, routes, timetables) and layered the real-time API on top of it for live vehicle positions and actual delays. to actually answer "what's my fastest way there, right now, accounting for what's currently running late," we implemented **bi-directional Dijkstra** over the whole network graph, searching outward from both the origin and the destination at once to cut down the search space on a graph that size
+## Teaching a Calendar to Read Timetables
 
-it was very much a proof of concept, held together by hackathon-grade duct tape, but it worked end to end, and it answered a question every Melburnian has silently screamed at their phone at least once
+this was very much a proof of concept project. we built a whole backend system that did bi-directional Dijkstra on the Melbourne public transport network, taking into consideration the GTFS schedule and the real-time API
 
-we walked away with **Best Technical Implementation**
+GTFS gave us the static shape of the network, stops, routes, timetables, and the real-time API layered live vehicle positions and actual delays on top. **bi-directional Dijkstra** searches outward from both the origin and the destination at once, which is what let us answer "what's my fastest way there, right now, accounting for what's currently running late" on a graph that size without it taking forever
+
+it was held together by hackathon-grade duct tape, but it worked end to end
+
+we won Best Technical Implementation for the hackathon, btw
 
 ## The Itch That Followed
 
