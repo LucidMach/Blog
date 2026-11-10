@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Comfortaa, Assistant, sans-serif">
+  <rect x="0" y="0" width="900" height="540" fill="#1a1a1a"/>
+
+  <text x="450" y="52" text-anchor="middle" fill="#d3d3d3" font-size="22" letter-spacing="0.5">
+    bi-directional dijkstra
+  </text>
+  <text x="450" y="80" text-anchor="middle" fill="#8a8a8a" font-size="14" letter-spacing="0.5">
+    searching outward from both ends at once, meeting in the middle
+  </text>
+
+  <!-- frontier rings from origin -->
+  <g stroke="#d3d3d3" fill="none" stroke-dasharray="3 7">
+    <circle cx="210" cy="300" r="40"  opacity="0.85" stroke-width="1.5"/>
+    <circle cx="210" cy="300" r="80"  opacity="0.60" stroke-width="1.5"/>
+    <circle cx="210" cy="300" r="120" opacity="0.40" stroke-width="1.5"/>
+    <circle cx="210" cy="300" r="160" opacity="0.22" stroke-width="1.5"/>
+  </g>
+
+  <!-- frontier rings from destination -->
+  <g stroke="#d3d3d3" fill="none" stroke-dasharray="3 7">
+    <circle cx="690" cy="300" r="40"  opacity="0.85" stroke-width="1.5"/>
+    <circle cx="690" cy="300" r="80"  opacity="0.60" stroke-width="1.5"/>
+    <circle cx="690" cy="300" r="120" opacity="0.40" stroke-width="1.5"/>
+    <circle cx="690" cy="300" r="160" opacity="0.22" stroke-width="1.5"/>
+  </g>
+
+  <!-- the found path, picked out in the one accent colour -->
+  <g stroke="#F87171" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="210" y1="300" x2="450" y2="300"/>
+    <line x1="450" y1="300" x2="690" y2="300"/>
+  </g>
+  <g fill="#F87171">
+    <circle cx="300" cy="300" r="5"/>
+    <circle cx="375" cy="300" r="5"/>
+    <circle cx="525" cy="300" r="5"/>
+    <circle cx="600" cy="300" r="5"/>
+  </g>
+
+  <!-- origin node -->
+  <circle cx="210" cy="300" r="13" fill="#1a1a1a" stroke="#d3d3d3" stroke-width="2.5"/>
+  <text x="210" y="345" text-anchor="middle" fill="#d3d3d3" font-size="15">origin</text>
+
+  <!-- destination node -->
+  <circle cx="690" cy="300" r="13" fill="#1a1a1a" stroke="#d3d3d3" stroke-width="2.5"/>
+  <text x="690" y="345" text-anchor="middle" fill="#d3d3d3" font-size="15">destination</text>
+
+  <!-- meeting point -->
+  <circle cx="450" cy="300" r="10" fill="#F87171"/>
+  <circle cx="450" cy="300" r="20" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="450" y1="320" x2="450" y2="365" stroke="#8a8a8a" stroke-width="1.2" stroke-dasharray="2 4"/>
+  <text x="450" y="390" text-anchor="middle" fill="#F87171" font-size="15">frontiers meet here</text>
+
+  <text x="450" y="500" text-anchor="middle" fill="#6f6f6f" font-size="13">
+    each side only has to search half the distance, not the whole network
+  </text>
+</svg>
